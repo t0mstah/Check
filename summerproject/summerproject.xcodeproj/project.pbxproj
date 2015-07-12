@@ -82,9 +82,6 @@
 				4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */,
 				4BCE29ED1B2E76F400B74DCA /* ViewController.swift */,
 				4BCE29EF1B2E76F400B74DCA /* Main.storyboard */,
-				4BCE29F21B2E76F400B74DCA /* Images.xcassets */,
-				4BCE29F41B2E76F400B74DCA /* LaunchScreen.xib */,
-				4BCE29EA1B2E76F400B74DCA /* summerproject.xcdatamodeld */,
 				4BCE29E61B2E76F400B74DCA /* Supporting Files */,
 			);
 			path = summerproject;
@@ -93,6 +90,9 @@
 		4BCE29E61B2E76F400B74DCA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BCE29F21B2E76F400B74DCA /* Images.xcassets */,
+				4BCE29F41B2E76F400B74DCA /* LaunchScreen.xib */,
+				4BCE29EA1B2E76F400B74DCA /* summerproject.xcdatamodeld */,
 				4BCE29E71B2E76F400B74DCA /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -415,6 +415,7 @@
 				4BCE2A071B2E76F400B74DCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BCE2A081B2E76F400B74DCA /* Build configuration list for PBXNativeTarget "summerprojectTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +424,7 @@
 				4BCE2A0A1B2E76F400B74DCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
