@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -42,6 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    func applicationDidFinishLaunching(application: UIApplication) {
+        Parse.setApplicationId("QEMTX8Eo59vaMSFFRQDpGfyZPvN1omEqosrJFLRb", clientKey: "gExzU9hg0XCIROCKYLxfLR1Ozv7AUqpXN8VBdZhC")
     }
 
     // MARK: - Core Data stack
