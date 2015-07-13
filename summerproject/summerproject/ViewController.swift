@@ -13,13 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let userProfile = PFObject(className: "UserProfile")
-        userProfile["biography"] = "Hi, I am biography."
-        userProfile["rewardPoints"] = 10
-
-        userProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            println("User Profile has been saved.")
-        }
+        addUser("UserProfile")
         // Do any additional setup after loading the view, typically from a nib.
     }
 

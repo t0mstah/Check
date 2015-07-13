@@ -29,6 +29,8 @@
 		5A2A13C51B53158C00BA9535 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13B81B53158C00BA9535 /* Social.framework */; };
 		5A2A13C61B53158C00BA9535 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13B91B53158C00BA9535 /* StoreKit.framework */; };
 		5A2A13C71B53158C00BA9535 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13BA1B53158C00BA9535 /* SystemConfiguration.framework */; };
+		5A6072A11B534090008D9C5A /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6072A01B534090008D9C5A /* UserProfileController.swift */; };
+		5A6072A31B534201008D9C5A /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6072A21B534201008D9C5A /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		5A2A13B81B53158C00BA9535 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		5A2A13B91B53158C00BA9535 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5A2A13BA1B53158C00BA9535 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5A6072A01B534090008D9C5A /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		5A6072A21B534201008D9C5A /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 		4BCE29E51B2E76F400B74DCA /* summerproject */ = {
 			isa = PBXGroup;
 			children = (
+				5A60729C1B53405D008D9C5A /* Controllers */,
+				5A60729E1B53405D008D9C5A /* Models */,
 				4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */,
 				4BCE29ED1B2E76F400B74DCA /* ViewController.swift */,
 				4BCE29EF1B2E76F400B74DCA /* Main.storyboard */,
@@ -181,6 +187,22 @@
 				5A2A13AB1B5314C300BA9535 /* Parse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A60729C1B53405D008D9C5A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A6072A01B534090008D9C5A /* UserProfileController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5A60729E1B53405D008D9C5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A6072A21B534201008D9C5A /* UserProfile.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +307,8 @@
 			files = (
 				4BCE29EE1B2E76F400B74DCA /* ViewController.swift in Sources */,
 				4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */,
+				5A6072A31B534201008D9C5A /* UserProfile.swift in Sources */,
+				5A6072A11B534090008D9C5A /* UserProfileController.swift in Sources */,
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
