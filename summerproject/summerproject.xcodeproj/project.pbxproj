@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0F81701B54A97D0077A371 /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F816F1B54A97D0077A371 /* ProfileCollectionViewController.swift */; };
+		4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81711B54A9B40077A371 /* SettingsTableViewController.swift */; };
+		4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81801B54AFBA0077A371 /* HomeTableViewCell.swift */; };
+		4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81821B54B18B0077A371 /* CustomNavigationController.swift */; };
+		4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */; };
+		4B0F818C1B54C1670077A371 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F818B1B54C1670077A371 /* MenuViewController.swift */; };
 		4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */; };
 		4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29EA1B2E76F400B74DCA /* summerproject.xcdatamodeld */; };
 		4BCE29F11B2E76F400B74DCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE29EF1B2E76F400B74DCA /* Main.storyboard */; };
@@ -48,6 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B0F816F1B54A97D0077A371 /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
+		4B0F81711B54A9B40077A371 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		4B0F81801B54AFBA0077A371 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		4B0F81821B54B18B0077A371 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		4B0F818A1B54BF110077A371 /* summerproject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "summerproject-Bridging-Header.h"; path = "Controllers/summerproject-Bridging-Header.h"; sourceTree = "<group>"; };
+		4B0F818B1B54C1670077A371 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4BCE29E31B2E76F400B74DCA /* summerproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = summerproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCE29E71B2E76F400B74DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +162,7 @@
 		4BCE29E61B2E76F400B74DCA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B0F818A1B54BF110077A371 /* summerproject-Bridging-Header.h */,
 				4BCE29F21B2E76F400B74DCA /* Images.xcassets */,
 				4BCE29F41B2E76F400B74DCA /* LaunchScreen.xib */,
 				4BCE29EA1B2E76F400B74DCA /* summerproject.xcdatamodeld */,
@@ -202,6 +216,12 @@
 				5A6E56751B5377EB006438BC /* Tutorial */,
 				5A6E566D1B5372E3006438BC /* LoginViewController.swift */,
 				5A6E566F1B53730F006438BC /* SignUpViewController.swift */,
+				4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */,
+				4B0F81801B54AFBA0077A371 /* HomeTableViewCell.swift */,
+				4B0F816F1B54A97D0077A371 /* ProfileCollectionViewController.swift */,
+				4B0F81711B54A9B40077A371 /* SettingsTableViewController.swift */,
+				4B0F81821B54B18B0077A371 /* CustomNavigationController.swift */,
+				4B0F818B1B54C1670077A371 /* MenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,9 +346,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6E56791B53781F006438BC /* Tutorial4ViewController.swift in Sources */,
+				4B0F818C1B54C1670077A371 /* MenuViewController.swift in Sources */,
+				4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */,
 				5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */,
 				5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */,
+				4B0F81701B54A97D0077A371 /* ProfileCollectionViewController.swift in Sources */,
+				4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */,
 				4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */,
+				4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */,
+				4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */,
 				5A6072A31B534201008D9C5A /* UserProfile.swift in Sources */,
 				5A6E56721B5377BF006438BC /* Tutorial1ViewController.swift in Sources */,
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,
@@ -462,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -469,6 +496,8 @@
 				INFOPLIST_FILE = summerproject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "summerproject/Controllers/summerproject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -476,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -483,6 +513,7 @@
 				INFOPLIST_FILE = summerproject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "summerproject/Controllers/summerproject-Bridging-Header.h";
 			};
 			name = Release;
 		};
