@@ -34,14 +34,7 @@
 		5A2A13C51B53158C00BA9535 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13B81B53158C00BA9535 /* Social.framework */; };
 		5A2A13C61B53158C00BA9535 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13B91B53158C00BA9535 /* StoreKit.framework */; };
 		5A2A13C71B53158C00BA9535 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13BA1B53158C00BA9535 /* SystemConfiguration.framework */; };
-		5A2A2A321B54C6F400C3A024 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2A311B54C6F400C3A024 /* UserProtocol.swift */; };
-		5A2A2A341B54C76200C3A024 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2A331B54C76200C3A024 /* User.swift */; };
-		5A2A2A361B54C7B400C3A024 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2A351B54C7B400C3A024 /* Profile.swift */; };
-		5A2A2A381B54C97800C3A024 /* ReviewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2A371B54C97800C3A024 /* ReviewsProtocol.swift */; };
-		5A2A2A3D1B54CAA600C3A024 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2A3C1B54CAA600C3A024 /* Reviews.swift */; };
-		5A2A2A3F1B54CC0100C3A024 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2A3E1B54CC0100C3A024 /* SettingsProtocol.swift */; };
-		5A2A2A411B54CC0A00C3A024 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2A401B54CC0A00C3A024 /* Settings.swift */; };
-		5A6072A31B534201008D9C5A /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6072A21B534201008D9C5A /* ProfileProtocol.swift */; };
+		5A6072A31B534201008D9C5A /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6072A21B534201008D9C5A /* UserProfile.swift */; };
 		5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E566D1B5372E3006438BC /* LoginViewController.swift */; };
 		5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E566F1B53730F006438BC /* SignUpViewController.swift */; };
 		5A6E56721B5377BF006438BC /* Tutorial1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E56711B5377BF006438BC /* Tutorial1ViewController.swift */; };
@@ -93,14 +86,7 @@
 		5A2A13B81B53158C00BA9535 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		5A2A13B91B53158C00BA9535 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5A2A13BA1B53158C00BA9535 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		5A2A2A311B54C6F400C3A024 /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
-		5A2A2A331B54C76200C3A024 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5A2A2A351B54C7B400C3A024 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		5A2A2A371B54C97800C3A024 /* ReviewsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewsProtocol.swift; path = Reviews/ReviewsProtocol.swift; sourceTree = "<group>"; };
-		5A2A2A3C1B54CAA600C3A024 /* Reviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reviews.swift; path = Reviews/Reviews.swift; sourceTree = "<group>"; };
-		5A2A2A3E1B54CC0100C3A024 /* SettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsProtocol.swift; path = Settings/SettingsProtocol.swift; sourceTree = "<group>"; };
-		5A2A2A401B54CC0A00C3A024 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = Settings/Settings.swift; sourceTree = "<group>"; };
-		5A6072A21B534201008D9C5A /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
+		5A6072A21B534201008D9C5A /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		5A6E566D1B5372E3006438BC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A6E566F1B53730F006438BC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A6E56711B5377BF006438BC /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tutorial1ViewController.swift; path = Tutorial/Tutorial1ViewController.swift; sourceTree = "<group>"; };
@@ -224,42 +210,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5A2A2A391B54C97E00C3A024 /* Reviews */ = {
-			isa = PBXGroup;
-			children = (
-				5A2A2A371B54C97800C3A024 /* ReviewsProtocol.swift */,
-				5A2A2A3C1B54CAA600C3A024 /* Reviews.swift */,
-			);
-			name = Reviews;
-			sourceTree = "<group>";
-		};
-		5A2A2A3A1B54C98700C3A024 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				5A6072A21B534201008D9C5A /* ProfileProtocol.swift */,
-				5A2A2A351B54C7B400C3A024 /* Profile.swift */,
-			);
-			name = Profile;
-			sourceTree = "<group>";
-		};
-		5A2A2A3B1B54C99900C3A024 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				5A2A2A311B54C6F400C3A024 /* UserProtocol.swift */,
-				5A2A2A331B54C76200C3A024 /* User.swift */,
-			);
-			name = User;
-			sourceTree = "<group>";
-		};
-		5A2A2A421B54CC2200C3A024 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				5A2A2A3E1B54CC0100C3A024 /* SettingsProtocol.swift */,
-				5A2A2A401B54CC0A00C3A024 /* Settings.swift */,
-			);
-			name = Settings;
-			sourceTree = "<group>";
-		};
 		5A60729C1B53405D008D9C5A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,10 +229,7 @@
 		5A60729E1B53405D008D9C5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5A2A2A421B54CC2200C3A024 /* Settings */,
-				5A2A2A3B1B54C99900C3A024 /* User */,
-				5A2A2A3A1B54C98700C3A024 /* Profile */,
-				5A2A2A391B54C97E00C3A024 /* Reviews */,
+				5A6072A21B534201008D9C5A /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -398,8 +345,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A2A2A3F1B54CC0100C3A024 /* SettingsProtocol.swift in Sources */,
 				5A6E56791B53781F006438BC /* Tutorial4ViewController.swift in Sources */,
+				4B0F818C1B54C1670077A371 /* MenuViewController.swift in Sources */,
+				4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */,
 				5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */,
 				5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */,
 				4B0F81701B54A97D0077A371 /* ProfileCollectionViewController.swift in Sources */,
@@ -408,16 +356,10 @@
 				4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */,
 				4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */,
 				5A6072A31B534201008D9C5A /* UserProfile.swift in Sources */,
-				5A6072A31B534201008D9C5A /* ProfileProtocol.swift in Sources */,
 				5A6E56721B5377BF006438BC /* Tutorial1ViewController.swift in Sources */,
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,
 				5A6E56771B537806006438BC /* Tutorial3ViewController.swift in Sources */,
-				5A2A2A411B54CC0A00C3A024 /* Settings.swift in Sources */,
-				5A2A2A321B54C6F400C3A024 /* UserProtocol.swift in Sources */,
-				5A2A2A381B54C97800C3A024 /* ReviewsProtocol.swift in Sources */,
 				5A6E56741B5377DB006438BC /* Tutorial2ViewController.swift in Sources */,
-				5A2A2A341B54C76200C3A024 /* User.swift in Sources */,
-				5A2A2A3D1B54CAA600C3A024 /* Reviews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
