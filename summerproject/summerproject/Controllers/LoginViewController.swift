@@ -14,8 +14,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         
-        let user = UserProfile()
-        user.addUser("UserProfile")
+        //let user = UserProfile()
+        //user.addUser("UserProfile")
         // Do any additional setup after loading the view.
     }
 
