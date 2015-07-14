@@ -400,24 +400,15 @@
 			files = (
 				5A2A2A3F1B54CC0100C3A024 /* SettingsProtocol.swift in Sources */,
 				5A6E56791B53781F006438BC /* Tutorial4ViewController.swift in Sources */,
-<<<<<<< HEAD
-				4B0F818C1B54C1670077A371 /* MenuViewController.swift in Sources */,
-				4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */,
-=======
-				5A2A2A361B54C7B400C3A024 /* Profile.swift in Sources */,
->>>>>>> a2003107a4e5e94b89d1cbe25e557d8081fa929e
 				5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */,
 				5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */,
 				4B0F81701B54A97D0077A371 /* ProfileCollectionViewController.swift in Sources */,
 				4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */,
 				4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */,
-<<<<<<< HEAD
 				4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */,
 				4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */,
 				5A6072A31B534201008D9C5A /* UserProfile.swift in Sources */,
-=======
 				5A6072A31B534201008D9C5A /* ProfileProtocol.swift in Sources */,
->>>>>>> a2003107a4e5e94b89d1cbe25e557d8081fa929e
 				5A6E56721B5377BF006438BC /* Tutorial1ViewController.swift in Sources */,
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,
 				5A6E56771B537806006438BC /* Tutorial3ViewController.swift in Sources */,
