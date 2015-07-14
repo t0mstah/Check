@@ -12,12 +12,13 @@ protocol UserProtocol {
     
     // REQUIRES: A user profile.
     // EFFECTS: Returns true if user is created successfully, false otherwise.
-    func addUser(userProfile: String) -> Bool
+    func addUser(userProfile: Profile) -> Bool
     
-    
-    func editUser(UserProfile: String) -> Bool
+	// REQUIRES: A user profile.
+	// EFFECTS: Edits the user profile
+    func editUser(userProfile: Profile) -> Bool
     
     // REQUIRES: A valid user.
     // EFFECTS: Returns true if user is successfully deleted, false otherwise.
-    func removeUser(userProfile: String) -> Bool
+    func removeUser(userProfile: Profile) -> Bool
 }

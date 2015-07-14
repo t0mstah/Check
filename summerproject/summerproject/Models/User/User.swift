@@ -10,19 +10,19 @@ import Foundation
 
 class User : UserProtocol {
     
-    func addUser(userProfile: String) -> Bool {
+    func addUser(userProfile: Profile) -> Bool {
 
         
         return true
     }
     
-    func editUser(UserProfile: String) -> Bool {
+    func editUser(UserProfile: Profile) -> Bool {
         
         return true
     }
     
     
-    func removeUser(userProfile: String) -> Bool {
+    func removeUser(userProfile: Profile) -> Bool {
         return true
     }
 }
