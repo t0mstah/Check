@@ -13,6 +13,23 @@
 		4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81821B54B18B0077A371 /* CustomNavigationController.swift */; };
 		4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */; };
 		4B0F818C1B54C1670077A371 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F818B1B54C1670077A371 /* MenuViewController.swift */; };
+		4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E41B56067A0040BEEA /* SideBarViewController.swift */; };
+		4B2CD2EE1B5609720040BEEA /* PrintBold.otf in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2E61B5609720040BEEA /* PrintBold.otf */; };
+		4B2CD2EF1B5609720040BEEA /* PrintDashed.otf in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2E71B5609720040BEEA /* PrintDashed.otf */; };
+		4B2CD2F01B5609720040BEEA /* PrintClearly.otf in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2E81B5609720040BEEA /* PrintClearly.otf */; };
+		4B2CD2F11B5609720040BEEA /* PrintBold_TT.ttf in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2E91B5609720040BEEA /* PrintBold_TT.ttf */; };
+		4B2CD2F21B5609720040BEEA /* PrintClearly_TT.ttf in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2EA1B5609720040BEEA /* PrintClearly_TT.ttf */; };
+		4B2CD2F31B5609720040BEEA /* PrintDashed_TT.ttf in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2EB1B5609720040BEEA /* PrintDashed_TT.ttf */; };
+		4B2CD2F41B5609720040BEEA /* PRIND___.TTF in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2EC1B5609720040BEEA /* PRIND___.TTF */; };
+		4B2CD2F51B5609720040BEEA /* PRINC___.TTF in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2ED1B5609720040BEEA /* PRINC___.TTF */; };
+		4B2CD2FA1B560C620040BEEA /* PrintBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E61B5609720040BEEA /* PrintBold.otf */; };
+		4B2CD2FB1B560C620040BEEA /* PrintDashed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E71B5609720040BEEA /* PrintDashed.otf */; };
+		4B2CD2FC1B560C620040BEEA /* PrintClearly.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E81B5609720040BEEA /* PrintClearly.otf */; };
+		4B2CD2FD1B560C620040BEEA /* PrintBold_TT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E91B5609720040BEEA /* PrintBold_TT.ttf */; };
+		4B2CD2FE1B560C620040BEEA /* PrintClearly_TT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2EA1B5609720040BEEA /* PrintClearly_TT.ttf */; };
+		4B2CD2FF1B560C620040BEEA /* PrintDashed_TT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2EB1B5609720040BEEA /* PrintDashed_TT.ttf */; };
+		4B2CD3001B560C620040BEEA /* PRIND___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2EC1B5609720040BEEA /* PRIND___.TTF */; };
+		4B2CD3011B560C620040BEEA /* PRINC___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2ED1B5609720040BEEA /* PRINC___.TTF */; };
 		4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */; };
 		4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29EA1B2E76F400B74DCA /* summerproject.xcdatamodeld */; };
 		4BCE29F11B2E76F400B74DCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE29EF1B2E76F400B74DCA /* Main.storyboard */; };
@@ -68,6 +85,17 @@
 		4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		4B0F818A1B54BF110077A371 /* summerproject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "summerproject-Bridging-Header.h"; path = "Controllers/summerproject-Bridging-Header.h"; sourceTree = "<group>"; };
 		4B0F818B1B54C1670077A371 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4B2CD2E41B56067A0040BEEA /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		4B2CD2E61B5609720040BEEA /* PrintBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintBold.otf; path = summerproject/Fonts/PrintBold.otf; sourceTree = "<group>"; };
+		4B2CD2E71B5609720040BEEA /* PrintDashed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintDashed.otf; path = summerproject/Fonts/PrintDashed.otf; sourceTree = "<group>"; };
+		4B2CD2E81B5609720040BEEA /* PrintClearly.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintClearly.otf; path = summerproject/Fonts/PrintClearly.otf; sourceTree = "<group>"; };
+		4B2CD2E91B5609720040BEEA /* PrintBold_TT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintBold_TT.ttf; path = summerproject/Fonts/PrintBold_TT.ttf; sourceTree = "<group>"; };
+		4B2CD2EA1B5609720040BEEA /* PrintClearly_TT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintClearly_TT.ttf; path = summerproject/Fonts/PrintClearly_TT.ttf; sourceTree = "<group>"; };
+		4B2CD2EB1B5609720040BEEA /* PrintDashed_TT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintDashed_TT.ttf; path = summerproject/Fonts/PrintDashed_TT.ttf; sourceTree = "<group>"; };
+		4B2CD2EC1B5609720040BEEA /* PRIND___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PRIND___.TTF"; path = "summerproject/Fonts/PRIND___.TTF"; sourceTree = "<group>"; };
+		4B2CD2ED1B5609720040BEEA /* PRINC___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PRINC___.TTF"; path = "summerproject/Fonts/PRINC___.TTF"; sourceTree = "<group>"; };
+		4B2CD2F61B560BF10040BEEA /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		4B2CD2F81B560C540040BEEA /* PRINC___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PRINC___.TTF"; path = "summerproject/Fonts/PRINC___.TTF"; sourceTree = "<group>"; };
 		4BCE29E31B2E76F400B74DCA /* summerproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = summerproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCE29E71B2E76F400B74DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +142,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2CD2EE1B5609720040BEEA /* PrintBold.otf in Frameworks */,
+				4B2CD2EF1B5609720040BEEA /* PrintDashed.otf in Frameworks */,
+				4B2CD2F01B5609720040BEEA /* PrintClearly.otf in Frameworks */,
+				4B2CD2F11B5609720040BEEA /* PrintBold_TT.ttf in Frameworks */,
+				4B2CD2F21B5609720040BEEA /* PrintClearly_TT.ttf in Frameworks */,
+				4B2CD2F31B5609720040BEEA /* PrintDashed_TT.ttf in Frameworks */,
+				4B2CD2F41B5609720040BEEA /* PRIND___.TTF in Frameworks */,
+				4B2CD2F51B5609720040BEEA /* PRINC___.TTF in Frameworks */,
 				5A2A13BB1B53158C00BA9535 /* Accounts.framework in Frameworks */,
 				5A2A13BC1B53158C00BA9535 /* AudioToolbox.framework in Frameworks */,
 				5A2A13BD1B53158C00BA9535 /* CFNetwork.framework in Frameworks */,
@@ -145,6 +181,7 @@
 		4BCE29DA1B2E76F300B74DCA = {
 			isa = PBXGroup;
 			children = (
+				4B2CD2F81B560C540040BEEA /* PRINC___.TTF */,
 				5A2A13A91B5314AB00BA9535 /* Frameworks */,
 				4BCE29E51B2E76F400B74DCA /* summerproject */,
 				4BCE29FE1B2E76F400B74DCA /* summerprojectTests */,
@@ -181,6 +218,7 @@
 				4BCE29F41B2E76F400B74DCA /* LaunchScreen.xib */,
 				4BCE29EA1B2E76F400B74DCA /* summerproject.xcdatamodeld */,
 				4BCE29E71B2E76F400B74DCA /* Info.plist */,
+				4B2CD2F61B560BF10040BEEA /* Fonts */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -205,6 +243,14 @@
 		5A2A13A91B5314AB00BA9535 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B2CD2E61B5609720040BEEA /* PrintBold.otf */,
+				4B2CD2E71B5609720040BEEA /* PrintDashed.otf */,
+				4B2CD2E81B5609720040BEEA /* PrintClearly.otf */,
+				4B2CD2E91B5609720040BEEA /* PrintBold_TT.ttf */,
+				4B2CD2EA1B5609720040BEEA /* PrintClearly_TT.ttf */,
+				4B2CD2EB1B5609720040BEEA /* PrintDashed_TT.ttf */,
+				4B2CD2EC1B5609720040BEEA /* PRIND___.TTF */,
+				4B2CD2ED1B5609720040BEEA /* PRINC___.TTF */,
 				5A2A13AE1B53158B00BA9535 /* Accounts.framework */,
 				5A2A13AF1B53158B00BA9535 /* AudioToolbox.framework */,
 				5A2A13B01B53158B00BA9535 /* CFNetwork.framework */,
@@ -236,6 +282,7 @@
 				4B0F81711B54A9B40077A371 /* SettingsTableViewController.swift */,
 				4B0F81821B54B18B0077A371 /* CustomNavigationController.swift */,
 				4B0F818B1B54C1670077A371 /* MenuViewController.swift */,
+				4B2CD2E41B56067A0040BEEA /* SideBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -378,6 +425,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2CD2FA1B560C620040BEEA /* PrintBold.otf in Resources */,
+				4B2CD2FB1B560C620040BEEA /* PrintDashed.otf in Resources */,
+				4B2CD2FC1B560C620040BEEA /* PrintClearly.otf in Resources */,
+				4B2CD2FD1B560C620040BEEA /* PrintBold_TT.ttf in Resources */,
+				4B2CD2FE1B560C620040BEEA /* PrintClearly_TT.ttf in Resources */,
+				4B2CD2FF1B560C620040BEEA /* PrintDashed_TT.ttf in Resources */,
+				4B2CD3001B560C620040BEEA /* PRIND___.TTF in Resources */,
+				4B2CD3011B560C620040BEEA /* PRINC___.TTF in Resources */,
 				4BCE29F11B2E76F400B74DCA /* Main.storyboard in Resources */,
 				4BCE29F61B2E76F400B74DCA /* LaunchScreen.xib in Resources */,
 				4BCE29F31B2E76F400B74DCA /* Images.xcassets in Resources */,
@@ -417,6 +472,7 @@
 				5A6E56721B5377BF006438BC /* Tutorial1ViewController.swift in Sources */,
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,
 				5A6E56771B537806006438BC /* Tutorial3ViewController.swift in Sources */,
+				4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */,
 				5A6E56741B5377DB006438BC /* Tutorial2ViewController.swift in Sources */,
 				5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */,
 				5AA6F2B21B54D1FA0006D6B3 /* User.swift in Sources */,

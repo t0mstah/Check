@@ -4,8 +4,15 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="PrintClearly_TT.ttf">
+            <string>PrintClearly</string>
+            <string>PrintClearly</string>
+            <string>PrintClearly</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--Home-->
+        <!--Home Table View Controller-->
         <scene sceneID="cD9-Ye-i7c">
             <objects>
                 <tableViewController storyboardIdentifier="HomeTableViewController" id="i5D-0B-SeR" customClass="HomeTableViewController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +33,7 @@
                             <outlet property="delegate" destination="i5D-0B-SeR" id="QQD-C3-oOp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="UyE-n1-Q9Y">
+                    <navigationItem key="navigationItem" id="UyE-n1-Q9Y">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="bAe-gV-rwC">
                             <connections>
                                 <action selector="toggleMenu:" destination="i5D-0B-SeR" id="fze-E5-reJ"/>
@@ -138,7 +145,7 @@
             </objects>
             <point key="canvasLocation" x="616" y="707"/>
         </scene>
-        <!--Settings-->
+        <!--Settings Table View Controller-->
         <scene sceneID="Uq7-iQ-o48">
             <objects>
                 <tableViewController id="L7j-NY-uig" customClass="SettingsTableViewController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,7 +167,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Settings" id="FdR-j9-Dt6">
+                    <navigationItem key="navigationItem" id="FdR-j9-Dt6">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="50F-kA-nZf">
                             <connections>
                                 <action selector="toggleMenu:" destination="L7j-NY-uig" id="Ybh-7U-8DG"/>
@@ -205,22 +212,79 @@
             </objects>
             <point key="canvasLocation" x="-49" y="-138"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Side Bar Table View Controller-->
         <scene sceneID="GvJ-mq-k6J">
             <objects>
-                <tableViewController id="tFR-5K-iqR" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xQL-pv-Pvl">
+                <tableViewController id="tFR-5K-iqR" customClass="SideBarTableViewController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xQL-pv-Pvl">
                         <rect key="frame" x="0.0" y="0.0" width="260" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="74V-18-0fK">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="74V-18-0fK" id="sao-Bi-8qL">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="cHD-v4-OyV">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="74V-18-0fK">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="74V-18-0fK" id="sao-Bi-8qL">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="qIM-R0-d98">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qIM-R0-d98" id="44E-em-HDT">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tf-Sf-gp5">
+                                                    <rect key="frame" x="93" y="35" width="75" height="30"/>
+                                                    <fontDescription key="fontDescription" name="PrintClearly" family="Print Clearly" pointSize="28"/>
+                                                    <state key="normal" title="Home">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="pU6-nW-aIK">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pU6-nW-aIK" id="y5V-R3-ySa">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h6-aR-2NT">
+                                                    <rect key="frame" x="93" y="35" width="75" height="40"/>
+                                                    <fontDescription key="fontDescription" name="PrintClearly" family="Print Clearly" pointSize="28"/>
+                                                    <state key="normal" title="Profile">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="NJo-B1-kLH">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NJo-B1-kLH" id="PjH-Pd-AYN">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7q-JL-VPJ">
+                                                    <rect key="frame" x="93" y="30" width="84" height="40"/>
+                                                    <fontDescription key="fontDescription" name="PrintClearly" family="Print Clearly" pointSize="28"/>
+                                                    <state key="normal" title="Settings">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="tFR-5K-iqR" id="5MC-VO-kYd"/>
                             <outlet property="delegate" destination="tFR-5K-iqR" id="B2A-wv-LsD"/>
@@ -366,6 +430,6 @@
         <image name="Menu" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JuN-7S-IQ5"/>
+        <segue reference="sU0-oG-qdo"/>
     </inferredMetricsTieBreakers>
 </document>
