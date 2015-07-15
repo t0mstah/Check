@@ -13,20 +13,13 @@ import Foundation
 import Parse
 
 protocol ProfileProtocol {
-    
-    // TODO: Add profile data.
 
-    // Profile pic.
-    // About
-    // Phone Number
-    // Check Points
-
+    var profilePicture : String { get set } // TODO: Not sure yet.
+    var biography : String { get set }
+    var phoneNumber: String { get set }
+    var checkPoints: Int { get set }
+    var isCheckVerified: Bool { get set }
 
     // EFFECTS: Returns the user profile
     func getProfile(userProfile: String) -> Void
-    
 }
-
-
-
-
