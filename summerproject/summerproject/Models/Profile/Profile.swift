@@ -9,12 +9,24 @@
 import Foundation
 import Parse
 
-// TODO: Add facebook profiles etc.
+// TODO: Add facebook, twitter, signup with email profiles etc.
 class Profile : ProfileProtocol {
 
+    var profilePicture : String = ""
+    var biography : String = ""
+    var phoneNumber: String = ""
+    var checkPoints: Int = 0
+    var isCheckVerified: Bool = false
+
     // Constructor for the created user.
-    init(name: String, phoneNumber: String) {
-        
+    init(profilePicture: String, biography: String, phoneNumber : String,
+        checkPoints : Int, isCheckVerified : Bool) {
+
+        self.profilePicture = profilePicture
+        self.biography = biography
+        self.phoneNumber = phoneNumber
+        self.checkPoints = checkPoints
+        self.isCheckVerified = isCheckVerified
     }
 
     // EFFECTS: Returns the user profile
