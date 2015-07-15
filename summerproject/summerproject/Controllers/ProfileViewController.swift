@@ -1,5 +1,5 @@
 //
-//  ProfileCollectionViewController.swift
+//  ProfileViewController.swift
 //  summerproject
 //
 //  Created by Tommy Fang on 7/13/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileCollectionViewController: UICollectionViewController {
+class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

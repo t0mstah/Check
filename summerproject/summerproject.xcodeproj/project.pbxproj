@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B0F81701B54A97D0077A371 /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F816F1B54A97D0077A371 /* ProfileCollectionViewController.swift */; };
+		4B0F81701B54A97D0077A371 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F816F1B54A97D0077A371 /* ProfileViewController.swift */; };
 		4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81711B54A9B40077A371 /* SettingsTableViewController.swift */; };
 		4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81801B54AFBA0077A371 /* HomeTableViewCell.swift */; };
 		4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81821B54B18B0077A371 /* CustomNavigationController.swift */; };
@@ -61,7 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4B0F816F1B54A97D0077A371 /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
+		4B0F816F1B54A97D0077A371 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4B0F81711B54A9B40077A371 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4B0F81801B54AFBA0077A371 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		4B0F81821B54B18B0077A371 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 				5A6E566F1B53730F006438BC /* SignUpViewController.swift */,
 				4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */,
 				4B0F81801B54AFBA0077A371 /* HomeTableViewCell.swift */,
-				4B0F816F1B54A97D0077A371 /* ProfileCollectionViewController.swift */,
+				4B0F816F1B54A97D0077A371 /* ProfileViewController.swift */,
 				4B0F81711B54A9B40077A371 /* SettingsTableViewController.swift */,
 				4B0F81821B54B18B0077A371 /* CustomNavigationController.swift */,
 				4B0F818B1B54C1670077A371 /* MenuViewController.swift */,
@@ -407,7 +407,7 @@
 				4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */,
 				5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */,
 				5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */,
-				4B0F81701B54A97D0077A371 /* ProfileCollectionViewController.swift in Sources */,
+				4B0F81701B54A97D0077A371 /* ProfileViewController.swift in Sources */,
 				4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */,
 				5AA6F2AF1B54D1FA0006D6B3 /* ReviewsProtocol.swift in Sources */,
 				4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */,

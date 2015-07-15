@@ -9,21 +9,8 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        return 1
-//    }
-    @IBAction func toggleMenu(sender: AnyObject) {            NSNotificationCenter.defaultCenter().postNotificationName("toggleMenu", object: nil)
+    @IBAction func toggleMenu(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("toggleMenu", object: nil)
     }
     
-    override func viewDidLoad() {
-        
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
-    }
 }
