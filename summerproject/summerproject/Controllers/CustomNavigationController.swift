@@ -18,8 +18,8 @@ class CustomNavigationController: UINavigationController {
         
         // Custom navigation bar.
         self.navigationBar.barTintColor = UIColor(red: 44.0/255.0, green: 62.0/255.0, blue: 80.0/255.0, alpha: 1.0)
-        self.navigationBar.barStyle = UIBarStyle.Black
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
     
     override func didReceiveMemoryWarning() {

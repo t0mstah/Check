@@ -47,6 +47,8 @@
 		<string>PrintDashed_TT.ttf</string>
 		<string>PrintDashed.otf</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
