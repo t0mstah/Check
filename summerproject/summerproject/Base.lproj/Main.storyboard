@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="PrintClearly_TT.ttf">
+        <mutableArray key="PrintClearly.otf">
             <string>PrintClearly</string>
             <string>PrintClearly</string>
             <string>PrintClearly</string>
@@ -15,13 +15,13 @@
         <!--Home Table View Controller-->
         <scene sceneID="cD9-Ye-i7c">
             <objects>
-                <tableViewController storyboardIdentifier="HomeTableViewController" id="i5D-0B-SeR" customClass="HomeTableViewController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeTableViewController" id="i5D-0B-SeR" customClass="HomeTableViewController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LVq-2R-VSY">
-                        <rect key="frame" x="0.0" y="0.0" width="318" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FYg-eJ-IXA" customClass="HomeTableViewCell" customModule="summerproject" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FYg-eJ-IXA" customClass="HomeTableViewCell" customModule="Check" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FYg-eJ-IXA" id="aAw-2o-nZM">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -48,7 +48,7 @@
         <!--Menu View Controller-->
         <scene sceneID="se8-hO-YYG">
             <objects>
-                <viewController id="l7K-Jj-zVn" customClass="MenuViewController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l7K-Jj-zVn" customClass="MenuViewController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PdQ-8J-cJa"/>
                         <viewControllerLayoutGuide type="bottom" id="OhJ-fE-A4M"/>
@@ -60,8 +60,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4s3-uW-Vec">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPK-80-KMq">
-                                        <rect key="frame" x="257" y="0.0" width="318" height="568"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPK-80-KMq">
+                                        <rect key="frame" x="260" y="0.0" width="568" height="568"/>
                                         <connections>
                                             <segue destination="r4b-vc-GIS" kind="embed" id="kYJ-CB-ybX"/>
                                         </connections>
@@ -113,7 +113,7 @@
         <!--Custom Navigation Controller-->
         <scene sceneID="RiV-Ip-iHe">
             <objects>
-                <navigationController id="QJv-Ea-Ozk" customClass="CustomNavigationController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="QJv-Ea-Ozk" customClass="CustomNavigationController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="q2o-tz-al2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -129,13 +129,13 @@
         <!--Profile View Controller-->
         <scene sceneID="pSk-sL-Xf3">
             <objects>
-                <viewController id="Htn-XC-yxb" customClass="ProfileViewController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Htn-XC-yxb" customClass="ProfileViewController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="puM-39-InQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Uvw-3q-lR3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3CL-K1-N6w">
-                        <rect key="frame" x="0.0" y="0.0" width="318" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -148,9 +148,9 @@
         <!--Settings Table View Controller-->
         <scene sceneID="Uq7-iQ-o48">
             <objects>
-                <tableViewController id="L7j-NY-uig" customClass="SettingsTableViewController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="L7j-NY-uig" customClass="SettingsTableViewController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mxk-1H-vJu">
-                        <rect key="frame" x="0.0" y="0.0" width="318" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -183,7 +183,7 @@
         <!--Custom Navigation Controller-->
         <scene sceneID="Lkp-dC-xb8">
             <objects>
-                <navigationController id="hEj-xE-fxO" customClass="CustomNavigationController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="hEj-xE-fxO" customClass="CustomNavigationController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="79r-fa-Z0p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -199,7 +199,7 @@
         <!--Custom Navigation Controller-->
         <scene sceneID="HNo-vm-3S9">
             <objects>
-                <navigationController id="r4b-vc-GIS" customClass="CustomNavigationController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="r4b-vc-GIS" customClass="CustomNavigationController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d2r-OA-6d6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -215,7 +215,7 @@
         <!--Side Bar Table View Controller-->
         <scene sceneID="GvJ-mq-k6J">
             <objects>
-                <tableViewController id="tFR-5K-iqR" customClass="SideBarTableViewController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="tFR-5K-iqR" customClass="SideBarTableViewController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xQL-pv-Pvl">
                         <rect key="frame" x="0.0" y="0.0" width="260" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -298,7 +298,7 @@
         <!--Menu View Controller-->
         <scene sceneID="AP4-Ot-aUn">
             <objects>
-                <viewController id="pkW-p7-e5w" customClass="MenuViewController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pkW-p7-e5w" customClass="MenuViewController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ge6-gG-eeA"/>
                         <viewControllerLayoutGuide type="bottom" id="O7C-Hj-nVo"/>
@@ -310,8 +310,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPH-CP-TOO">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GpH-Gh-8WH">
-                                        <rect key="frame" x="257" y="0.0" width="318" height="568"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpH-Gh-8WH">
+                                        <rect key="frame" x="260" y="0.0" width="568" height="568"/>
                                         <connections>
                                             <segue destination="QJv-Ea-Ozk" kind="embed" id="Exn-wQ-3aj"/>
                                         </connections>
@@ -363,7 +363,7 @@
         <!--Menu View Controller-->
         <scene sceneID="wG1-3L-mml">
             <objects>
-                <viewController id="0xl-k3-4DB" customClass="MenuViewController" customModule="summerproject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0xl-k3-4DB" customClass="MenuViewController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jvh-OW-Gjb"/>
                         <viewControllerLayoutGuide type="bottom" id="QJ3-Bg-Afp"/>
@@ -375,8 +375,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fx-fx-DCS">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4dT-Ja-uwF">
-                                        <rect key="frame" x="257" y="0.0" width="318" height="568"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dT-Ja-uwF">
+                                        <rect key="frame" x="260" y="0.0" width="568" height="568"/>
                                         <connections>
                                             <segue destination="hEj-xE-fxO" kind="embed" id="kL4-bX-7ES"/>
                                         </connections>
@@ -430,6 +430,6 @@
         <image name="Menu" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sU0-oG-qdo"/>
+        <segue reference="bvN-py-7Ni"/>
     </inferredMetricsTieBreakers>
 </document>
