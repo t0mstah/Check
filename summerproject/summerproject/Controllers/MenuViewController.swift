@@ -13,6 +13,12 @@ class MenuViewController: UIViewController {
 
     let leftMenuWidth:CGFloat = 260
     
+    override func viewDidAppear(animated: Bool) {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.closeMenu()
+        }
+    }
+    
     override func viewDidLoad() {
         
         // Initially close menu programmatically.  This needs to be done on the main thread initially in order to work.
@@ -22,6 +28,7 @@ class MenuViewController: UIViewController {
         
         // Tab bar controller's child pages have a top-left button toggles the menu
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "toggleMenu", name: "toggleMenu", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "closeMenu", name: "closeMenu", object: nil)
         
     }
     

@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Stanford University. All rights reserved.
 //
 
-import Foundation
+// import Foundation
 
-class Reviews : ReviewsProtocol {
+// class Reviews : ReviewsProtocol {
     
     
-}
+// }
