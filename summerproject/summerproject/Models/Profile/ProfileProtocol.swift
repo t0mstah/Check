@@ -15,6 +15,7 @@ import Parse
 protocol ProfileProtocol {
 
     var profilePicture : String { get set } // TODO: Not sure yet.
+    var name: String { get set }
     var biography : String { get set }
     var phoneNumber: String { get set }
     var checkPoints: Int { get set }

@@ -13,16 +13,18 @@ import Parse
 class Profile : ProfileProtocol {
 
     var profilePicture : String = ""
+    var name: String = ""
     var biography : String = ""
     var phoneNumber: String = ""
     var checkPoints: Int = 0
     var isCheckVerified: Bool = false
 
     // Constructor for the created user.
-    init(profilePicture: String, biography: String, phoneNumber : String,
+    init(profilePicture: String, name: String, biography: String, phoneNumber : String,
         checkPoints : Int, isCheckVerified : Bool) {
 
         self.profilePicture = profilePicture
+        self.name = name
         self.biography = biography
         self.phoneNumber = phoneNumber
         self.checkPoints = checkPoints

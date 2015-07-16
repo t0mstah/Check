@@ -182,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				4B2CD2F81B560C540040BEEA /* PRINC___.TTF */,
+				5AE83EF01B57584300B3C650 /* Fonts */,
 				5A2A13A91B5314AB00BA9535 /* Frameworks */,
 				4BCE29E51B2E76F400B74DCA /* summerproject */,
 				4BCE29FE1B2E76F400B74DCA /* summerprojectTests */,
@@ -243,14 +244,6 @@
 		5A2A13A91B5314AB00BA9535 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B2CD2E61B5609720040BEEA /* PrintBold.otf */,
-				4B2CD2E71B5609720040BEEA /* PrintDashed.otf */,
-				4B2CD2E81B5609720040BEEA /* PrintClearly.otf */,
-				4B2CD2E91B5609720040BEEA /* PrintBold_TT.ttf */,
-				4B2CD2EA1B5609720040BEEA /* PrintClearly_TT.ttf */,
-				4B2CD2EB1B5609720040BEEA /* PrintDashed_TT.ttf */,
-				4B2CD2EC1B5609720040BEEA /* PRIND___.TTF */,
-				4B2CD2ED1B5609720040BEEA /* PRINC___.TTF */,
 				5A2A13AE1B53158B00BA9535 /* Accounts.framework */,
 				5A2A13AF1B53158B00BA9535 /* AudioToolbox.framework */,
 				5A2A13B01B53158B00BA9535 /* CFNetwork.framework */,
@@ -343,6 +336,21 @@
 				5AA6F2AA1B54D1FA0006D6B3 /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		5AE83EF01B57584300B3C650 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4B2CD2E61B5609720040BEEA /* PrintBold.otf */,
+				4B2CD2E71B5609720040BEEA /* PrintDashed.otf */,
+				4B2CD2E81B5609720040BEEA /* PrintClearly.otf */,
+				4B2CD2E91B5609720040BEEA /* PrintBold_TT.ttf */,
+				4B2CD2EA1B5609720040BEEA /* PrintClearly_TT.ttf */,
+				4B2CD2EB1B5609720040BEEA /* PrintDashed_TT.ttf */,
+				4B2CD2EC1B5609720040BEEA /* PRIND___.TTF */,
+				4B2CD2ED1B5609720040BEEA /* PRINC___.TTF */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
