@@ -12,8 +12,8 @@ import Parse
 class ParseHandler: ParseHandlerProtocol {
     
     
-    func addParseProfile(userProfile: Profile, parseProfileId: String) {
-        let userParseProfile = PFObject(className: parseProfileId as String)
+    func addParseProfile(userProfile: Profile, parseProfileObjectName: String) {
+        let userParseProfile = PFObject(className: parseProfileObjectName)
         
         // Populate and add all user data into the Parse Profile object.
         userParseProfile["profilePicture"] = userProfile.profilePicture
@@ -28,37 +28,55 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             println("Parse user profile has been added successfully.")
         }
+        
+        userProfile.id = userParseProfile.objectId
     }
     
-    func updateParseProfile(parseProfileId: String) {
+    func updateParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?) {
+        
+        var query = PFQuery(className: parseProfileObjectName)
+        query.getObjectInBackgroundWithId(parseProfileObjectId!) {
+            (userParseProfile: PFObject?, error: NSError?) -> Void in
+//            if error != nil {
+//                println(error)
+//            }
+//            else if let gameScore = gameScore {
+//                gameScore["cheatMode"] = true
+//                gameScore["score"] = 1338
+//                gameScore.saveInBackground()
+//            }
+        }
+//        objectId, createdAt, updatedAt
+        // error check - Parse profile does not exist.
+    }
+    
+    func deleteParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?) {
         
         // error check - Parse profile does not exist.
     }
     
-    func deleteParseProfile(parseProfileId: String) {
-        
-        // error check - Parse profile does not exist.
-    }
-    
-    func getParseProfile(parseProfileId : String) -> Profile {
+    func getParseProfile(parseProfileObjectName : String, parseProfileObjectId: String?) -> Profile {
         
         var userProfile = Profile()
-        
-        let userParseProfile = PFObject(className: parseProfileId as String)
 
-        // Populate userProfile object.
-        
-//        userProfile.profilePicture = userParseProfile["profilePicture"]
-//        userProfile.name = userParseProfile["name"]
-//        userProfile.biography = userParseProfile["biography"]
-//        userProfile.phoneNumber = userParseProfile["phoneNumber"]
-//        userProfile.checkPoints = userParseProfile["checkPoints"]
-//        userProfile.isCheckVerified = userParseProfile["isCheckVerified"]
-//        userProfile.reviews = userParseProfile["reviews"]
-//        userProfile.settings = userParseProfile["settings"]
-
-        userParseProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            println("User Profile loaded successfully")
+        var query = PFQuery(className: parseProfileObjectName)
+        query.getObjectInBackgroundWithId(parseProfileObjectId!) {
+            (userParseProfile: PFObject?, error: NSError?) -> Void in
+            
+            if error == nil && userParseProfile != nil {
+                
+//                userProfile.profilePicture = userParseProfile["profilePicture"] as! String
+//                userProfile.name = userParseProfile["name"] as! String
+//                userProfile.biography = userParseProfile["biography"] as! String
+//                userProfile.phoneNumber = userParseProfile["phoneNumber"] as! String
+//                userProfile.checkPoints = userParseProfile["checkPoints"] as! Int
+//                userProfile.isCheckVerified = userParseProfile["isCheckVerified"] as! Bool
+//                userProfile.reviews = userParseProfile["reviews"] as! String
+//                userProfile.settings = userParseProfile["settings"] as! String
+                
+            } else {
+                println("Error occured while fetching ParseProfile")
+            }
         }
         
         return userProfile

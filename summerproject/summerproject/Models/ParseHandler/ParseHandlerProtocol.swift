@@ -14,18 +14,18 @@ protocol ParseHandlerProtocol {
     
     // REQUIRES: A user profile.
     // EFFECTS: Adds a new user profile in Parse.
-    func addParseProfile(userProfile: Profile, parseProfileId: String)
+    func addParseProfile(userProfile: Profile, parseProfileObjectName: String)
 
     // REQUIRES: A user profile.
     // EFFECTS: Updates the Parse profile stored in the cloud.
-    func updateParseProfile(parseProfileId: String)
+    func updateParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?)
     
     // REQUIRES: A user profile.
     // EFFECTS: Deletes the Parse profile.
-    func deleteParseProfile(parseProfileId: String)
+    func deleteParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?)
     
     // EFFECTS: Returns the Parse profile.
-    func getParseProfile(parseProfileId : String) -> Profile
+    func getParseProfile(parseProfileObjectName : String, parseProfileObjectId: String?) -> Profile
     
     // MARK: Reviews stored in Parse.
     func addParseReview(userReview: Reviews)

@@ -12,7 +12,8 @@
 import Foundation
 
 protocol ProfileProtocol {
-
+    
+    var id: String? { get set }
     var profilePicture : String { get set } // TODO: Not sure yet.
     var name: String { get set }
     var biography : String { get set }

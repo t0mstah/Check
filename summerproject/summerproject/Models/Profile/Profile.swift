@@ -11,6 +11,7 @@ import Foundation
 // TODO: Add facebook, twitter, signup with email profiles etc.
 class Profile : ProfileProtocol {
 
+    var id: String?
     var profilePicture : String
     var name: String
     var biography : String
@@ -24,6 +25,7 @@ class Profile : ProfileProtocol {
 
     // Constructor for the created user.
     init () {
+        id = ""
         profilePicture = ""
         name = ""
         biography = ""
@@ -36,9 +38,10 @@ class Profile : ProfileProtocol {
         isUsingParse = true
     }
 
-    init(profilePicture: String, name: String, biography: String, phoneNumber : String,
+    init(id: String, profilePicture: String, name: String, biography: String, phoneNumber : String,
         checkPoints : Int, isCheckVerified : Bool, reviews: Reviews, settings: Settings) {
 
+        self.id = id
         self.profilePicture = profilePicture
         self.name = name
         self.biography = biography
@@ -54,10 +57,10 @@ class Profile : ProfileProtocol {
     func getProfile(userProfile: String) -> Profile {
         
         if isUsingParse {
-            return ParseHandler().getParseProfile(userProfile)
+            return ParseHandler().getParseProfile(userProfile, parseProfileObjectId: self.id)
         }
         
-        return ParseHandler().getParseProfile(userProfile)
+        return ParseHandler().getParseProfile(userProfile, parseProfileObjectId: self.id)
     }
     
     func updateProfile(){
