@@ -12,12 +12,11 @@ import Parse
 class ParseHandler: ParseHandlerProtocol {
     
     
-    // User profile interface stored in Parse.
     func addParseProfile(userReview: Profile) -> Void {
         
     }
     
-    func editParseProfile(userProfile: Profile) -> Void  {
+    func updateParseProfile(userProfile: Profile) -> Void  {
         
     }
     
@@ -58,7 +57,7 @@ class ParseHandler: ParseHandlerProtocol {
         
     }
     
-    func editParseReview(userReview: Reviews) -> Void  {
+    func updateParseReview(userReview: Reviews) -> Void  {
         
     }
     
@@ -72,7 +71,7 @@ class ParseHandler: ParseHandlerProtocol {
         
     }
     
-    func editParseSettings(userProfile: Settings) -> Void  {
+    func updateParseSettings(userProfile: Settings) -> Void  {
         
     }
     

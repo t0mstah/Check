@@ -25,7 +25,7 @@ protocol ReviewsProtocol {
 
     // REQUIRES: A reviewId.
     // EFFECTS: Edits the person's review and changes the modification date.
-    func editReview(reviewId : Int32)
+    func updateReview(reviewId : Int32)
     
     // REQUIRES: A reviewId.
     // EFFECTS: Remove the given review.

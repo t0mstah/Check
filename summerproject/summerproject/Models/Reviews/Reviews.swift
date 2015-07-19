@@ -26,7 +26,7 @@ class Reviews : ReviewsProtocol {
 //        addParseReview(review)
     }
     
-    func editReview(reviewId: Int32) {
+    func updateReview(reviewId: Int32) {
         
         // error check: review does not exist.
         

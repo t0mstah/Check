@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 // TODO: Add facebook, twitter, signup with email profiles etc.
 class Profile : ProfileProtocol {
@@ -40,9 +39,7 @@ class Profile : ProfileProtocol {
         return ParseHandler().getParseProfile()
     }
     
-    func editProfile(userProfile: Profile) {
-
-        // TODO: error check - user profile does not exist.
+    func updateProfile() -> Void {
     }
     
     func removeProfile(userProfile: Profile) {

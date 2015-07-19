@@ -10,7 +10,6 @@
 // profiles. Examples: Facebook, Twitter, Login with Email etc.
 
 import Foundation
-import Parse
 
 protocol ProfileProtocol {
 
@@ -26,9 +25,10 @@ protocol ProfileProtocol {
     // EFFECTS: Returns the user profile
     func getProfile(userProfile: String) -> Profile
     
-    // EFFECTS: Updates the user profile
-    func editProfile(userProfile: Profile) -> Void
-    
+    // EFFECTS: Updates the current profile.
+    //          This should be called every time a variable here is modified.
+    func updateProfile() -> Void
+
     // EFFECTS: Removes the user profile
     func removeProfile(userProfile: Profile) -> Void
 }
