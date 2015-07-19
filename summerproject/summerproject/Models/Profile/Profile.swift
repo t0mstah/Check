@@ -18,10 +18,12 @@ class Profile : ProfileProtocol {
     var phoneNumber: String = ""
     var checkPoints: Int = 0
     var isCheckVerified: Bool = false
+    var reviews: Reviews
+    var settings: Settings
 
     // Constructor for the created user.
     init(profilePicture: String, name: String, biography: String, phoneNumber : String,
-        checkPoints : Int, isCheckVerified : Bool) {
+        checkPoints : Int, isCheckVerified : Bool, reviews: Reviews, settings: Settings) {
 
         self.profilePicture = profilePicture
         self.name = name
@@ -29,6 +31,8 @@ class Profile : ProfileProtocol {
         self.phoneNumber = phoneNumber
         self.checkPoints = checkPoints
         self.isCheckVerified = isCheckVerified
+        self.reviews = reviews
+        self.settings = settings
     }
 
     // EFFECTS: Returns the user profile

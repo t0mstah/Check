@@ -51,6 +51,12 @@
 		5AA6F2B11B54D1FA0006D6B3 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */; };
 		5AA6F2B21B54D1FA0006D6B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2AA1B54D1FA0006D6B3 /* User.swift */; };
 		5AA6F2B31B54D1FA0006D6B3 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2AB1B54D1FA0006D6B3 /* UserProtocol.swift */; };
+		5AE6272E1B5B85A30055C4FC /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6272D1B5B85A30055C4FC /* NotificationSettings.swift */; };
+		5AE627301B5B85B40055C4FC /* NotificationSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6272F1B5B85B40055C4FC /* NotificationSettingsProtocol.swift */; };
+		5AE627341B5B861A0055C4FC /* PrivacySettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE627331B5B861A0055C4FC /* PrivacySettingsProtocol.swift */; };
+		5AE627361B5B862C0055C4FC /* PrivacySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE627351B5B862C0055C4FC /* PrivacySettings.swift */; };
+		5AEF28031B5B875800DBF7A1 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF28021B5B875800DBF7A1 /* LoginProtocol.swift */; };
+		5AEF28051B5B876E00DBF7A1 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF28041B5B876E00DBF7A1 /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,11 +81,6 @@
 		4B2CD2E61B5609720040BEEA /* PrintBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintBold.otf; path = summerproject/Fonts/PrintBold.otf; sourceTree = "<group>"; };
 		4B2CD2E71B5609720040BEEA /* PrintDashed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintDashed.otf; path = summerproject/Fonts/PrintDashed.otf; sourceTree = "<group>"; };
 		4B2CD2E81B5609720040BEEA /* PrintClearly.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintClearly.otf; path = summerproject/Fonts/PrintClearly.otf; sourceTree = "<group>"; };
-		4B2CD2E91B5609720040BEEA /* PrintBold_TT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintBold_TT.ttf; path = summerproject/Fonts/PrintBold_TT.ttf; sourceTree = "<group>"; };
-		4B2CD2EA1B5609720040BEEA /* PrintClearly_TT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintClearly_TT.ttf; path = summerproject/Fonts/PrintClearly_TT.ttf; sourceTree = "<group>"; };
-		4B2CD2EB1B5609720040BEEA /* PrintDashed_TT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintDashed_TT.ttf; path = summerproject/Fonts/PrintDashed_TT.ttf; sourceTree = "<group>"; };
-		4B2CD2EC1B5609720040BEEA /* PRIND___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PRIND___.TTF"; path = "summerproject/Fonts/PRIND___.TTF"; sourceTree = "<group>"; };
-		4B2CD2ED1B5609720040BEEA /* PRINC___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PRINC___.TTF"; path = "summerproject/Fonts/PRINC___.TTF"; sourceTree = "<group>"; };
 		4B2CD2F61B560BF10040BEEA /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		4B46F0221B5B5C3900573A1F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4BCE29E31B2E76F400B74DCA /* Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Check.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +121,12 @@
 		5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
 		5AA6F2AA1B54D1FA0006D6B3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5AA6F2AB1B54D1FA0006D6B3 /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
+		5AE6272D1B5B85A30055C4FC /* NotificationSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationSettings.swift; path = summerproject/Models/NotificationSettings/NotificationSettings.swift; sourceTree = SOURCE_ROOT; };
+		5AE6272F1B5B85B40055C4FC /* NotificationSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationSettingsProtocol.swift; path = summerproject/Models/NotificationSettings/NotificationSettingsProtocol.swift; sourceTree = SOURCE_ROOT; };
+		5AE627331B5B861A0055C4FC /* PrivacySettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacySettingsProtocol.swift; path = Models/PrivacySettings/PrivacySettingsProtocol.swift; sourceTree = "<group>"; };
+		5AE627351B5B862C0055C4FC /* PrivacySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacySettings.swift; path = Models/PrivacySettings/PrivacySettings.swift; sourceTree = "<group>"; };
+		5AEF28021B5B875800DBF7A1 /* LoginProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginProtocol.swift; path = Login/LoginProtocol.swift; sourceTree = "<group>"; };
+		5AEF28041B5B876E00DBF7A1 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = Login/Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,9 +269,12 @@
 		5A60729E1B53405D008D9C5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5AEF28011B5B873500DBF7A1 /* Login */,
+				5AA6F2A61B54D1FA0006D6B3 /* Settings */,
 				5AA6F2A01B54D1FA0006D6B3 /* Profile */,
 				5AA6F2A31B54D1FA0006D6B3 /* Reviews */,
-				5AA6F2A61B54D1FA0006D6B3 /* Settings */,
+				5AE627311B5B85C30055C4FC /* NotificationSettings */,
+				5AE627321B5B85F70055C4FC /* PrivacySettings */,
 				5AA6F2A91B54D1FA0006D6B3 /* User */,
 			);
 			path = Models;
@@ -317,19 +327,42 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		5AE627311B5B85C30055C4FC /* NotificationSettings */ = {
+			isa = PBXGroup;
+			children = (
+				5AE6272D1B5B85A30055C4FC /* NotificationSettings.swift */,
+				5AE6272F1B5B85B40055C4FC /* NotificationSettingsProtocol.swift */,
+			);
+			name = NotificationSettings;
+			sourceTree = "<group>";
+		};
+		5AE627321B5B85F70055C4FC /* PrivacySettings */ = {
+			isa = PBXGroup;
+			children = (
+				5AE627331B5B861A0055C4FC /* PrivacySettingsProtocol.swift */,
+				5AE627351B5B862C0055C4FC /* PrivacySettings.swift */,
+			);
+			name = PrivacySettings;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		5AE83EF01B57584300B3C650 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				4B2CD2E61B5609720040BEEA /* PrintBold.otf */,
 				4B2CD2E71B5609720040BEEA /* PrintDashed.otf */,
 				4B2CD2E81B5609720040BEEA /* PrintClearly.otf */,
-				4B2CD2E91B5609720040BEEA /* PrintBold_TT.ttf */,
-				4B2CD2EA1B5609720040BEEA /* PrintClearly_TT.ttf */,
-				4B2CD2EB1B5609720040BEEA /* PrintDashed_TT.ttf */,
-				4B2CD2EC1B5609720040BEEA /* PRIND___.TTF */,
-				4B2CD2ED1B5609720040BEEA /* PRINC___.TTF */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		5AEF28011B5B873500DBF7A1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5AEF28021B5B875800DBF7A1 /* LoginProtocol.swift */,
+				5AEF28041B5B876E00DBF7A1 /* Login.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,15 +469,20 @@
 			files = (
 				4B46F0241B5B5C4B00573A1F /* Main.storyboard in Sources */,
 				5AA6F2B31B54D1FA0006D6B3 /* UserProtocol.swift in Sources */,
+				5AE6272E1B5B85A30055C4FC /* NotificationSettings.swift in Sources */,
 				5AA6F2B11B54D1FA0006D6B3 /* SettingsProtocol.swift in Sources */,
 				5AA6F2AC1B54D1FA0006D6B3 /* Profile.swift in Sources */,
 				4B0F818C1B54C1670077A371 /* MenuViewController.swift in Sources */,
 				5AA6F2AD1B54D1FA0006D6B3 /* ProfileProtocol.swift in Sources */,
+				5AE627361B5B862C0055C4FC /* PrivacySettings.swift in Sources */,
+				5AE627301B5B85B40055C4FC /* NotificationSettingsProtocol.swift in Sources */,
 				4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */,
 				5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */,
 				5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */,
+				5AEF28031B5B875800DBF7A1 /* LoginProtocol.swift in Sources */,
 				4B0F81701B54A97D0077A371 /* ProfileViewController.swift in Sources */,
 				4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */,
+				5AEF28051B5B876E00DBF7A1 /* Login.swift in Sources */,
 				5AA6F2AF1B54D1FA0006D6B3 /* ReviewsProtocol.swift in Sources */,
 				4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */,
 				4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */,
@@ -453,6 +491,7 @@
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,
 				4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */,
 				5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */,
+				5AE627341B5B861A0055C4FC /* PrivacySettingsProtocol.swift in Sources */,
 				5AA6F2B21B54D1FA0006D6B3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
