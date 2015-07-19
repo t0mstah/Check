@@ -24,5 +24,5 @@ protocol ProfileProtocol {
     var settings: Settings { get set }
 
     // EFFECTS: Returns the user profile
-    func getProfile(userProfile: String) -> Void
+    func getProfile(userProfile: String) -> Profile
 }

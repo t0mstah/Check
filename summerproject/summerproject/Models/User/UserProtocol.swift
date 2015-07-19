@@ -12,7 +12,7 @@ protocol UserProtocol {
     
     // REQUIRES: A user profile.
     // EFFECTS: Returns true if user is created successfully, false otherwise.
-    func addUser(userProfile: Profile) -> Bool
+    func addUser() -> Bool
     
 	// REQUIRES: A user profile.
 	// EFFECTS: Edits the user profile

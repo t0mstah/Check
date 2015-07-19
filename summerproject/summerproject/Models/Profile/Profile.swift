@@ -36,13 +36,8 @@ class Profile : ProfileProtocol {
     }
 
     // EFFECTS: Returns the user profile
-    func getProfile(userProfile: String) -> Void {
-        let userProfile = PFObject(className: userProfile as String)
-        userProfile["biography"] = "Hi, I am biography."
-        userProfile["rewardPoints"] = 10
+    func getProfile(userProfile: String) -> Profile {
         
-        userProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            println("User Profile has been saved.")
-        }
+        return ParseHandler().getParseProfile()
     }
 }

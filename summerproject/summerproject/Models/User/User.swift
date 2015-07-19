@@ -10,9 +10,12 @@ import Foundation
 
 class User : UserProtocol {
     
-    func addUser(userProfile: Profile) -> Bool {
-
+    func addUser() -> Bool {
         
+        // TODO: Create new profile here.
+//        var userProfile = new Profile {
+//        }
+
         return true
     }
     
@@ -23,6 +26,7 @@ class User : UserProtocol {
     
     
     func removeUser(userProfile: Profile) -> Bool {
+
         return true
     }
 }

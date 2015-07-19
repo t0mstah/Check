@@ -10,4 +10,8 @@ import Foundation
 
 protocol LoginProtocol {
     
+    
+    // REQUIRES: A Profile
+    // EFFECTS: Returns true if user has a logged in session, false otherwise.
+    func userIsLoggedIn(userProfile: Profile) -> Bool
 }

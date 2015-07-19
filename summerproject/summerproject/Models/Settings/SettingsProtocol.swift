@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Stanford University. All rights reserved.
 //
 
+// This file handles the settings portion of a user's profile.
 import Foundation
 
 protocol SettingsProtocol {

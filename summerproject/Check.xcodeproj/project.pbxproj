@@ -41,6 +41,8 @@
 		5A2A13C51B53158C00BA9535 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13B81B53158C00BA9535 /* Social.framework */; };
 		5A2A13C61B53158C00BA9535 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13B91B53158C00BA9535 /* StoreKit.framework */; };
 		5A2A13C71B53158C00BA9535 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13BA1B53158C00BA9535 /* SystemConfiguration.framework */; };
+		5A6642FC1B5C35EF005F5FCB /* ParseHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6642FB1B5C35EF005F5FCB /* ParseHandlerProtocol.swift */; };
+		5A6642FE1B5C361D005F5FCB /* ParseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6642FD1B5C361D005F5FCB /* ParseHandler.swift */; };
 		5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E566D1B5372E3006438BC /* LoginViewController.swift */; };
 		5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E566F1B53730F006438BC /* SignUpViewController.swift */; };
 		5AA6F2AC1B54D1FA0006D6B3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A11B54D1FA0006D6B3 /* Profile.swift */; };
@@ -107,6 +109,8 @@
 		5A2A13B81B53158C00BA9535 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		5A2A13B91B53158C00BA9535 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5A2A13BA1B53158C00BA9535 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5A6642FB1B5C35EF005F5FCB /* ParseHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseHandlerProtocol.swift; path = ParseHandler/ParseHandlerProtocol.swift; sourceTree = "<group>"; };
+		5A6642FD1B5C361D005F5FCB /* ParseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseHandler.swift; path = ParseHandler/ParseHandler.swift; sourceTree = "<group>"; };
 		5A6E566D1B5372E3006438BC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A6E566F1B53730F006438BC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A6E56711B5377BF006438BC /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tutorial1ViewController.swift; path = Tutorial/Tutorial1ViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 		5A60729E1B53405D008D9C5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5A6642FA1B5C3522005F5FCB /* ParseHandler */,
 				5AEF28011B5B873500DBF7A1 /* Login */,
 				5AA6F2A61B54D1FA0006D6B3 /* Settings */,
 				5AA6F2A01B54D1FA0006D6B3 /* Profile */,
@@ -278,6 +283,15 @@
 				5AA6F2A91B54D1FA0006D6B3 /* User */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5A6642FA1B5C3522005F5FCB /* ParseHandler */ = {
+			isa = PBXGroup;
+			children = (
+				5A6642FB1B5C35EF005F5FCB /* ParseHandlerProtocol.swift */,
+				5A6642FD1B5C361D005F5FCB /* ParseHandler.swift */,
+			);
+			name = ParseHandler;
 			sourceTree = "<group>";
 		};
 		5A6E56751B5377EB006438BC /* Tutorial */ = {
@@ -483,11 +497,13 @@
 				4B0F81701B54A97D0077A371 /* ProfileViewController.swift in Sources */,
 				4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */,
 				5AEF28051B5B876E00DBF7A1 /* Login.swift in Sources */,
+				5A6642FC1B5C35EF005F5FCB /* ParseHandlerProtocol.swift in Sources */,
 				5AA6F2AF1B54D1FA0006D6B3 /* ReviewsProtocol.swift in Sources */,
 				4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */,
 				4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */,
 				5AA6F2AE1B54D1FA0006D6B3 /* Reviews.swift in Sources */,
 				4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */,
+				5A6642FE1B5C361D005F5FCB /* ParseHandler.swift in Sources */,
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,
 				4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */,
 				5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */,

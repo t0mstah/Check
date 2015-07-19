@@ -15,14 +15,28 @@ class Reviews : ReviewsProtocol {
 //    init(date: NSDate, reviews: [String],)
 
     func getReviews() -> [String] {
+        
         return review
+        
+//        getParseReview(review)
     }
     
     func addReview(review: String) {
         
+//        addParseReview(review)
     }
     
     func editReview(reviewId: Int32) {
         
+        // error check: review does not exist.
+        
+//        editParseReview(review) 
+    }
+    
+    func removeReview(reviewId: Int32) {
+        
+        // error check: review does not exist.
+        
+//        removeParseReview(review)
     }
 }
