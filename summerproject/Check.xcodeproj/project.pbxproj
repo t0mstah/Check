@@ -75,11 +75,6 @@
 		4B2CD2E61B5609720040BEEA /* PrintBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintBold.otf; path = summerproject/Fonts/PrintBold.otf; sourceTree = "<group>"; };
 		4B2CD2E71B5609720040BEEA /* PrintDashed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintDashed.otf; path = summerproject/Fonts/PrintDashed.otf; sourceTree = "<group>"; };
 		4B2CD2E81B5609720040BEEA /* PrintClearly.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintClearly.otf; path = summerproject/Fonts/PrintClearly.otf; sourceTree = "<group>"; };
-		4B2CD2E91B5609720040BEEA /* PrintBold_TT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintBold_TT.ttf; path = summerproject/Fonts/PrintBold_TT.ttf; sourceTree = "<group>"; };
-		4B2CD2EA1B5609720040BEEA /* PrintClearly_TT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintClearly_TT.ttf; path = summerproject/Fonts/PrintClearly_TT.ttf; sourceTree = "<group>"; };
-		4B2CD2EB1B5609720040BEEA /* PrintDashed_TT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintDashed_TT.ttf; path = summerproject/Fonts/PrintDashed_TT.ttf; sourceTree = "<group>"; };
-		4B2CD2EC1B5609720040BEEA /* PRIND___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PRIND___.TTF"; path = "summerproject/Fonts/PRIND___.TTF"; sourceTree = "<group>"; };
-		4B2CD2ED1B5609720040BEEA /* PRINC___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PRINC___.TTF"; path = "summerproject/Fonts/PRINC___.TTF"; sourceTree = "<group>"; };
 		4B2CD2F61B560BF10040BEEA /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		4B46F0221B5B5C3900573A1F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4BCE29E31B2E76F400B74DCA /* Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Check.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,11 +318,6 @@
 				4B2CD2E61B5609720040BEEA /* PrintBold.otf */,
 				4B2CD2E71B5609720040BEEA /* PrintDashed.otf */,
 				4B2CD2E81B5609720040BEEA /* PrintClearly.otf */,
-				4B2CD2E91B5609720040BEEA /* PrintBold_TT.ttf */,
-				4B2CD2EA1B5609720040BEEA /* PrintClearly_TT.ttf */,
-				4B2CD2EB1B5609720040BEEA /* PrintDashed_TT.ttf */,
-				4B2CD2EC1B5609720040BEEA /* PRIND___.TTF */,
-				4B2CD2ED1B5609720040BEEA /* PRINC___.TTF */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
