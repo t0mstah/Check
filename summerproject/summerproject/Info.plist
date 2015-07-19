@@ -38,13 +38,8 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>PRINC___.TTF</string>
-		<string>PRIND___.TTF</string>
-		<string>PrintBold_TT.ttf</string>
 		<string>PrintBold.otf</string>
-		<string>PrintClearly_TT.ttf</string>
 		<string>PrintClearly.otf</string>
-		<string>PrintDashed_TT.ttf</string>
 		<string>PrintDashed.otf</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
