@@ -32,27 +32,48 @@ class ParseHandler: ParseHandlerProtocol {
         userProfile.id = userParseProfile.objectId
     }
     
-    func updateParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?) {
+    func updateParseProfile(userProfile: Profile, parseProfileObjectName: String, parseProfileObjectId: String?) {
         
         var query = PFQuery(className: parseProfileObjectName)
         query.getObjectInBackgroundWithId(parseProfileObjectId!) {
             (userParseProfile: PFObject?, error: NSError?) -> Void in
-//            if error != nil {
-//                println(error)
-//            }
-//            else if let gameScore = gameScore {
-//                gameScore["cheatMode"] = true
-//                gameScore["score"] = 1338
-//                gameScore.saveInBackground()
-//            }
+            
+            if error != nil {
+                println(error)
+            }
+            else if let userParseProfile = userParseProfile {
+                
+                userParseProfile["profilePicture"] = userProfile.profilePicture
+                userParseProfile["name"] = userProfile.name
+                userParseProfile["biography"] = userProfile.biography
+                userParseProfile["phoneNumber"] = userProfile.phoneNumber
+                userParseProfile["checkPoints"] = userProfile.checkPoints
+                userParseProfile["isCheckVerified"] = userProfile.checkPoints
+                userParseProfile["reviews"] = userProfile.reviews
+                userParseProfile["settings"] = userProfile.settings
+
+                userParseProfile.saveInBackground()
+            }
         }
-//        objectId, createdAt, updatedAt
         // error check - Parse profile does not exist.
     }
     
     func deleteParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?) {
         
         // error check - Parse profile does not exist.
+        
+        var query = PFQuery(className: parseProfileObjectName)
+        query.getObjectInBackgroundWithId(parseProfileObjectId!) {
+            (userParseProfile: PFObject?, error: NSError?) -> Void in
+            
+            if error == nil && userParseProfile != nil {
+                
+                userParseProfile?.deleteInBackground()
+                
+            } else {
+                println("Error occured while deleting Parse Profile")
+            }
+        }
     }
     
     func getParseProfile(parseProfileObjectName : String, parseProfileObjectId: String?) -> Profile {

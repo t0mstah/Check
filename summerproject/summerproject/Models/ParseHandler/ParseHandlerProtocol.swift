@@ -18,7 +18,7 @@ protocol ParseHandlerProtocol {
 
     // REQUIRES: A user profile.
     // EFFECTS: Updates the Parse profile stored in the cloud.
-    func updateParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?)
+    func updateParseProfile(userProfile: Profile, parseProfileObjectName: String, parseProfileObjectId: String?)
     
     // REQUIRES: A user profile.
     // EFFECTS: Deletes the Parse profile.
