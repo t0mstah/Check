@@ -25,4 +25,10 @@ protocol ProfileProtocol {
 
     // EFFECTS: Returns the user profile
     func getProfile(userProfile: String) -> Profile
+    
+    // EFFECTS: Updates the user profile
+    func editProfile(userProfile: Profile) -> Void
+    
+    // EFFECTS: Removes the user profile
+    func removeProfile(userProfile: Profile) -> Void
 }

@@ -35,9 +35,19 @@ class Profile : ProfileProtocol {
         self.settings = settings
     }
 
-    // EFFECTS: Returns the user profile
     func getProfile(userProfile: String) -> Profile {
         
         return ParseHandler().getParseProfile()
     }
+    
+    func editProfile(userProfile: Profile) {
+
+        // TODO: error check - user profile does not exist.
+    }
+    
+    func removeProfile(userProfile: Profile) {
+        
+        // TODO: error check - user profile does not exist.
+    }
+    
 }

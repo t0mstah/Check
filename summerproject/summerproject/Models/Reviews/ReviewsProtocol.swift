@@ -11,11 +11,11 @@ import Foundation
 
 protocol ReviewsProtocol {
     
-    // EFFECTS: Returns all reviews
     
 //    var date: NSDate { get set }
     var review: [String] { get set }
-    
+
+    // EFFECTS: Returns all reviews
     func getReviews() -> [String]
     
     // REQUIRES: A review.

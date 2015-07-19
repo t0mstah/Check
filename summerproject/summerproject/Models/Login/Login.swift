@@ -11,8 +11,12 @@ import Foundation
 
 class Login: LoginProtocol {
     
-    func userIsLoggedIn(userProfile: Profile) -> Bool {
+    func isLoggedIn(userProfile: Profile) -> Bool {
         
+        return true
+    }
+    
+    func logout(userProfile: Profile) -> Bool {
         return true
     }
 }

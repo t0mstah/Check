@@ -13,5 +13,9 @@ protocol LoginProtocol {
     
     // REQUIRES: A Profile
     // EFFECTS: Returns true if user has a logged in session, false otherwise.
-    func userIsLoggedIn(userProfile: Profile) -> Bool
+    func isLoggedIn(userProfile: Profile) -> Bool
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Returns true on successful log out, false otherwise.
+    func logout(userProfile: Profile) -> Bool
 }

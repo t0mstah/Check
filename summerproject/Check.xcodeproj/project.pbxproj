@@ -43,6 +43,8 @@
 		5A2A13C71B53158C00BA9535 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13BA1B53158C00BA9535 /* SystemConfiguration.framework */; };
 		5A6642FC1B5C35EF005F5FCB /* ParseHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6642FB1B5C35EF005F5FCB /* ParseHandlerProtocol.swift */; };
 		5A6642FE1B5C361D005F5FCB /* ParseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6642FD1B5C361D005F5FCB /* ParseHandler.swift */; };
+		5A6643011B5C4349005F5FCB /* SignUpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6643001B5C4349005F5FCB /* SignUpProtocol.swift */; };
+		5A6643031B5C4355005F5FCB /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6643021B5C4355005F5FCB /* SignUp.swift */; };
 		5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E566D1B5372E3006438BC /* LoginViewController.swift */; };
 		5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E566F1B53730F006438BC /* SignUpViewController.swift */; };
 		5AA6F2AC1B54D1FA0006D6B3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A11B54D1FA0006D6B3 /* Profile.swift */; };
@@ -51,8 +53,6 @@
 		5AA6F2AF1B54D1FA0006D6B3 /* ReviewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A51B54D1FA0006D6B3 /* ReviewsProtocol.swift */; };
 		5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */; };
 		5AA6F2B11B54D1FA0006D6B3 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */; };
-		5AA6F2B21B54D1FA0006D6B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2AA1B54D1FA0006D6B3 /* User.swift */; };
-		5AA6F2B31B54D1FA0006D6B3 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2AB1B54D1FA0006D6B3 /* UserProtocol.swift */; };
 		5AE6272E1B5B85A30055C4FC /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6272D1B5B85A30055C4FC /* NotificationSettings.swift */; };
 		5AE627301B5B85B40055C4FC /* NotificationSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6272F1B5B85B40055C4FC /* NotificationSettingsProtocol.swift */; };
 		5AE627341B5B861A0055C4FC /* PrivacySettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE627331B5B861A0055C4FC /* PrivacySettingsProtocol.swift */; };
@@ -111,6 +111,8 @@
 		5A2A13BA1B53158C00BA9535 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5A6642FB1B5C35EF005F5FCB /* ParseHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseHandlerProtocol.swift; path = ParseHandler/ParseHandlerProtocol.swift; sourceTree = "<group>"; };
 		5A6642FD1B5C361D005F5FCB /* ParseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseHandler.swift; path = ParseHandler/ParseHandler.swift; sourceTree = "<group>"; };
+		5A6643001B5C4349005F5FCB /* SignUpProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpProtocol.swift; path = SignUp/SignUpProtocol.swift; sourceTree = "<group>"; };
+		5A6643021B5C4355005F5FCB /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUp.swift; path = SignUp/SignUp.swift; sourceTree = "<group>"; };
 		5A6E566D1B5372E3006438BC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A6E566F1B53730F006438BC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A6E56711B5377BF006438BC /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tutorial1ViewController.swift; path = Tutorial/Tutorial1ViewController.swift; sourceTree = "<group>"; };
@@ -123,8 +125,6 @@
 		5AA6F2A51B54D1FA0006D6B3 /* ReviewsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsProtocol.swift; sourceTree = "<group>"; };
 		5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
-		5AA6F2AA1B54D1FA0006D6B3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5AA6F2AB1B54D1FA0006D6B3 /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
 		5AE6272D1B5B85A30055C4FC /* NotificationSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationSettings.swift; path = summerproject/Models/NotificationSettings/NotificationSettings.swift; sourceTree = SOURCE_ROOT; };
 		5AE6272F1B5B85B40055C4FC /* NotificationSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationSettingsProtocol.swift; path = summerproject/Models/NotificationSettings/NotificationSettingsProtocol.swift; sourceTree = SOURCE_ROOT; };
 		5AE627331B5B861A0055C4FC /* PrivacySettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacySettingsProtocol.swift; path = Models/PrivacySettings/PrivacySettingsProtocol.swift; sourceTree = "<group>"; };
@@ -273,14 +273,14 @@
 		5A60729E1B53405D008D9C5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5A6642FA1B5C3522005F5FCB /* ParseHandler */,
+				5AA6F2A01B54D1FA0006D6B3 /* Profile */,
+				5A6642FF1B5C432A005F5FCB /* SignUp */,
 				5AEF28011B5B873500DBF7A1 /* Login */,
 				5AA6F2A61B54D1FA0006D6B3 /* Settings */,
-				5AA6F2A01B54D1FA0006D6B3 /* Profile */,
 				5AA6F2A31B54D1FA0006D6B3 /* Reviews */,
 				5AE627311B5B85C30055C4FC /* NotificationSettings */,
 				5AE627321B5B85F70055C4FC /* PrivacySettings */,
-				5AA6F2A91B54D1FA0006D6B3 /* User */,
+				5A6642FA1B5C3522005F5FCB /* ParseHandler */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,6 +292,15 @@
 				5A6642FD1B5C361D005F5FCB /* ParseHandler.swift */,
 			);
 			name = ParseHandler;
+			sourceTree = "<group>";
+		};
+		5A6642FF1B5C432A005F5FCB /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5A6643001B5C4349005F5FCB /* SignUpProtocol.swift */,
+				5A6643021B5C4355005F5FCB /* SignUp.swift */,
+			);
+			name = SignUp;
 			sourceTree = "<group>";
 		};
 		5A6E56751B5377EB006438BC /* Tutorial */ = {
@@ -332,20 +341,11 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		5AA6F2A91B54D1FA0006D6B3 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				5AA6F2AB1B54D1FA0006D6B3 /* UserProtocol.swift */,
-				5AA6F2AA1B54D1FA0006D6B3 /* User.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
 		5AE627311B5B85C30055C4FC /* NotificationSettings */ = {
 			isa = PBXGroup;
 			children = (
-				5AE6272D1B5B85A30055C4FC /* NotificationSettings.swift */,
 				5AE6272F1B5B85B40055C4FC /* NotificationSettingsProtocol.swift */,
+				5AE6272D1B5B85A30055C4FC /* NotificationSettings.swift */,
 			);
 			name = NotificationSettings;
 			sourceTree = "<group>";
@@ -482,7 +482,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B46F0241B5B5C4B00573A1F /* Main.storyboard in Sources */,
-				5AA6F2B31B54D1FA0006D6B3 /* UserProtocol.swift in Sources */,
 				5AE6272E1B5B85A30055C4FC /* NotificationSettings.swift in Sources */,
 				5AA6F2B11B54D1FA0006D6B3 /* SettingsProtocol.swift in Sources */,
 				5AA6F2AC1B54D1FA0006D6B3 /* Profile.swift in Sources */,
@@ -495,10 +494,12 @@
 				5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */,
 				5AEF28031B5B875800DBF7A1 /* LoginProtocol.swift in Sources */,
 				4B0F81701B54A97D0077A371 /* ProfileViewController.swift in Sources */,
+				5A6643011B5C4349005F5FCB /* SignUpProtocol.swift in Sources */,
 				4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */,
 				5AEF28051B5B876E00DBF7A1 /* Login.swift in Sources */,
 				5A6642FC1B5C35EF005F5FCB /* ParseHandlerProtocol.swift in Sources */,
 				5AA6F2AF1B54D1FA0006D6B3 /* ReviewsProtocol.swift in Sources */,
+				5A6643031B5C4355005F5FCB /* SignUp.swift in Sources */,
 				4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */,
 				4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */,
 				5AA6F2AE1B54D1FA0006D6B3 /* Reviews.swift in Sources */,
@@ -508,7 +509,6 @@
 				4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */,
 				5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */,
 				5AE627341B5B861A0055C4FC /* PrivacySettingsProtocol.swift in Sources */,
-				5AA6F2B21B54D1FA0006D6B3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
