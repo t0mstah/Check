@@ -16,6 +16,10 @@ class Login: LoginProtocol {
         return true
     }
     
+    func login(userProfile: Profile) -> Bool {
+        return true
+    }
+    
     func logout(userProfile: Profile) -> Bool {
         return true
     }

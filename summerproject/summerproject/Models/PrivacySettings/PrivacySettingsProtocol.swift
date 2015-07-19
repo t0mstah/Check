@@ -12,5 +12,5 @@ import Foundation
 
 protocol PrivacySettingsProtocol {
     
-    
+    func updatePrivacySettings(userProfile: Profile)
 }

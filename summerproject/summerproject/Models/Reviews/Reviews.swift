@@ -30,13 +30,13 @@ class Reviews : ReviewsProtocol {
         
         // error check: review does not exist.
         
-//        editParseReview(review) 
+//        updateParseReview(reviewId)
     }
     
     func removeReview(reviewId: Int32) {
         
         // error check: review does not exist.
         
-//        removeParseReview(review)
+//        removeParseReview(reviewId)
     }
 }

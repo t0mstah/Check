@@ -11,16 +11,31 @@ import Foundation
 // TODO: Add facebook, twitter, signup with email profiles etc.
 class Profile : ProfileProtocol {
 
-    var profilePicture : String = ""
-    var name: String = ""
-    var biography : String = ""
-    var phoneNumber: String = ""
-    var checkPoints: Int = 0
-    var isCheckVerified: Bool = false
-    var reviews: Reviews
-    var settings: Settings
+    var profilePicture : String
+    var name: String
+    var biography : String
+    var phoneNumber: String
+    var checkPoints: Int
+    var isCheckVerified: Bool
+    var reviews: Reviews?
+    var settings: Settings?
+
+    var isUsingParse: Bool
 
     // Constructor for the created user.
+    init () {
+        profilePicture = ""
+        name = ""
+        biography = ""
+        phoneNumber = ""
+        checkPoints = 0
+        isCheckVerified = false
+        reviews = nil
+        settings = nil
+        
+        isUsingParse = true
+    }
+
     init(profilePicture: String, name: String, biography: String, phoneNumber : String,
         checkPoints : Int, isCheckVerified : Bool, reviews: Reviews, settings: Settings) {
 
@@ -32,14 +47,22 @@ class Profile : ProfileProtocol {
         self.isCheckVerified = isCheckVerified
         self.reviews = reviews
         self.settings = settings
+            
+        isUsingParse = true
     }
 
     func getProfile(userProfile: String) -> Profile {
         
-        return ParseHandler().getParseProfile()
+        if isUsingParse {
+            return ParseHandler().getParseProfile(userProfile)
+        }
+        
+        return ParseHandler().getParseProfile(userProfile)
     }
     
-    func updateProfile() -> Void {
+    func updateProfile(){
+        
+        // TODO: error check - user profile does not exist.
     }
     
     func removeProfile(userProfile: Profile) {

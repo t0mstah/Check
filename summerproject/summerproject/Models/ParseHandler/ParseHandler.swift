@@ -12,25 +12,42 @@ import Parse
 class ParseHandler: ParseHandlerProtocol {
     
     
-    func addParseProfile(userReview: Profile) -> Void {
+    func addParseProfile(userProfile: Profile, parseProfileId: String) {
+        let userParseProfile = PFObject(className: parseProfileId as String)
         
+        // Populate and add all user data into the Parse Profile object.
+        userParseProfile["profilePicture"] = userProfile.profilePicture
+        userParseProfile["name"] = userProfile.name
+        userParseProfile["biography"] = userProfile.biography
+        userParseProfile["phoneNumber"] = userProfile.phoneNumber
+        userParseProfile["checkPoints"] = userProfile.checkPoints
+        userParseProfile["isCheckVerified"] = userProfile.checkPoints
+        userParseProfile["reviews"] = userProfile.reviews
+        userParseProfile["settings"] = userProfile.settings
+        
+        userParseProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            println("Parse user profile has been added successfully.")
+        }
     }
     
-    func updateParseProfile(userProfile: Profile) -> Void  {
+    func updateParseProfile(parseProfileId: String) {
         
+        // error check - Parse profile does not exist.
     }
     
-    func deleteParseProfile(userProfile: Profile) -> Void  {
+    func deleteParseProfile(parseProfileId: String) {
         
+        // error check - Parse profile does not exist.
     }
     
-    func getParseProfile() -> Profile {
+    func getParseProfile(parseProfileId : String) -> Profile {
         
-//        var profile: String
-//        let userParseProfile = PFObject(className: profile as String)
-//
-//        // Populate userProfile object.
-//        
+        var userProfile = Profile()
+        
+        let userParseProfile = PFObject(className: parseProfileId as String)
+
+        // Populate userProfile object.
+        
 //        userProfile.profilePicture = userParseProfile["profilePicture"]
 //        userProfile.name = userParseProfile["name"]
 //        userProfile.biography = userParseProfile["biography"]
@@ -39,25 +56,24 @@ class ParseHandler: ParseHandlerProtocol {
 //        userProfile.isCheckVerified = userParseProfile["isCheckVerified"]
 //        userProfile.reviews = userParseProfile["reviews"]
 //        userProfile.settings = userParseProfile["settings"]
-//
-//        userProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-//            println("User Profile has been saved.")
-//        }
+
+        userParseProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            println("User Profile loaded successfully")
+        }
         
-        var userProfile: Profile?
-        return userProfile!
+        return userProfile
     }
     
     // Reviews stored in Parse.
-    func addParseReview(userReview: Reviews) -> Void  {
+    func addParseReview(userReview: Reviews) {
         
     }
     
-    func removeParseReview(userReview: Reviews) -> Void  {
+    func removeParseReview(userReview: Reviews) {
         
     }
     
-    func updateParseReview(userReview: Reviews) -> Void  {
+    func updateParseReview(userReview: Reviews) {
         
     }
     
@@ -67,11 +83,11 @@ class ParseHandler: ParseHandlerProtocol {
     }
     
     // Settings stored in Parse.
-    func addParseSettings(userProfile: Settings) -> Void  {
+    func addParseSettings(userProfile: Settings) {
         
     }
     
-    func updateParseSettings(userProfile: Settings) -> Void  {
+    func updateParseSettings(userProfile: Settings) {
         
     }
     

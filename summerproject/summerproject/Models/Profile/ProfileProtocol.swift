@@ -19,16 +19,19 @@ protocol ProfileProtocol {
     var phoneNumber: String { get set }
     var checkPoints: Int { get set }
     var isCheckVerified: Bool { get set }
-    var reviews: Reviews { get set }
-    var settings: Settings { get set }
+    var reviews: Reviews? { get set }
+    var settings: Settings? { get set }
+    
+    // Internal states
+    var isUsingParse: Bool { get set }
 
     // EFFECTS: Returns the user profile
     func getProfile(userProfile: String) -> Profile
     
     // EFFECTS: Updates the current profile.
     //          This should be called every time a variable here is modified.
-    func updateProfile() -> Void
+    func updateProfile()
 
     // EFFECTS: Removes the user profile
-    func removeProfile(userProfile: Profile) -> Void
+    func removeProfile(userProfile: Profile)
 }
