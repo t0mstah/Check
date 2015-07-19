@@ -14,5 +14,11 @@ protocol ReviewsProtocol {
     // EFFECTS: Returns all reviews
     
 //    var date: NSDate { get set }
-    var review: String { get set }
+    var review: [String] { get set }
+    
+    func getReviews() -> [String]
+    
+    func addReview(review: String)
+    
+    func editReview(reviewId : Int32)
 }

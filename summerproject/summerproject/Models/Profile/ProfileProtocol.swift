@@ -20,6 +20,8 @@ protocol ProfileProtocol {
     var phoneNumber: String { get set }
     var checkPoints: Int { get set }
     var isCheckVerified: Bool { get set }
+    var reviews: Reviews { get set }
+    var settings: Settings { get set }
 
     // EFFECTS: Returns the user profile
     func getProfile(userProfile: String) -> Void

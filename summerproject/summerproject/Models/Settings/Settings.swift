@@ -9,5 +9,8 @@
 import Foundation
 
 class Settings: SettingsProtocol {
-    
+
+    var notificationSettings: NotificationSettings?
+    var privacySettings: PrivacySettings?
+
 }

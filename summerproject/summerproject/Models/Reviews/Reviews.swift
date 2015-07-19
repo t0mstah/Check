@@ -10,5 +10,19 @@
 
 class Reviews : ReviewsProtocol {
     
-    var review: String = ""
+    var review = ["hello1", "hello2"]
+    
+//    init(date: NSDate, reviews: [String],)
+
+    func getReviews() -> [String] {
+        return review
+    }
+    
+    func addReview(review: String) {
+        
+    }
+    
+    func editReview(reviewId: Int32) {
+        
+    }
 }
