@@ -10,5 +10,5 @@ import Foundation
 
 class Reviews : ReviewsProtocol {
     
-    
+    var review: String = ""
 }

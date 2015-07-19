@@ -13,6 +13,6 @@ protocol ReviewsProtocol {
     
     // EFFECTS: Returns all reviews
     
-    var date: NSDate { get set }
+//    var date: NSDate { get set }
     var review: String { get set }
 }
