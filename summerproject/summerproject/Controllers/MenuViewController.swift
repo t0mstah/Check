@@ -35,6 +35,12 @@ class MenuViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "toggleMenu", name: "toggleMenu", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "closeMenu", name: "closeMenu", object: nil)
         
+        // START OF BACKEND TEST.
+        
+        
+        
+        
+        // END OF BACKEND TEST.
     }
     
     // Cleanup notifications added in viewDidLoad

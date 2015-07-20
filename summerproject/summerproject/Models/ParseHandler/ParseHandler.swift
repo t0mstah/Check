@@ -32,8 +32,9 @@ class ParseHandler: ParseHandlerProtocol {
         userProfile.id = userParseProfile.objectId
     }
     
-    func updateParseProfile(userProfile: Profile, parseProfileObjectName: String, parseProfileObjectId: String?) {
-        
+    func updateParseProfile(userProfile: Profile, parseProfileObjectName: String,
+                            parseProfileObjectId: String?) {
+
         var query = PFQuery(className: parseProfileObjectName)
         query.getObjectInBackgroundWithId(parseProfileObjectId!) {
             (userParseProfile: PFObject?, error: NSError?) -> Void in
@@ -58,7 +59,7 @@ class ParseHandler: ParseHandlerProtocol {
         // error check - Parse profile does not exist.
     }
     
-    func deleteParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?) {
+    func removeParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?) {
         
         // error check - Parse profile does not exist.
         
@@ -81,6 +82,7 @@ class ParseHandler: ParseHandlerProtocol {
         var userProfile = Profile()
 
         var query = PFQuery(className: parseProfileObjectName)
+
         query.getObjectInBackgroundWithId(parseProfileObjectId!) {
             (userParseProfile: PFObject?, error: NSError?) -> Void in
             
@@ -99,7 +101,7 @@ class ParseHandler: ParseHandlerProtocol {
                 println("Error occured while fetching ParseProfile")
             }
         }
-        
+
         return userProfile
     }
     

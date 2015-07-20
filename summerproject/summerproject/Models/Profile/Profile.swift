@@ -60,17 +60,23 @@ class Profile : ProfileProtocol {
             return ParseHandler().getParseProfile(userProfile, parseProfileObjectId: self.id)
         }
         
-        return ParseHandler().getParseProfile(userProfile, parseProfileObjectId: self.id)
+        return self
     }
     
-    func updateProfile(){
+    func updateProfile() {
         
         // TODO: error check - user profile does not exist.
+        if isUsingParse {
+            ParseHandler().updateParseProfile(self, parseProfileObjectName: "userParseProfile", parseProfileObjectId: self.id)
+        }
     }
     
     func removeProfile(userProfile: Profile) {
         
         // TODO: error check - user profile does not exist.
+        if isUsingParse {
+            ParseHandler().removeParseProfile("userParseProfile", parseProfileObjectId: self.id)
+        }
     }
     
 }

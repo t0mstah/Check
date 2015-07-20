@@ -22,7 +22,7 @@ protocol ParseHandlerProtocol {
     
     // REQUIRES: A user profile.
     // EFFECTS: Deletes the Parse profile.
-    func deleteParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?)
+    func removeParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?)
     
     // EFFECTS: Returns the Parse profile.
     func getParseProfile(parseProfileObjectName : String, parseProfileObjectId: String?) -> Profile
