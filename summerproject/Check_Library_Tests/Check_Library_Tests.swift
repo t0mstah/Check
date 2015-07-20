@@ -1,15 +1,15 @@
 //
-//  summerprojectTests.swift
-//  summerprojectTests
+//  Check_Library_Tests.swift
+//  Check_Library_Tests
 //
-//  Created by Tommy Fang on 6/14/15.
+//  Created by Zheng Hao Tan on 7/19/15.
 //  Copyright (c) 2015 Stanford University. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class summerprojectTests: XCTestCase {
+class Check_Library_Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
