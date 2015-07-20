@@ -14,12 +14,6 @@
 		4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */; };
 		4B0F818C1B54C1670077A371 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F818B1B54C1670077A371 /* MenuViewController.swift */; };
 		4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E41B56067A0040BEEA /* SideBarViewController.swift */; };
-		4B2CD2EE1B5609720040BEEA /* PrintBold.otf in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2E61B5609720040BEEA /* PrintBold.otf */; };
-		4B2CD2EF1B5609720040BEEA /* PrintDashed.otf in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2E71B5609720040BEEA /* PrintDashed.otf */; };
-		4B2CD2F01B5609720040BEEA /* PrintClearly.otf in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2CD2E81B5609720040BEEA /* PrintClearly.otf */; };
-		4B2CD2FA1B560C620040BEEA /* PrintBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E61B5609720040BEEA /* PrintBold.otf */; };
-		4B2CD2FB1B560C620040BEEA /* PrintDashed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E71B5609720040BEEA /* PrintDashed.otf */; };
-		4B2CD2FC1B560C620040BEEA /* PrintClearly.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E81B5609720040BEEA /* PrintClearly.otf */; };
 		4B46F0231B5B5C3900573A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B46F0221B5B5C3900573A1F /* Main.storyboard */; };
 		4B46F0241B5B5C4B00573A1F /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 4B46F0221B5B5C3900573A1F /* Main.storyboard */; };
 		4B8A2FB41B5C551A00085940 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A2FB31B5C551A00085940 /* TutorialViewController.swift */; };
@@ -142,9 +136,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B2CD2EE1B5609720040BEEA /* PrintBold.otf in Frameworks */,
-				4B2CD2EF1B5609720040BEEA /* PrintDashed.otf in Frameworks */,
-				4B2CD2F01B5609720040BEEA /* PrintClearly.otf in Frameworks */,
 				5A2A13BB1B53158C00BA9535 /* Accounts.framework in Frameworks */,
 				5A2A13BC1B53158C00BA9535 /* AudioToolbox.framework in Frameworks */,
 				5A2A13BD1B53158C00BA9535 /* CFNetwork.framework in Frameworks */,
@@ -465,10 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B2CD2FA1B560C620040BEEA /* PrintBold.otf in Resources */,
 				4B46F0231B5B5C3900573A1F /* Main.storyboard in Resources */,
-				4B2CD2FB1B560C620040BEEA /* PrintDashed.otf in Resources */,
-				4B2CD2FC1B560C620040BEEA /* PrintClearly.otf in Resources */,
 				4BCE29F31B2E76F400B74DCA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
