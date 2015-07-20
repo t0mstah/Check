@@ -22,6 +22,8 @@
 		4B2CD2FC1B560C620040BEEA /* PrintClearly.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E81B5609720040BEEA /* PrintClearly.otf */; };
 		4B46F0231B5B5C3900573A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B46F0221B5B5C3900573A1F /* Main.storyboard */; };
 		4B46F0241B5B5C4B00573A1F /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 4B46F0221B5B5C3900573A1F /* Main.storyboard */; };
+		4B8A2FB41B5C551A00085940 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A2FB31B5C551A00085940 /* TutorialViewController.swift */; };
+		4B8A2FB61B5C743800085940 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A2FB51B5C743800085940 /* PageViewController.swift */; };
 		4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */; };
 		4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29EA1B2E76F400B74DCA /* summerproject.xcdatamodeld */; };
 		4BCE29F31B2E76F400B74DCA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE29F21B2E76F400B74DCA /* Images.xcassets */; };
@@ -85,6 +87,8 @@
 		4B2CD2E81B5609720040BEEA /* PrintClearly.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintClearly.otf; path = summerproject/Fonts/PrintClearly.otf; sourceTree = "<group>"; };
 		4B2CD2F61B560BF10040BEEA /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		4B46F0221B5B5C3900573A1F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4B8A2FB31B5C551A00085940 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		4B8A2FB51B5C743800085940 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		4BCE29E31B2E76F400B74DCA /* Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Check.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCE29E71B2E76F400B74DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +270,8 @@
 				4B0F81821B54B18B0077A371 /* CustomNavigationController.swift */,
 				4B0F818B1B54C1670077A371 /* MenuViewController.swift */,
 				4B2CD2E41B56067A0040BEEA /* SideBarViewController.swift */,
+				4B8A2FB31B5C551A00085940 /* TutorialViewController.swift */,
+				4B8A2FB51B5C743800085940 /* PageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -497,10 +503,12 @@
 				5A6643011B5C4349005F5FCB /* SignUpProtocol.swift in Sources */,
 				4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */,
 				5AEF28051B5B876E00DBF7A1 /* Login.swift in Sources */,
+				4B8A2FB41B5C551A00085940 /* TutorialViewController.swift in Sources */,
 				5A6642FC1B5C35EF005F5FCB /* ParseHandlerProtocol.swift in Sources */,
 				5AA6F2AF1B54D1FA0006D6B3 /* ReviewsProtocol.swift in Sources */,
 				5A6643031B5C4355005F5FCB /* SignUp.swift in Sources */,
 				4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */,
+				4B8A2FB61B5C743800085940 /* PageViewController.swift in Sources */,
 				4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */,
 				5AA6F2AE1B54D1FA0006D6B3 /* Reviews.swift in Sources */,
 				4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */,

@@ -14,6 +14,11 @@ class MenuViewController: UIViewController {
     let leftMenuWidth:CGFloat = 260
     
     override func viewDidAppear(animated: Bool) {
+        if NSUserDefaults.standardUserDefaults().objectForKey("Tutorial") == nil {
+            performSegueWithIdentifier("ShowTutorial", sender: self)
+            NSUserDefaults.standardUserDefaults().setObject("Set", forKey: "Tutorial")
+        }
+        
         dispatch_async(dispatch_get_main_queue()) {
             self.closeMenu()
         }
