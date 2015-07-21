@@ -1,15 +1,15 @@
 //
-//  Check_Library_Tests.swift
-//  Check_Library_Tests
+//  ProfilePictureTests.swift
+//  Check
 //
-//  Created by Zheng Hao Tan on 7/19/15.
+//  Created by Zheng Hao Tan on 7/20/15.
 //  Copyright (c) 2015 Stanford University. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class Check_Library_Tests: XCTestCase {
+class ProfilePictureTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -33,30 +33,17 @@ class Check_Library_Tests: XCTestCase {
         }
     }
     
+    // MARK: Unit tests for profile picture.
     
-    // MARK: Unit tests for profile name.
-
-    func testUpdateProfileName() {
-        
-    }
-    
-    func testAddProfileName() {
-        
-    }
-
-    // MARK: Unit tests for check points.
-
-    func testAddCheckPoints() {
+    func testAddProfilePicture() {
         
     }
     
-    func testUpdateCheckPoints() {
+    func testUpdateProfilePicture() {
         
     }
-
-    // MARK: Unit tests for check verified profiles.
-
-    func testIsCheckVerified() {
+    
+    func testRemoveProfilePicture() {
         
     }
 }

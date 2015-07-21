@@ -50,6 +50,9 @@
 		5AA6F2AF1B54D1FA0006D6B3 /* ReviewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A51B54D1FA0006D6B3 /* ReviewsProtocol.swift */; };
 		5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */; };
 		5AA6F2B11B54D1FA0006D6B3 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */; };
+		5ABF461C1B5E00F6004A0E8E /* UserProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */; };
+		5ABF461E1B5E0145004A0E8E /* ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461D1B5E0145004A0E8E /* ReviewTests.swift */; };
+		5ABF46201B5E0168004A0E8E /* ProfilePictureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461F1B5E0168004A0E8E /* ProfilePictureTests.swift */; };
 		5AE6272E1B5B85A30055C4FC /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6272D1B5B85A30055C4FC /* NotificationSettings.swift */; };
 		5AE627301B5B85B40055C4FC /* NotificationSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6272F1B5B85B40055C4FC /* NotificationSettingsProtocol.swift */; };
 		5AE627341B5B861A0055C4FC /* PrivacySettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE627331B5B861A0055C4FC /* PrivacySettingsProtocol.swift */; };
@@ -134,6 +137,9 @@
 		5AA6F2A51B54D1FA0006D6B3 /* ReviewsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsProtocol.swift; sourceTree = "<group>"; };
 		5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
+		5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileTests.swift; sourceTree = "<group>"; };
+		5ABF461D1B5E0145004A0E8E /* ReviewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTests.swift; sourceTree = "<group>"; };
+		5ABF461F1B5E0168004A0E8E /* ProfilePictureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureTests.swift; sourceTree = "<group>"; };
 		5AE6272D1B5B85A30055C4FC /* NotificationSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationSettings.swift; path = summerproject/Models/NotificationSettings/NotificationSettings.swift; sourceTree = SOURCE_ROOT; };
 		5AE6272F1B5B85B40055C4FC /* NotificationSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationSettingsProtocol.swift; path = summerproject/Models/NotificationSettings/NotificationSettingsProtocol.swift; sourceTree = SOURCE_ROOT; };
 		5AE627331B5B861A0055C4FC /* PrivacySettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacySettingsProtocol.swift; path = Models/PrivacySettings/PrivacySettingsProtocol.swift; sourceTree = "<group>"; };
@@ -255,6 +261,9 @@
 		5A414F741B5CAFC10060C8E2 /* Check_Library_Tests */ = {
 			isa = PBXGroup;
 			children = (
+				5ABF461F1B5E0168004A0E8E /* ProfilePictureTests.swift */,
+				5ABF461D1B5E0145004A0E8E /* ReviewTests.swift */,
+				5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */,
 				5A414F771B5CAFC10060C8E2 /* Check_Library_Tests.swift */,
 				5A414F751B5CAFC10060C8E2 /* Supporting Files */,
 			);
@@ -580,7 +589,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ABF46201B5E0168004A0E8E /* ProfilePictureTests.swift in Sources */,
+				5ABF461C1B5E00F6004A0E8E /* UserProfileTests.swift in Sources */,
 				5A414F781B5CAFC10060C8E2 /* Check_Library_Tests.swift in Sources */,
+				5ABF461E1B5E0145004A0E8E /* ReviewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,6 +847,7 @@
 				5A414F7C1B5CAFC10060C8E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A414F8A1B5CB1CA0060C8E2 /* Build configuration list for PBXNativeTarget "Check_Application_Tests" */ = {
 			isa = XCConfigurationList;
@@ -843,6 +856,7 @@
 				5A414F8C1B5CB1CA0060C8E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
