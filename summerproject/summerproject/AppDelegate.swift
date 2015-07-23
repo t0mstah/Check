@@ -11,6 +11,10 @@ import CoreData
 import Parse
 import Bolts
 
+import FBSDKCoreKit
+import FBSDKShareKit
+import FBSDKLoginKit
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
