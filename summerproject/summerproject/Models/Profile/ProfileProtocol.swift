@@ -13,6 +13,10 @@ import Foundation
 
 protocol ProfileProtocol {
     
+    var username: String { get set }
+    var password: String { get set }
+    var email: String { get set }
+    
     var id: String? { get set }
     var profilePicture : String { get set } // TODO: Not sure yet.
     var name: String { get set }
@@ -27,7 +31,7 @@ protocol ProfileProtocol {
     var isUsingParse: Bool { get set }
 
     // EFFECTS: Returns the user profile
-    func getProfile(userProfile: String) -> Profile
+    func getProfile() -> Profile
     
     // EFFECTS: Updates the current profile.
     //          This should be called every time a variable here is modified.

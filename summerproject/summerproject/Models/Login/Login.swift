@@ -13,14 +13,15 @@ class Login: LoginProtocol {
     
     func isLoggedIn(userProfile: Profile) -> Bool {
         
-        return true
+        return ParseHandler().isParseLoggedIn()
     }
     
     func login(userProfile: Profile) -> Bool {
-        return true
+        
+        return ParseHandler().loginParseProfile(userProfile)
     }
     
     func logout(userProfile: Profile) -> Bool {
-        return true
+        return ParseHandler().logoutParseProfile(userProfile)
     }
 }

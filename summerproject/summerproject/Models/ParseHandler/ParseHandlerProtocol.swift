@@ -10,24 +10,45 @@ import Foundation
 
 protocol ParseHandlerProtocol {
     
-    // MARK: User profile interface stored in Parse.
+    // MARK: Login user profile in Parse.
     
     // REQUIRES: A user profile.
-    // EFFECTS: Adds a new user profile in Parse.
-    func addParseProfile(userProfile: Profile, parseProfileObjectName: String)
-
+    // EFFECTS: Returns true on successful login, false otherwise.
+    func loginParseProfile(userProfile: Profile) -> Bool
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Returns true on successful logout, false otherwise.
+    func logoutParseProfile(userProfile: Profile) -> Bool
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Adds a new user profile in Parse. Returns true on successful signup, false otherwise.
+    func signUpParseProfile(userProfile: Profile) -> Bool
+ 
     // REQUIRES: A user profile.
     // EFFECTS: Updates the Parse profile stored in the cloud.
-    func updateParseProfile(userProfile: Profile, parseProfileObjectName: String, parseProfileObjectId: String?)
+    func updateParseProfile(userProfile: Profile)
     
     // REQUIRES: A user profile.
     // EFFECTS: Deletes the Parse profile.
     func removeParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?)
-    
+ 
+    // REQUIRES: The user must be logged in.
     // EFFECTS: Returns the Parse profile.
-    func getParseProfile(parseProfileObjectName : String, parseProfileObjectId: String?) -> Profile
+    func getParseProfile() -> Profile
+    
+    // MARK: Current user status checks.
+    
+    // EFFECTS: Returns true if the user is still currently logged in, false otherwise.
+    func isParseLoggedIn() -> Bool
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Resets the password of the user
+    func resetParsePassword(userProfile: Profile)
+
     
     // MARK: Reviews stored in Parse.
+    
+    
     func addParseReview(userReview: Reviews)
     
     func removeParseReview(userReview: Reviews)

@@ -11,11 +11,37 @@ import Parse
 
 class ParseHandler: ParseHandlerProtocol {
     
-    
-    func addParseProfile(userProfile: Profile, parseProfileObjectName: String) {
-        let userParseProfile = PFObject(className: parseProfileObjectName)
+    func loginParseProfile(userProfile: Profile) -> Bool {
         
-        // Populate and add all user data into the Parse Profile object.
+        var isLogin : Bool = false
+        
+        PFUser.logInWithUsernameInBackground(userProfile.username, password: userProfile.password) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                // Do stuff after successful login.
+                isLogin = true
+            } else {
+                // The login failed. Check error to see why.
+                isLogin = false
+            }
+        }
+        return isLogin
+    }
+    
+    func logoutParseProfile(userProfile: Profile) -> Bool {
+        PFUser.logOut()
+        return true
+    }
+    
+    func signUpParseProfile(userProfile: Profile) -> Bool {
+        
+        let userParseProfile = PFUser()
+        
+        // Populate and add all user data into the Parse Profile.
+        userParseProfile.username = userProfile.username
+        userParseProfile.password = userProfile.password
+        userParseProfile.email = userProfile.email
+        
         userParseProfile["profilePicture"] = userProfile.profilePicture
         userParseProfile["name"] = userProfile.name
         userParseProfile["biography"] = userProfile.biography
@@ -25,38 +51,35 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile["reviews"] = userProfile.reviews
         userParseProfile["settings"] = userProfile.settings
         
-        userParseProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+        userParseProfile.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             println("Parse user profile has been added successfully.")
         }
         
         userProfile.id = userParseProfile.objectId
+        
+        return true
     }
     
-    func updateParseProfile(userProfile: Profile, parseProfileObjectName: String,
-                            parseProfileObjectId: String?) {
+    func updateParseProfile(userProfile: Profile) {
 
-        var query = PFQuery(className: parseProfileObjectName)
-        query.getObjectInBackgroundWithId(parseProfileObjectId!) {
-            (userParseProfile: PFObject?, error: NSError?) -> Void in
-            
-            if error != nil {
-                println(error)
-            }
-            else if let userParseProfile = userParseProfile {
-                
-                userParseProfile["profilePicture"] = userProfile.profilePicture
-                userParseProfile["name"] = userProfile.name
-                userParseProfile["biography"] = userProfile.biography
-                userParseProfile["phoneNumber"] = userProfile.phoneNumber
-                userParseProfile["checkPoints"] = userProfile.checkPoints
-                userParseProfile["isCheckVerified"] = userProfile.checkPoints
-                userParseProfile["reviews"] = userProfile.reviews
-                userParseProfile["settings"] = userProfile.settings
-
-                userParseProfile.saveInBackground()
-            }
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(userProfile)
         }
-        // error check - Parse profile does not exist.
+        
+        userParseProfile!.username = userProfile.username
+        userParseProfile!.password = userProfile.password
+        userParseProfile!.email = userProfile.email
+        
+        userParseProfile!["profilePicture"] = userProfile.profilePicture
+        userParseProfile!["name"] = userProfile.name
+        userParseProfile!["biography"] = userProfile.biography
+        userParseProfile!["phoneNumber"] = userProfile.phoneNumber
+        userParseProfile!["checkPoints"] = userProfile.checkPoints
+        userParseProfile!["isCheckVerified"] = userProfile.checkPoints
+        userParseProfile!["reviews"] = userProfile.reviews
+        userParseProfile!["settings"] = userProfile.settings
     }
     
     func removeParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?) {
@@ -77,32 +100,37 @@ class ParseHandler: ParseHandlerProtocol {
         }
     }
     
-    func getParseProfile(parseProfileObjectName : String, parseProfileObjectId: String?) -> Profile {
+    func getParseProfile() -> Profile {
         
         var userProfile = Profile()
-
-        var query = PFQuery(className: parseProfileObjectName)
-
-        query.getObjectInBackgroundWithId(parseProfileObjectId!) {
-            (userParseProfile: PFObject?, error: NSError?) -> Void in
+        var userParseProfile = PFUser.currentUser()
+        
+        if userParseProfile != nil {
+                
+//            userProfile.profilePicture = userParseProfile["profilePicture"] as String
+//            userProfile.name = userParseProfile["name"] as String
+//            userProfile.biography = userParseProfile["biography"] as! String
+//            userProfile.phoneNumber = userParseProfile["phoneNumber"] as! String
+//            userProfile.checkPoints = userParseProfile["checkPoints"] as! Int
+//            userProfile.isCheckVerified = userParseProfile["isCheckVerified"] as! Bool
+//            userProfile.reviews = userParseProfile["reviews"] as! String
+//            userProfile.settings = userParseProfile["settings"] as! String
             
-            if error == nil && userParseProfile != nil {
-                
-//                userProfile.profilePicture = userParseProfile["profilePicture"] as! String
-//                userProfile.name = userParseProfile["name"] as! String
-//                userProfile.biography = userParseProfile["biography"] as! String
-//                userProfile.phoneNumber = userParseProfile["phoneNumber"] as! String
-//                userProfile.checkPoints = userParseProfile["checkPoints"] as! Int
-//                userProfile.isCheckVerified = userParseProfile["isCheckVerified"] as! Bool
-//                userProfile.reviews = userParseProfile["reviews"] as! String
-//                userProfile.settings = userParseProfile["settings"] as! String
-                
-            } else {
-                println("Error occured while fetching ParseProfile")
-            }
+        }
+        else {
+            println("Error occured while fetching ParseProfile")
         }
 
         return userProfile
+    }
+
+    func isParseLoggedIn() -> Bool {
+        return PFUser.currentUser() != nil
+    }
+    
+    func resetParsePassword(userProfile: Profile) {
+        
+        PFUser.requestPasswordResetForEmailInBackground(userProfile.email)
     }
     
     // Reviews stored in Parse.

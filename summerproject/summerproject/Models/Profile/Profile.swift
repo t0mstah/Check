@@ -11,6 +11,10 @@ import Foundation
 // TODO: Add facebook, twitter, signup with email profiles etc.
 class Profile : ProfileProtocol {
 
+    var username: String
+    var password: String
+    var email: String
+
     var id: String?
     var profilePicture : String
     var name: String
@@ -25,6 +29,10 @@ class Profile : ProfileProtocol {
 
     // Constructor for the created user.
     init () {
+        username = ""
+        password = ""
+        email = ""
+
         id = ""
         profilePicture = ""
         name = ""
@@ -38,8 +46,13 @@ class Profile : ProfileProtocol {
         isUsingParse = true
     }
 
-    init(id: String, profilePicture: String, name: String, biography: String, phoneNumber : String,
+    init(username: String, password : String, email: String,
+         id: String, profilePicture: String, name: String, biography: String, phoneNumber : String,
         checkPoints : Int, isCheckVerified : Bool, reviews: Reviews, settings: Settings) {
+
+        self.username = username
+        self.password = password
+        self.email = email
 
         self.id = id
         self.profilePicture = profilePicture
@@ -54,10 +67,10 @@ class Profile : ProfileProtocol {
         isUsingParse = true
     }
 
-    func getProfile(userProfile: String) -> Profile {
+    func getProfile() -> Profile {
         
         if isUsingParse {
-            return ParseHandler().getParseProfile(userProfile, parseProfileObjectId: self.id)
+            return ParseHandler().getParseProfile()
         }
         
         return self
@@ -67,7 +80,7 @@ class Profile : ProfileProtocol {
         
         // TODO: error check - user profile does not exist.
         if isUsingParse {
-            ParseHandler().updateParseProfile(self, parseProfileObjectName: "userParseProfile", parseProfileObjectId: self.id)
+            ParseHandler().updateParseProfile(self)
         }
     }
     
