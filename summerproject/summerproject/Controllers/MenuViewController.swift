@@ -33,10 +33,19 @@ class MenuViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "closeMenu", name: "closeMenu", object: nil)
         
         // START OF BACKEND TEST.
-        var newUser = Profile(username: "tzhenghao", password: "lala", email: "tanzhao@umich.edu", id: "100", profilePicture: "hello", name: "ZhengHao", biography: "I have an awesome biography", phoneNumber: "2065120445", checkPoints: 200, isCheckVerified: true, reviews: nil, settings: nil)
+        var newUser = Profile(username: "lalal", password: "lala", email: "tanzhao@umich.edu", id: "100", profilePicture: "hello", name: "ZhengHao", biography: "I have an awesome biography", phoneNumber: "2065120445", checkPoints: 200, isCheckVerified: true, reviews: nil, settings: nil)
         
         SignUp().signup(newUser)
         
+        var log = Login()
+        log.login(newUser)
+        
+        assert(log.isLoggedIn(newUser), "User must be logged in")
+        
+        log.logout(newUser)
+        
+        assert(!log.isLoggedIn(newUser), "User must be logged in")
+
         // END OF BACKEND TEST.
     }
     
