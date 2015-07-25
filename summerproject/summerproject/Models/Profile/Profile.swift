@@ -11,40 +11,21 @@ import Foundation
 // TODO: Add facebook, twitter, signup with email profiles etc.
 class Profile : ProfileProtocol {
 
-    var username: String
-    var password: String
-    var email: String
+    var username: String = ""
+    var password: String = ""
+    var email: String = ""
 
-    var id: String?
-    var profilePicture : String
-    var name: String
-    var biography : String
-    var phoneNumber: String
-    var checkPoints: Int
-    var isCheckVerified: Bool
+    var id: String? = ""
+    var profilePicture : String = ""
+    var name: String = ""
+    var biography : String = ""
+    var phoneNumber: String = ""
+    var checkPoints: Int = 0
+    var isCheckVerified: Bool = false
     var reviews: Reviews?
     var settings: Settings?
 
-    var isUsingParse: Bool
-
-    // Constructor for the created user.
-    init () {
-        username = ""
-        password = ""
-        email = ""
-
-        id = ""
-        profilePicture = ""
-        name = ""
-        biography = ""
-        phoneNumber = ""
-        checkPoints = 0
-        isCheckVerified = false
-        reviews = nil
-        settings = nil
-        
-        isUsingParse = true
-    }
+    var isUsingParse: Bool = true
 
     init(username: String, password : String, email: String,
          id: String, profilePicture: String, name: String, biography: String, phoneNumber : String,
@@ -64,7 +45,7 @@ class Profile : ProfileProtocol {
         self.reviews = reviews
         self.settings = settings
             
-        isUsingParse = true
+        isUsingParse = true // Use Parse for all profile stores.
     }
 
     func getProfile() -> Profile {
@@ -88,7 +69,7 @@ class Profile : ProfileProtocol {
         
         // TODO: error check - user profile does not exist.
         if isUsingParse {
-            ParseHandler().removeParseProfile("userParseProfile", parseProfileObjectId: self.id)
+            ParseHandler().removeParseProfile()
         }
     }
     

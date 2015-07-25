@@ -82,27 +82,16 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile!["settings"] = userProfile.settings
     }
     
-    func removeParseProfile(parseProfileObjectName: String, parseProfileObjectId: String?) {
+    func removeParseProfile() {
         
         // error check - Parse profile does not exist.
         
-        var query = PFQuery(className: parseProfileObjectName)
-        query.getObjectInBackgroundWithId(parseProfileObjectId!) {
-            (userParseProfile: PFObject?, error: NSError?) -> Void in
-            
-            if error == nil && userParseProfile != nil {
-                
-                userParseProfile?.deleteInBackground()
-                
-            } else {
-                println("Error occured while deleting Parse Profile")
-            }
-        }
+        // TODO: Implement remove parse profile.
     }
     
     func getParseProfile() -> Profile {
         
-        var userProfile = Profile()
+        var userProfile : Profile?
         var userParseProfile = PFUser.currentUser()
         
         if userParseProfile != nil {
@@ -121,7 +110,7 @@ class ParseHandler: ParseHandlerProtocol {
             println("Error occured while fetching ParseProfile")
         }
 
-        return userProfile
+        return userProfile!
     }
 
     func isParseLoggedIn() -> Bool {

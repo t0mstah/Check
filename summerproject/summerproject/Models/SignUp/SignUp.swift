@@ -10,5 +10,8 @@ import Foundation
 
 class SignUp: SignUpProtocol {
 
+    func signup(userProfile: Profile) -> Bool {
+        return ParseHandler().signUpParseProfile(userProfile)
+    }
     
 }

@@ -9,5 +9,8 @@
 import Foundation
 
 protocol SignUpProtocol {
-    
+
+    // REQUIRES: A user profile.
+    // EFFECTS: Returns true on successful signup, false otherwise.
+    func signup(userProfile: Profile) -> Bool
 }
