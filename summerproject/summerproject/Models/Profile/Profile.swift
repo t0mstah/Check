@@ -26,10 +26,11 @@ class Profile : ProfileProtocol {
     var settings: Settings?
 
     var isUsingParse: Bool = true
+    var backendService: ParseHandler?
 
     init(username: String, password : String, email: String,
          id: String, profilePicture: String, name: String, biography: String, phoneNumber : String,
-        checkPoints : Int, isCheckVerified : Bool, reviews: Reviews, settings: Settings) {
+        checkPoints : Int, isCheckVerified : Bool, reviews: Reviews?, settings: Settings?) {
 
         self.username = username
         self.password = password
@@ -46,12 +47,13 @@ class Profile : ProfileProtocol {
         self.settings = settings
             
         isUsingParse = true // Use Parse for all profile stores.
+        backendService = ParseHandler()
     }
 
     func getProfile() -> Profile {
         
         if isUsingParse {
-            return ParseHandler().getParseProfile()
+            return backendService!.getParseProfile()
         }
         
         return self
@@ -61,7 +63,7 @@ class Profile : ProfileProtocol {
         
         // TODO: error check - user profile does not exist.
         if isUsingParse {
-            ParseHandler().updateParseProfile(self)
+            backendService!.updateParseProfile(self)
         }
     }
     
@@ -69,7 +71,7 @@ class Profile : ProfileProtocol {
         
         // TODO: error check - user profile does not exist.
         if isUsingParse {
-            ParseHandler().removeParseProfile()
+            backendService!.removeParseProfile()
         }
     }
     

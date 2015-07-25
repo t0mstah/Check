@@ -48,8 +48,10 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile["phoneNumber"] = userProfile.phoneNumber
         userParseProfile["checkPoints"] = userProfile.checkPoints
         userParseProfile["isCheckVerified"] = userProfile.checkPoints
-        userParseProfile["reviews"] = userProfile.reviews
-        userParseProfile["settings"] = userProfile.settings
+//        userParseProfile["reviews"] = userProfile.reviews
+//        userParseProfile["settings"] = userProfile.settings
+        userParseProfile["reviews"] = "reviews"
+        userParseProfile["settings"] = "settings"
         
         userParseProfile.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             println("Parse user profile has been added successfully.")
