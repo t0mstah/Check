@@ -13,3 +13,5 @@ target 'Check_Application_Tests' do
 
 end
 
+
+pod 'ParseFacebookUtils', :podspec => 'https://raw.githubusercontent.com/rickerbh/ParseFacebookUtilsSpec/master/ParseFacebookUtils.podspec.json'
