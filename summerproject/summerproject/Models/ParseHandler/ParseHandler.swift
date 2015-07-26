@@ -20,9 +20,11 @@ class ParseHandler: ParseHandlerProtocol {
             if user != nil {
                 // Do stuff after successful login.
                 isLogin = true
+                println("Parse user login success.")
             } else {
                 // The login failed. Check error to see why.
                 isLogin = false
+                println("Parse user login failed.")
             }
         }
         return isLogin
@@ -54,7 +56,7 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile["settings"] = "settings"
         
         userParseProfile.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            println("Parse user profile has been added successfully.")
+            println("Parse user profile signed up successfully.")
         }
         
         userProfile.id = userParseProfile.objectId
