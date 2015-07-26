@@ -33,19 +33,24 @@ class MenuViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "closeMenu", name: "closeMenu", object: nil)
         
         // START OF BACKEND TEST.
-        var newUser = Profile(username: "lalal", password: "lala", email: "tanzhao@umich.edu", id: "100", profilePicture: "hello", name: "ZhengHao", biography: "I have an awesome biography", phoneNumber: "2065120445", checkPoints: 200, isCheckVerified: true, reviews: nil, settings: nil)
-        
-        SignUp().signup(newUser)
-        
-        var log = Login()
-        log.login(newUser)
-        
-        //assert(log.isLoggedIn(newUser), "User must be logged in")
-        
-        log.logout(newUser)
-        
-        //assert(!log.isLoggedIn(newUser), "User must be logged in")
+        var newUser = Profile(username: "lalaalala", password: "lala", email: "awesome@umich.edu", id: "100", profilePicture: "hello", name: "ZhengHao", biography: "I have an awesome biography", phoneNumber: "2065120445", checkPoints: 200, isCheckVerified: true, reviews: nil, settings: nil)
 
+        
+        if (newUser.isLoggedIn(newUser)) {
+            print("I am logged in!")
+        }
+        else {
+            print("Not logged in, trying to sign up...")
+            newUser.signup(newUser)
+            //newUser.login(newUser)
+        }
+
+        assert(newUser.isLoggedIn(newUser), "User must be logged in1")
+        
+        newUser.logout(newUser)
+        
+        assert(!newUser.isLoggedIn(newUser), "User must be logged in")
+        
         // END OF BACKEND TEST.
     }
     

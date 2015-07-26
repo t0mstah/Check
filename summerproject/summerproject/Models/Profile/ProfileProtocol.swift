@@ -30,6 +30,22 @@ protocol ProfileProtocol {
     // Internal states
     var isUsingParse: Bool { get set }
 
+    // REQUIRES: A user profile.
+    // EFFECTS: Returns true on successful signup, false otherwise.
+    func signup(userProfile: Profile) -> Bool
+    
+    // REQUIRES: A Profile
+    // EFFECTS: Returns true if user has a logged in session, false otherwise.
+    func isLoggedIn(userProfile: Profile) -> Bool
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Returns true on successful login, false otherwise.
+    func login(userProfile: Profile) -> Bool
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Returns true on successful log out, false otherwise.
+    func logout(userProfile: Profile) -> Bool
+
     // EFFECTS: Returns the user profile
     func getProfile() -> Profile
     

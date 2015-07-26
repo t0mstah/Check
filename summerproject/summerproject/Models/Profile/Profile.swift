@@ -28,6 +28,8 @@ class Profile : ProfileProtocol {
     var isUsingParse: Bool = true
     var backendService: ParseHandler?
 
+    // MARK: Constructor.
+
     init(username: String, password : String, email: String,
          id: String, profilePicture: String, name: String, biography: String, phoneNumber : String,
         checkPoints : Int, isCheckVerified : Bool, reviews: Reviews?, settings: Settings?) {
@@ -49,6 +51,28 @@ class Profile : ProfileProtocol {
         isUsingParse = true // Use Parse for all profile stores.
         backendService = ParseHandler()
     }
+
+    // MARK: Login/signup interface.
+    
+    func signup(userProfile: Profile) -> Bool {
+        return backendService!.signUpParseProfile(userProfile)
+    }
+    
+    func isLoggedIn(userProfile: Profile) -> Bool {
+        
+        return backendService!.isParseLoggedIn()
+    }
+    
+    func login(userProfile: Profile) -> Bool {
+        
+        return backendService!.loginParseProfile(userProfile)
+    }
+    
+    func logout(userProfile: Profile) -> Bool {
+        return backendService!.logoutParseProfile(userProfile)
+    }
+
+    // MARK: Profile interface.
 
     func getProfile() -> Profile {
         
@@ -74,5 +98,7 @@ class Profile : ProfileProtocol {
             backendService!.removeParseProfile()
         }
     }
+    
+
     
 }
