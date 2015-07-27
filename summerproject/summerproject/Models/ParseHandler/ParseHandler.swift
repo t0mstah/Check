@@ -63,28 +63,7 @@ class ParseHandler: ParseHandlerProtocol {
         
         return true
     }
-    
-    func updateParseProfile(userProfile: Profile) {
 
-        var userParseProfile = PFUser.currentUser()
-        
-        if (userParseProfile == nil) {
-            loginParseProfile(userProfile)
-        }
-        
-        userParseProfile!.username = userProfile.username
-        userParseProfile!.password = userProfile.password
-        userParseProfile!.email = userProfile.email
-        
-        userParseProfile!["profilePicture"] = userProfile.profilePicture
-        userParseProfile!["name"] = userProfile.name
-        userParseProfile!["biography"] = userProfile.biography
-        userParseProfile!["phoneNumber"] = userProfile.phoneNumber
-        userParseProfile!["checkPoints"] = userProfile.checkPoints
-        userParseProfile!["isCheckVerified"] = userProfile.checkPoints
-        userParseProfile!["reviews"] = userProfile.reviews
-        userParseProfile!["settings"] = userProfile.settings
-    }
     
     func removeParseProfile() {
         
@@ -126,22 +105,31 @@ class ParseHandler: ParseHandlerProtocol {
         PFUser.requestPasswordResetForEmailInBackground(userProfile.email)
     }
     
-    // Reviews stored in Parse.
-    func addParseReview(userReview: Reviews) {
+    
+    // MARK: Reviews stored in Parse.
+    
+
+    func addParseReview(userProfile: Profile, userReview: Review) {
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(userProfile)
+        }
+        
+        userParseProfile!["reviews"] = userProfile.reviews
+    }
+    
+    func removeParseReview(userProfile: Profile, userReview: Review) {
         
     }
     
-    func removeParseReview(userReview: Reviews) {
+    func updateParseReview(userProfile: Profile, userReview: Review) {
         
     }
     
-    func updateParseReview(userReview: Reviews) {
+    func getParseReviews(userProfile: Profile) -> [Review]? {
         
-    }
-    
-    func getParseReview() -> Reviews {
-        
-        return Reviews()
+        return nil
     }
     
     // Settings stored in Parse.

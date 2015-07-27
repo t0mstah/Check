@@ -12,6 +12,10 @@ class Settings: SettingsProtocol {
 
     var notificationSettings: NotificationSettings?
     var privacySettings: PrivacySettings?
+    
+    // Constructor.
+    init() {
+    }
 
     init(notificationSettings: NotificationSettings, privacySettings : PrivacySettings) {
         self.notificationSettings = notificationSettings

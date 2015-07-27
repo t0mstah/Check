@@ -24,35 +24,55 @@ protocol ProfileProtocol {
     var phoneNumber: String { get set }
     var checkPoints: Int { get set }
     var isCheckVerified: Bool { get set }
-    var reviews: Reviews? { get set }
+    var reviews: [Review]? { get set }
     var settings: Settings? { get set }
     
     // Internal states
     var isUsingParse: Bool { get set }
 
+    
+    // MARK: User profile interface.
+    
+    
     // REQUIRES: A user profile.
     // EFFECTS: Returns true on successful signup, false otherwise.
-    func signup(userProfile: Profile) -> Bool
+    func signup() -> Bool
     
     // REQUIRES: A Profile
     // EFFECTS: Returns true if user has a logged in session, false otherwise.
-    func isLoggedIn(userProfile: Profile) -> Bool
+    func isLoggedIn() -> Bool
     
     // REQUIRES: A user profile.
     // EFFECTS: Returns true on successful login, false otherwise.
-    func login(userProfile: Profile) -> Bool
+    func login() -> Bool
     
     // REQUIRES: A user profile.
     // EFFECTS: Returns true on successful log out, false otherwise.
-    func logout(userProfile: Profile) -> Bool
+    func logout() -> Bool
 
     // EFFECTS: Returns the user profile
     func getProfile() -> Profile
-    
-    // EFFECTS: Updates the current profile.
-    //          This should be called every time a variable here is modified.
-    func updateProfile()
 
     // EFFECTS: Removes the user profile
-    func removeProfile(userProfile: Profile)
+    func removeProfile()
+    
+    
+    // MARK: Reviews interface.
+    
+    
+    // EFFECTS: Returns all reviews
+    func getReviews() -> [Review]?
+    
+    // REQUIRES: A review.
+    // EFFECTS: Creates a review id and adds a review that is linked to the
+    //          person's profile.
+    func addReview(review: Review)
+    
+    // REQUIRES: A reviewId.
+    // EFFECTS: Edits the person's review and changes the modification date.
+    func updateReview(review: Review)
+    
+    // REQUIRES: A reviewId.
+    // EFFECTS: Remove the given review.
+    func removeReview(review: Review)
 }

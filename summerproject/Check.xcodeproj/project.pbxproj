@@ -48,8 +48,6 @@
 		5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E566F1B53730F006438BC /* SignUpViewController.swift */; };
 		5AA6F2AC1B54D1FA0006D6B3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A11B54D1FA0006D6B3 /* Profile.swift */; };
 		5AA6F2AD1B54D1FA0006D6B3 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A21B54D1FA0006D6B3 /* ProfileProtocol.swift */; };
-		5AA6F2AE1B54D1FA0006D6B3 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A41B54D1FA0006D6B3 /* Reviews.swift */; };
-		5AA6F2AF1B54D1FA0006D6B3 /* ReviewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A51B54D1FA0006D6B3 /* ReviewsProtocol.swift */; };
 		5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */; };
 		5AA6F2B11B54D1FA0006D6B3 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */; };
 		5ABF461C1B5E00F6004A0E8E /* UserProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */; };
@@ -59,6 +57,8 @@
 		5AE627301B5B85B40055C4FC /* NotificationSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6272F1B5B85B40055C4FC /* NotificationSettingsProtocol.swift */; };
 		5AE627341B5B861A0055C4FC /* PrivacySettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE627331B5B861A0055C4FC /* PrivacySettingsProtocol.swift */; };
 		5AE627361B5B862C0055C4FC /* PrivacySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE627351B5B862C0055C4FC /* PrivacySettings.swift */; };
+		5AFC93741B65E75A00C34193 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC93721B65E75A00C34193 /* Review.swift */; };
+		5AFC93751B65E75A00C34193 /* ReviewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC93731B65E75A00C34193 /* ReviewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,8 +135,6 @@
 		5A6E56781B53781F006438BC /* Tutorial4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tutorial4ViewController.swift; path = Tutorial/Tutorial4ViewController.swift; sourceTree = "<group>"; };
 		5AA6F2A11B54D1FA0006D6B3 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5AA6F2A21B54D1FA0006D6B3 /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
-		5AA6F2A41B54D1FA0006D6B3 /* Reviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
-		5AA6F2A51B54D1FA0006D6B3 /* ReviewsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsProtocol.swift; sourceTree = "<group>"; };
 		5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
 		5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileTests.swift; sourceTree = "<group>"; };
@@ -146,6 +144,8 @@
 		5AE6272F1B5B85B40055C4FC /* NotificationSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationSettingsProtocol.swift; path = summerproject/Models/NotificationSettings/NotificationSettingsProtocol.swift; sourceTree = SOURCE_ROOT; };
 		5AE627331B5B861A0055C4FC /* PrivacySettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacySettingsProtocol.swift; path = Models/PrivacySettings/PrivacySettingsProtocol.swift; sourceTree = "<group>"; };
 		5AE627351B5B862C0055C4FC /* PrivacySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacySettings.swift; path = Models/PrivacySettings/PrivacySettings.swift; sourceTree = "<group>"; };
+		5AFC93721B65E75A00C34193 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Review.swift; path = Review/Review.swift; sourceTree = "<group>"; };
+		5AFC93731B65E75A00C34193 /* ReviewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewProtocol.swift; path = Review/ReviewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,9 +325,9 @@
 		5A60729E1B53405D008D9C5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5AFC93711B65E74000C34193 /* Review */,
 				5AA6F2A01B54D1FA0006D6B3 /* Profile */,
 				5AA6F2A61B54D1FA0006D6B3 /* Settings */,
-				5AA6F2A31B54D1FA0006D6B3 /* Reviews */,
 				5AE627311B5B85C30055C4FC /* NotificationSettings */,
 				5AE627321B5B85F70055C4FC /* PrivacySettings */,
 				5A6642FA1B5C3522005F5FCB /* ParseHandler */,
@@ -362,15 +362,6 @@
 				5AA6F2A11B54D1FA0006D6B3 /* Profile.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		5AA6F2A31B54D1FA0006D6B3 /* Reviews */ = {
-			isa = PBXGroup;
-			children = (
-				5AA6F2A51B54D1FA0006D6B3 /* ReviewsProtocol.swift */,
-				5AA6F2A41B54D1FA0006D6B3 /* Reviews.swift */,
-			);
-			path = Reviews;
 			sourceTree = "<group>";
 		};
 		5AA6F2A61B54D1FA0006D6B3 /* Settings */ = {
@@ -409,6 +400,15 @@
 				4B2CD2E81B5609720040BEEA /* PrintClearly.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		5AFC93711B65E74000C34193 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				5AFC93731B65E75A00C34193 /* ReviewProtocol.swift */,
+				5AFC93721B65E75A00C34193 /* Review.swift */,
+			);
+			name = Review;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -550,16 +550,16 @@
 				5AE627301B5B85B40055C4FC /* NotificationSettingsProtocol.swift in Sources */,
 				4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */,
 				5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */,
+				5AFC93741B65E75A00C34193 /* Review.swift in Sources */,
 				5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */,
 				4B0F81701B54A97D0077A371 /* ProfileViewController.swift in Sources */,
 				4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */,
 				4B8A2FB41B5C551A00085940 /* TutorialViewController.swift in Sources */,
 				5A6642FC1B5C35EF005F5FCB /* ParseHandlerProtocol.swift in Sources */,
-				5AA6F2AF1B54D1FA0006D6B3 /* ReviewsProtocol.swift in Sources */,
 				4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */,
+				5AFC93751B65E75A00C34193 /* ReviewProtocol.swift in Sources */,
 				4B8A2FB61B5C743800085940 /* PageViewController.swift in Sources */,
 				4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */,
-				5AA6F2AE1B54D1FA0006D6B3 /* Reviews.swift in Sources */,
 				4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */,
 				5A6642FE1B5C361D005F5FCB /* ParseHandler.swift in Sources */,
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,

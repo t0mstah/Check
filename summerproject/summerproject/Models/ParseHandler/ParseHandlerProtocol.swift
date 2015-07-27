@@ -23,10 +23,6 @@ protocol ParseHandlerProtocol {
     // REQUIRES: A user profile.
     // EFFECTS: Adds a new user profile in Parse. Returns true on successful signup, false otherwise.
     func signUpParseProfile(userProfile: Profile) -> Bool
- 
-    // REQUIRES: A user profile.
-    // EFFECTS: Updates the Parse profile stored in the cloud.
-    func updateParseProfile(userProfile: Profile)
     
     // REQUIRES: A user profile.
     // EFFECTS: Deletes the Parse profile.
@@ -36,7 +32,9 @@ protocol ParseHandlerProtocol {
     // EFFECTS: Returns the Parse profile.
     func getParseProfile() -> Profile
     
+    
     // MARK: Current user status checks.
+    
     
     // EFFECTS: Returns true if the user is still currently logged in, false otherwise.
     func isParseLoggedIn() -> Bool
@@ -46,19 +44,29 @@ protocol ParseHandlerProtocol {
     func resetParsePassword(userProfile: Profile)
 
     
-    // MARK: Reviews stored in Parse.
+    // MARK: Reviews modification interface in Parse.
     
     
-    func addParseReview(userReview: Reviews)
+    // REQUIRES: A user profile.
+    // EFFECTS: Appends a new review for the user in Parse.
+    func addParseReview(userProfile: Profile, userReview: Review)
     
-    func removeParseReview(userReview: Reviews)
+    // REQUIRES: A user profile.
+    // EFFECTS: Removes a review for the user in Parse.
+    func removeParseReview(userProfile: Profile, userReview: Review)
     
-    func updateParseReview(userReview: Reviews)
+    // REQUIRES: A user profile.
+    // EFFECTS: Updates a review for the user in Parse.
+    func updateParseReview(userProfile: Profile, userReview: Review)
     
-    func getParseReview() -> Reviews
+    // REQUIRES: A user profile.
+    // EFFECTS: Returns the user's reviews in Parse.
+    func getParseReviews(userProfile: Profile) -> [Review]?
 
 
     // MARK: Settings stored in Parse.
+    
+
     func addParseSettings(userProfile: Settings)
     
     func updateParseSettings(userProfile: Settings)

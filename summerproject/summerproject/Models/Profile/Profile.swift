@@ -22,17 +22,19 @@ class Profile : ProfileProtocol {
     var phoneNumber: String = ""
     var checkPoints: Int = 0
     var isCheckVerified: Bool = false
-    var reviews: Reviews?
+    var reviews: [Review]?
     var settings: Settings?
 
     var isUsingParse: Bool = true
+    
+    var settingsService: Settings?
     var backendService: ParseHandler?
 
     // MARK: Constructor.
 
     init(username: String, password : String, email: String,
          id: String, profilePicture: String, name: String, biography: String, phoneNumber : String,
-        checkPoints : Int, isCheckVerified : Bool, reviews: Reviews?, settings: Settings?) {
+        checkPoints : Int, isCheckVerified : Bool, reviews: [Review]?, settings: Settings?) {
 
         self.username = username
         self.password = password
@@ -47,29 +49,30 @@ class Profile : ProfileProtocol {
         self.isCheckVerified = isCheckVerified
         self.reviews = reviews
         self.settings = settings
-            
+
         isUsingParse = true // Use Parse for all profile stores.
+            
+        // Services for reviews, settings and the Parse handler.
+        settingsService = Settings()
         backendService = ParseHandler()
     }
 
     // MARK: Login/signup interface.
     
-    func signup(userProfile: Profile) -> Bool {
-        return backendService!.signUpParseProfile(userProfile)
+    func signup() -> Bool {
+        return backendService!.signUpParseProfile(self)
     }
     
-    func isLoggedIn(userProfile: Profile) -> Bool {
-        
+    func isLoggedIn() -> Bool {
         return backendService!.isParseLoggedIn()
     }
     
-    func login(userProfile: Profile) -> Bool {
-        
-        return backendService!.loginParseProfile(userProfile)
+    func login() -> Bool {
+        return backendService!.loginParseProfile(self)
     }
     
-    func logout(userProfile: Profile) -> Bool {
-        return backendService!.logoutParseProfile(userProfile)
+    func logout() -> Bool {
+        return backendService!.logoutParseProfile(self)
     }
 
     // MARK: Profile interface.
@@ -83,15 +86,7 @@ class Profile : ProfileProtocol {
         return self
     }
     
-    func updateProfile() {
-        
-        // TODO: error check - user profile does not exist.
-        if isUsingParse {
-            backendService!.updateParseProfile(self)
-        }
-    }
-    
-    func removeProfile(userProfile: Profile) {
+    func removeProfile() {
         
         // TODO: error check - user profile does not exist.
         if isUsingParse {
@@ -99,6 +94,31 @@ class Profile : ProfileProtocol {
         }
     }
     
-
+    // MARK: Review interface.
     
+    func getReviews() -> [Review]? {
+        
+        return backendService!.getParseReviews(self)
+    }
+    
+    func addReview(review: Review) {
+    
+        if isUsingParse {
+            backendService!.addParseReview(self, userReview: review)
+        }
+    }
+    
+    func updateReview(review: Review) {
+        
+        if isUsingParse {
+            backendService!.updateParseReview(self, userReview: review)
+        }
+    }
+    
+    func removeReview(review: Review) {
+        
+        if isUsingParse {
+            backendService!.removeParseReview(self, userReview: review)
+        }
+    }
 }
