@@ -11,6 +11,23 @@ import Parse
 
 class ParseHandler: ParseHandlerProtocol {
     
+    private struct ParseProfileKeys {
+        static let profilePicture = "profilePicture"
+        static let name = "name"
+        static let biography = "biography"
+        static let phoneNumber = "phoneNumber"
+        static let checkPoints = "checkPoints"
+        static let isCheckVerified = "isCheckVerified"
+        static let reviews = "reviews"
+        static let settings = "settings"
+    }
+
+    var thisUser : Profile?
+
+    init(thisUser: Profile) {
+        self.thisUser = thisUser
+    }
+
     func loginParseProfile(userProfile: Profile) -> Bool {
         
         var isLogin : Bool = false
@@ -44,16 +61,16 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile.password = userProfile.password
         userParseProfile.email = userProfile.email
         
-        //userParseProfile["profilePicture"] = userProfile.profilePicture
-        userParseProfile["name"] = userProfile.name
-        userParseProfile["biography"] = userProfile.biography
-        userParseProfile["phoneNumber"] = userProfile.phoneNumber
-        userParseProfile["checkPoints"] = userProfile.checkPoints
-        userParseProfile["isCheckVerified"] = userProfile.checkPoints
-//        userParseProfile["reviews"] = userProfile.reviews
-//        userParseProfile["settings"] = userProfile.settings
-        userParseProfile["reviews"] = "reviews"
-        userParseProfile["settings"] = "settings"
+        //userParseProfile[ParseProfileKeys.profilePicture] = userProfile.profilePicture
+        userParseProfile[ParseProfileKeys.profilePicture] = userProfile.name
+        userParseProfile[ParseProfileKeys.biography] = userProfile.biography
+        userParseProfile[ParseProfileKeys.phoneNumber] = userProfile.phoneNumber
+        userParseProfile[ParseProfileKeys.checkPoints] = userProfile.checkPoints
+        userParseProfile[ParseProfileKeys.isCheckVerified] = userProfile.isCheckVerified
+//        userParseProfile[ParseProfileKeys.reviews] = userProfile.reviews
+//        userParseProfile[ParseProfileKeys.settings] = userProfile.settings
+        userParseProfile[ParseProfileKeys.reviews] = "reviews"
+        userParseProfile[ParseProfileKeys.settings] = "settings"
         
         userParseProfile.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             println("Parse user profile signed up successfully.")
@@ -99,10 +116,170 @@ class ParseHandler: ParseHandlerProtocol {
     func isParseLoggedIn() -> Bool {
         return PFUser.currentUser() != nil
     }
+
+    
+    
+    // MARK: Username interface in Parse.
+    
+    // REQUIRES: A user profile and a new password.
+    // EFFECTS: Changes the user's username in Parse.
+    func changeParseUsername(newUsername: String) {
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        thisUser!.username = newUsername
+        userParseProfile!.username = newUsername
+    }
+    
+    
+    // MARK: Password interface in Parse.
     
     func resetParsePassword(userProfile: Profile) {
-        
         PFUser.requestPasswordResetForEmailInBackground(userProfile.email)
+    }
+    
+    // REQUIRES: A user profile and a new password.
+    // EFFECTS: Changes the user's password in Parse.
+    func changeParsePassword(newPassword: String) {
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        thisUser!.password = newPassword
+        userParseProfile!.password = newPassword
+    }
+    
+    
+    // MARK: Email interface in Parse.
+    
+    
+    // REQUIRES: A user profile and a new email address.
+    // EFFECTS: Changes the user's email in Parse.
+    func changeParseEmail(newEmail: String) {
+        
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        userParseProfile!.email = newEmail
+    }
+    
+    
+    // MARK: Name interface in Parse.
+    
+    
+    // REQUIRES: A user profile and a new name.
+    // EFFECTS: Changes the user's name in Parse.
+    func changeParseName(newName: String) {
+        
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        userParseProfile![ParseProfileKeys.name] = newName
+    }
+    
+    
+    // MARK: Biography interface in Parse.
+    
+    
+    // REQUIRES: A user profile and a new biography.
+    // EFFECTS: Changes the user's biography in Parse.
+    func changeParseBiography(newBiography:String) {
+        
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        userParseProfile![ParseProfileKeys.biography] = newBiography
+    }
+    
+    
+    // MARK: Phone number interface in Parse.
+    
+    
+    // REQUIRES: A user profile and a new phone number.
+    // EFFECTS: Changes the user's phone number.
+    func changeParsePhoneNumber(newPhoneNumber: String) {
+        
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        userParseProfile![ParseProfileKeys.phoneNumber] = newPhoneNumber
+    }
+    
+    
+    // MARK: Checkpoints interface in Parse.
+    
+    
+    // REQUIRES: A user profile and check point value.
+    // EFFECTS: Increments the check points on the particular user.
+    func addParseCheckPoints(checkPointsValue: Int) {
+        
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        //userParseProfile![ParseProfileKeys.checkPoints] += checkPointsValue
+    }
+    
+    
+    // REQUIRES: A user profile and check point value.
+    // EFFECTS: Decrements the check points on the particular user.
+    func subtractParseCheckPoints(checkPointsValue: Int) {
+        
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        //userParseProfile![ParseProfileKeys.checkPoints] -= checkPointsValue
+    }
+    
+    
+    // MARK: IsCheckVerified interface in Parse.
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Sets the user to be check verified.
+    func addParseCheckVerified() {
+        
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        userParseProfile![ParseProfileKeys.isCheckVerified] = true
+    }
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Removes check verified status from the user.
+    func removeParseCheckVerified() {
+        
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        userParseProfile![ParseProfileKeys.isCheckVerified] = false
     }
     
     
@@ -116,7 +293,8 @@ class ParseHandler: ParseHandlerProtocol {
             loginParseProfile(userProfile)
         }
         
-        userParseProfile!["reviews"] = userProfile.reviews
+        // TODO: Query for user and then add this review.
+        userParseProfile![ParseProfileKeys.reviews] = userProfile.reviews
     }
     
     func removeParseReview(userProfile: Profile, userReview: Review) {

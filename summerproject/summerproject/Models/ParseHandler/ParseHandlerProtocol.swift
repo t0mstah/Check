@@ -8,9 +8,14 @@
 
 import Foundation
 
+
+
 protocol ParseHandlerProtocol {
     
+    var thisUser: Profile? { get set }
+    
     // MARK: Login user profile in Parse.
+    
     
     // REQUIRES: A user profile.
     // EFFECTS: Returns true on successful login, false otherwise.
@@ -39,10 +44,82 @@ protocol ParseHandlerProtocol {
     // EFFECTS: Returns true if the user is still currently logged in, false otherwise.
     func isParseLoggedIn() -> Bool
     
-    // REQUIRES: A user profile.
-    // EFFECTS: Resets the password of the user
-    func resetParsePassword(userProfile: Profile)
+    
+    // MARK: Username interface in Parse.
+    
+    // REQUIRES: A user profile and a new password.
+    // EFFECTS: Changes the user's username in Parse.
+    func changeParseUsername(newUsername: String)
 
+    
+    // MARK: Password interface in Parse.
+    
+    
+    // REQUIRES: A user profile and a new password.
+    // EFFECTS: Changes the user's password in Parse.
+    func changeParsePassword(newPassword: String)
+    
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Resets the password of the user in Parse.
+    func resetParsePassword(userProfile: Profile)
+    
+    
+    // MARK: Email interface in Parse.
+    
+    
+    // REQUIRES: A user profile and a new email address.
+    // EFFECTS: Changes the user's email in Parse.
+    func changeParseEmail(newEmail: String)
+    
+    
+    // MARK: Name interface in Parse.
+    
+    
+    // REQUIRES: A user profile and a new name.
+    // EFFECTS: Changes the user's name in Parse.
+    func changeParseName(newName: String)
+
+    
+    // MARK: Biography interface in Parse.
+    
+    
+    // REQUIRES: A user profile and a new biography.
+    // EFFECTS: Changes the user's biography in Parse.
+    func changeParseBiography(newBiography:String)
+    
+    
+    // MARK: Phone number interface in Parse.
+    
+    
+    // REQUIRES: A user profile and a new phone number.
+    // EFFECTS: Changes the user's phone number.
+    func changeParsePhoneNumber(newPhoneNumber: String)
+    
+    
+    // MARK: Checkpoints interface in Parse.
+    
+    
+    // REQUIRES: A user profile and check point value.
+    // EFFECTS: Increments the check points on the particular user.
+    func addParseCheckPoints(checkPointsValue: Int)
+
+    
+    // REQUIRES: A user profile and check point value.
+    // EFFECTS: Decrements the check points on the particular user.
+    func subtractParseCheckPoints(checkPointsValue: Int)
+    
+    
+    // MARK: IsCheckVerified interface in Parse.
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Sets the user to be check verified.
+    func addParseCheckVerified()
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Removes check verified status from the user.
+    func removeParseCheckVerified()
+    
     
     // MARK: Reviews interface in Parse.
     

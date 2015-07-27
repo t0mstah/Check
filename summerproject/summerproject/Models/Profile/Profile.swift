@@ -56,7 +56,7 @@ class Profile : ProfileProtocol {
             
         // Services for reviews, settings and the Parse handler.
         settingsService = Settings()
-        backendService = ParseHandler()
+        backendService = ParseHandler(thisUser: self)
     }
 
     // MARK: Login/signup interface.
