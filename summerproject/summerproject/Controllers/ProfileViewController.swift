@@ -9,6 +9,10 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var profileName: UILabel!
+    @IBOutlet weak var points: UILabel!
+    
     @IBAction func toggleMenu(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName("toggleMenu", object: nil)
     }
@@ -16,7 +20,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        profilePicture.clipsToBounds = true
+        profilePicture.layer.cornerRadius = profilePicture.frame.size.width / 2.0
     }
     
     override func didReceiveMemoryWarning() {
