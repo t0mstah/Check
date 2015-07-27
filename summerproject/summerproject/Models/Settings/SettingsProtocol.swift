@@ -11,6 +11,9 @@ import Foundation
 
 protocol SettingsProtocol {
     
-    var notificationSettings: NotificationSettings? { get set }
-    var privacySettings: PrivacySettings? { get set }
+    // MARK: Notification settings.
+    
+    
+    // MARK: Privacy settings.
+   
 }

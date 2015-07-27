@@ -11,7 +11,7 @@ import Foundation
 
 protocol ReviewProtocol {
     
-//    var time: NSDate { get set }
+    var time: NSDate { get set }
     var reviewId: Int { get set }
     var reviewer: Profile { get set }
     var description: String { get set }

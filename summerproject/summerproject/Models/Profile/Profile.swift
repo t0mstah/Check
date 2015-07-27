@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // TODO: Add facebook, twitter, signup with email profiles etc.
 class Profile : ProfileProtocol {
@@ -16,7 +17,7 @@ class Profile : ProfileProtocol {
     var email: String = ""
 
     var id: String? = ""
-    var profilePicture : String = ""
+    var profilePicture : UIImage?
     var name: String = ""
     var biography : String = ""
     var phoneNumber: String = ""
@@ -33,8 +34,9 @@ class Profile : ProfileProtocol {
     // MARK: Constructor.
 
     init(username: String, password : String, email: String,
-         id: String, profilePicture: String, name: String, biography: String, phoneNumber : String,
-        checkPoints : Int, isCheckVerified : Bool, reviews: [Review]?, settings: Settings?) {
+         id: String, profilePicture: UIImage?, name: String, biography: String,
+         phoneNumber : String, checkPoints : Int, isCheckVerified : Bool,
+         reviews: [Review]?, settings: Settings?) {
 
         self.username = username
         self.password = password

@@ -44,7 +44,7 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile.password = userProfile.password
         userParseProfile.email = userProfile.email
         
-        userParseProfile["profilePicture"] = userProfile.profilePicture
+        //userParseProfile["profilePicture"] = userProfile.profilePicture
         userParseProfile["name"] = userProfile.name
         userParseProfile["biography"] = userProfile.biography
         userParseProfile["phoneNumber"] = userProfile.phoneNumber
@@ -133,11 +133,11 @@ class ParseHandler: ParseHandlerProtocol {
     }
     
     // Settings stored in Parse.
-    func addParseSettings(userProfile: Settings) {
+    func addParseSettings(userSettings: Settings) {
         
     }
     
-    func updateParseSettings(userProfile: Settings) {
+    func updateParseSettings(userSettings: Settings) {
         
     }
     

@@ -33,7 +33,7 @@ protocol ParseHandlerProtocol {
     func getParseProfile() -> Profile
     
     
-    // MARK: Current user status checks.
+    // MARK: Current user status interface in Parse.
     
     
     // EFFECTS: Returns true if the user is still currently logged in, false otherwise.
@@ -44,7 +44,7 @@ protocol ParseHandlerProtocol {
     func resetParsePassword(userProfile: Profile)
 
     
-    // MARK: Reviews modification interface in Parse.
+    // MARK: Reviews interface in Parse.
     
     
     // REQUIRES: A user profile.
@@ -64,10 +64,10 @@ protocol ParseHandlerProtocol {
     func getParseReviews(userProfile: Profile) -> [Review]?
 
 
-    // MARK: Settings stored in Parse.
+    // MARK: Settings interface in Parse.
     
 
-    func addParseSettings(userProfile: Settings)
+    func addParseSettings(userSettings: Settings)
     
-    func updateParseSettings(userProfile: Settings)
+    func updateParseSettings(userSettings: Settings)
 }

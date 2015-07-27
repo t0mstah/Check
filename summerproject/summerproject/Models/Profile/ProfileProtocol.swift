@@ -10,6 +10,7 @@
 // profiles. Examples: Facebook, Twitter, Login with Email etc.
 
 import Foundation
+import UIKit
 
 protocol ProfileProtocol {
     
@@ -18,7 +19,7 @@ protocol ProfileProtocol {
     var email: String { get set }
     
     var id: String? { get set }
-    var profilePicture : String { get set } // TODO: Not sure yet.
+    var profilePicture : UIImage? { get set }
     var name: String { get set }
     var biography : String { get set }
     var phoneNumber: String { get set }
@@ -75,4 +76,7 @@ protocol ProfileProtocol {
     // REQUIRES: A reviewId.
     // EFFECTS: Remove the given review.
     func removeReview(review: Review)
+    
+    
+    // MARK: Settings interface.
 }
