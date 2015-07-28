@@ -13,6 +13,8 @@
 		4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81821B54B18B0077A371 /* CustomNavigationController.swift */; };
 		4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */; };
 		4B0F818C1B54C1670077A371 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F818B1B54C1670077A371 /* MenuViewController.swift */; };
+		4B269A6F1B672B1700FAFFDE /* ReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B269A6E1B672B1700FAFFDE /* ReviewsTableViewController.swift */; };
+		4B269A711B672B2F00FAFFDE /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B269A701B672B2F00FAFFDE /* ReviewTableViewCell.swift */; };
 		4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E41B56067A0040BEEA /* SideBarViewController.swift */; };
 		4B46F0231B5B5C3900573A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B46F0221B5B5C3900573A1F /* Main.storyboard */; };
 		4B46F0241B5B5C4B00573A1F /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 4B46F0221B5B5C3900573A1F /* Main.storyboard */; };
@@ -83,6 +85,8 @@
 		4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		4B0F818A1B54BF110077A371 /* summerproject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "summerproject-Bridging-Header.h"; path = "Controllers/summerproject-Bridging-Header.h"; sourceTree = "<group>"; };
 		4B0F818B1B54C1670077A371 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4B269A6E1B672B1700FAFFDE /* ReviewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewController.swift; sourceTree = "<group>"; };
+		4B269A701B672B2F00FAFFDE /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		4B2CD2E41B56067A0040BEEA /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		4B2CD2E61B5609720040BEEA /* PrintBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintBold.otf; path = summerproject/Fonts/PrintBold.otf; sourceTree = "<group>"; };
 		4B2CD2E71B5609720040BEEA /* PrintDashed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintDashed.otf; path = summerproject/Fonts/PrintDashed.otf; sourceTree = "<group>"; };
@@ -314,6 +318,8 @@
 				4B2CD2E41B56067A0040BEEA /* SideBarViewController.swift */,
 				4B8A2FB31B5C551A00085940 /* TutorialViewController.swift */,
 				4B8A2FB51B5C743800085940 /* PageViewController.swift */,
+				4B269A6E1B672B1700FAFFDE /* ReviewsTableViewController.swift */,
+				4B269A701B672B2F00FAFFDE /* ReviewTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -516,7 +522,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B46F0241B5B5C4B00573A1F /* Main.storyboard in Sources */,
+				4B269A711B672B2F00FAFFDE /* ReviewTableViewCell.swift in Sources */,
 				5AA6F2B11B54D1FA0006D6B3 /* SettingsProtocol.swift in Sources */,
+				4B269A6F1B672B1700FAFFDE /* ReviewsTableViewController.swift in Sources */,
 				5AA6F2AC1B54D1FA0006D6B3 /* Profile.swift in Sources */,
 				4B0F818C1B54C1670077A371 /* MenuViewController.swift in Sources */,
 				5AA6F2AD1B54D1FA0006D6B3 /* ProfileProtocol.swift in Sources */,
