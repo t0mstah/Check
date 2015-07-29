@@ -52,7 +52,7 @@
 		5AA6F2AD1B54D1FA0006D6B3 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A21B54D1FA0006D6B3 /* ProfileProtocol.swift */; };
 		5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */; };
 		5AA6F2B11B54D1FA0006D6B3 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */; };
-		5AAC93021B6882F000CEC036 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC93011B6882F000CEC036 /* ParseFacebookUtilsV4.framework */; };
+		5AAC93041B6885AB00CEC036 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC93031B6885AB00CEC036 /* ParseFacebookUtilsV4.framework */; };
 		5ABF461C1B5E00F6004A0E8E /* UserProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */; };
 		5ABF461E1B5E0145004A0E8E /* ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461D1B5E0145004A0E8E /* ReviewTests.swift */; };
 		5ABF46201B5E0168004A0E8E /* ProfilePictureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461F1B5E0168004A0E8E /* ProfilePictureTests.swift */; };
@@ -138,7 +138,7 @@
 		5AA6F2A21B54D1FA0006D6B3 /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
 		5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
-		5AAC93011B6882F000CEC036 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../../../Documents/parse-library-1.7.5/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		5AAC93031B6885AB00CEC036 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileTests.swift; sourceTree = "<group>"; };
 		5ABF461D1B5E0145004A0E8E /* ReviewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTests.swift; sourceTree = "<group>"; };
 		5ABF461F1B5E0168004A0E8E /* ProfilePictureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureTests.swift; sourceTree = "<group>"; };
@@ -151,7 +151,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AAC93021B6882F000CEC036 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				5A40D48A1B65F45B00E12648 /* UIKit.framework in Frameworks */,
 				5A41DBA41B609B7800D781DC /* FBSDKLoginKit.framework in Frameworks */,
 				5A2A13BB1B53158C00BA9535 /* Accounts.framework in Frameworks */,
@@ -166,6 +165,7 @@
 				5A2A13C41B53158C00BA9535 /* Security.framework in Frameworks */,
 				5A2A13C51B53158C00BA9535 /* Social.framework in Frameworks */,
 				5A2A13C61B53158C00BA9535 /* StoreKit.framework in Frameworks */,
+				5AAC93041B6885AB00CEC036 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				5A2A13C71B53158C00BA9535 /* SystemConfiguration.framework in Frameworks */,
 				5A41DBA61B609B8100D781DC /* FBSDKShareKit.framework in Frameworks */,
 				5A41DBA21B609B6A00D781DC /* FBSDKCoreKit.framework in Frameworks */,
@@ -242,7 +242,7 @@
 		5A2A13A91B5314AB00BA9535 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5AAC93011B6882F000CEC036 /* ParseFacebookUtilsV4.framework */,
+				5AAC93031B6885AB00CEC036 /* ParseFacebookUtilsV4.framework */,
 				5A40D4881B65F3AE00E12648 /* UIKit.framework */,
 				5A41DBA11B609B6A00D781DC /* FBSDKCoreKit.framework */,
 				5A41DBA31B609B7800D781DC /* FBSDKLoginKit.framework */,
