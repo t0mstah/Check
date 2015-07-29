@@ -30,21 +30,21 @@ class ParseHandler: ParseHandlerProtocol {
 
     func loginParseProfile(userProfile: Profile) -> Bool {
         
-        var isLogin : Bool = false
+        var isSuccessfulLogin : Bool = false
         
         PFUser.logInWithUsernameInBackground(userProfile.username, password: userProfile.password) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 // Do stuff after successful login.
-                isLogin = true
+                isSuccessfulLogin = true
                 println("Parse user login success.")
             } else {
                 // The login failed. Check error to see why.
-                isLogin = false
+                isSuccessfulLogin = false
                 println("Parse user login failed.")
             }
         }
-        return isLogin
+        return isSuccessfulLogin
     }
     
     func logoutParseProfile(userProfile: Profile) -> Bool {
@@ -117,7 +117,60 @@ class ParseHandler: ParseHandlerProtocol {
         return PFUser.currentUser() != nil
     }
 
+    func loginParseFacebookProfile(userProfile: Profile) -> Bool {
+        
+        var isSuccessfulLogin = false
+        
+        //        var permissions = ["]
+        PFFacebookUtils.logInInBackgroundWithReadPermissions([]) {
+            (user: PFUser?, error: NSError?) -> Void in
+            
+            if let user = user {
+                
+                if user.isNew {
+                    println("User signed up and logged in through Facebook!")
+                } else {
+                    println("User logged in through Facebook!")
+                }
+                isSuccessfulLogin = true
+                
+            }
+            else {
+                println("Uh oh. The user cancelled the Facebook login.")
+                isSuccessfulLogin = false
+            }
+        }
+        
+        return isSuccessfulLogin
+    }
+
+    func linkParseProfileToFacebook(userProfile: Profile) -> Bool {
+        
+        var isSuccessfulLinking = false
+//        if !PFFacebookUtils.isLinkedWithUser(user) {
+//            PFFacebookUtils.linkUserInBackground(user, withReadPermissions: nil, {
+//                (succeeded: Bool?, error: NSError?) -> Void in
+//                if succeeded {
+//                    println("Woohoo, the user is linked with Facebook!")
+//                }
+//            })
+//        }
+        
+        return isSuccessfulLinking
+    }
     
+    func unlinkParseProfileToFacebook(userProfile: Profile) -> Bool {
+        
+        var isSuccessfulUnlinking = false
+//        PFFacebookUtils.unlinkUserInBackground(user, {
+//            (succeeded: Bool?, error: NSError?) -> Void in
+//            if succeeded {
+//                println("The user is no longer associated with their Facebook account.")
+//            }
+//        })
+        
+        return isSuccessfulUnlinking
+    }
     
     // MARK: Username interface in Parse.
     

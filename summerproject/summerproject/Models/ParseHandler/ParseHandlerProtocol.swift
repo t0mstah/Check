@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 protocol ParseHandlerProtocol {
     
     var thisUser: Profile? { get set }
@@ -37,6 +35,21 @@ protocol ParseHandlerProtocol {
     // EFFECTS: Returns the Parse profile.
     func getParseProfile() -> Profile
     
+    
+    // MARK: Facebook user profile in Parse.
+    
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Returns true on successful Facebook login/signup, false otherwise.
+    func loginParseFacebookProfile(userProfile: Profile) -> Bool
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Returns true on successful linking of Parse and Facebook profiles.
+    func linkParseProfileToFacebook(userProfile: Profile) -> Bool
+    
+    // REQUIRES: A user profile.
+    // EFFECTS: Returns true on successful unlinking of Parse and Facebook profiles.
+    func unlinkParseProfileToFacebook(userProfile: Profile) -> Bool
     
     // MARK: Current user status interface in Parse.
     
