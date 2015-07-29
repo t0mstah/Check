@@ -51,7 +51,7 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
         let itemController = viewController as! PageViewController
         
         if itemController.itemIndex > 0 {
-            return getItemController(itemController.itemIndex-1)
+            return getItemController(itemController.itemIndex - 1)
         }
         
         return nil
@@ -61,8 +61,8 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
         
         let itemController = viewController as! PageViewController
         
-        if itemController.itemIndex+1 < contentImages.count {
-            return getItemController(itemController.itemIndex+1)
+        if itemController.itemIndex + 1 < contentImages.count {
+            return getItemController(itemController.itemIndex + 1)
         }
         
         return nil
