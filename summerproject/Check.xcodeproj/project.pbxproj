@@ -18,6 +18,9 @@
 		4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E41B56067A0040BEEA /* SideBarViewController.swift */; };
 		4B46F0231B5B5C3900573A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B46F0221B5B5C3900573A1F /* Main.storyboard */; };
 		4B46F0241B5B5C4B00573A1F /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 4B46F0221B5B5C3900573A1F /* Main.storyboard */; };
+		4B5F57FD1B68776C00B473BD /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F57FC1B68776C00B473BD /* RatingViewController.swift */; };
+		4B5F57FF1B6877E000B473BD /* RatingViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F57FE1B6877E000B473BD /* RatingViewController2.swift */; };
+		4B5F58011B6881A100B473BD /* RatingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F58001B6881A100B473BD /* RatingBaseViewController.swift */; };
 		4B8A2FB41B5C551A00085940 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A2FB31B5C551A00085940 /* TutorialViewController.swift */; };
 		4B8A2FB61B5C743800085940 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A2FB51B5C743800085940 /* PageViewController.swift */; };
 		4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */; };
@@ -47,7 +50,6 @@
 		5A6642FC1B5C35EF005F5FCB /* ParseHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6642FB1B5C35EF005F5FCB /* ParseHandlerProtocol.swift */; };
 		5A6642FE1B5C361D005F5FCB /* ParseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6642FD1B5C361D005F5FCB /* ParseHandler.swift */; };
 		5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E566D1B5372E3006438BC /* LoginViewController.swift */; };
-		5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E566F1B53730F006438BC /* SignUpViewController.swift */; };
 		5AA6F2AC1B54D1FA0006D6B3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A11B54D1FA0006D6B3 /* Profile.swift */; };
 		5AA6F2AD1B54D1FA0006D6B3 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A21B54D1FA0006D6B3 /* ProfileProtocol.swift */; };
 		5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */; };
@@ -93,6 +95,9 @@
 		4B2CD2E81B5609720040BEEA /* PrintClearly.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintClearly.otf; path = summerproject/Fonts/PrintClearly.otf; sourceTree = "<group>"; };
 		4B2CD2F61B560BF10040BEEA /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		4B46F0221B5B5C3900573A1F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4B5F57FC1B68776C00B473BD /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		4B5F57FE1B6877E000B473BD /* RatingViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController2.swift; sourceTree = "<group>"; };
+		4B5F58001B6881A100B473BD /* RatingBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingBaseViewController.swift; sourceTree = "<group>"; };
 		4B8A2FB31B5C551A00085940 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		4B8A2FB51B5C743800085940 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		4BCE29E31B2E76F400B74DCA /* Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Check.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +134,6 @@
 		5A6642FB1B5C35EF005F5FCB /* ParseHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseHandlerProtocol.swift; path = ParseHandler/ParseHandlerProtocol.swift; sourceTree = "<group>"; };
 		5A6642FD1B5C361D005F5FCB /* ParseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseHandler.swift; path = ParseHandler/ParseHandler.swift; sourceTree = "<group>"; };
 		5A6E566D1B5372E3006438BC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		5A6E566F1B53730F006438BC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A6E56711B5377BF006438BC /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tutorial1ViewController.swift; path = Tutorial/Tutorial1ViewController.swift; sourceTree = "<group>"; };
 		5A6E56731B5377DB006438BC /* Tutorial2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tutorial2ViewController.swift; path = Tutorial/Tutorial2ViewController.swift; sourceTree = "<group>"; };
 		5A6E56761B537806006438BC /* Tutorial3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tutorial3ViewController.swift; path = Tutorial/Tutorial3ViewController.swift; sourceTree = "<group>"; };
@@ -308,7 +312,6 @@
 			children = (
 				5A6E56751B5377EB006438BC /* Tutorial */,
 				5A6E566D1B5372E3006438BC /* LoginViewController.swift */,
-				5A6E566F1B53730F006438BC /* SignUpViewController.swift */,
 				4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */,
 				4B0F81801B54AFBA0077A371 /* HomeTableViewCell.swift */,
 				4B0F816F1B54A97D0077A371 /* ProfileViewController.swift */,
@@ -320,6 +323,9 @@
 				4B8A2FB51B5C743800085940 /* PageViewController.swift */,
 				4B269A6E1B672B1700FAFFDE /* ReviewsTableViewController.swift */,
 				4B269A701B672B2F00FAFFDE /* ReviewTableViewCell.swift */,
+				4B5F58001B6881A100B473BD /* RatingBaseViewController.swift */,
+				4B5F57FC1B68776C00B473BD /* RatingViewController.swift */,
+				4B5F57FE1B6877E000B473BD /* RatingViewController2.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -521,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B5F58011B6881A100B473BD /* RatingBaseViewController.swift in Sources */,
 				4B46F0241B5B5C4B00573A1F /* Main.storyboard in Sources */,
 				4B269A711B672B2F00FAFFDE /* ReviewTableViewCell.swift in Sources */,
 				5AA6F2B11B54D1FA0006D6B3 /* SettingsProtocol.swift in Sources */,
@@ -530,8 +537,8 @@
 				5AA6F2AD1B54D1FA0006D6B3 /* ProfileProtocol.swift in Sources */,
 				4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */,
 				5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */,
+				4B5F57FD1B68776C00B473BD /* RatingViewController.swift in Sources */,
 				5AFC93741B65E75A00C34193 /* Review.swift in Sources */,
-				5A6E56701B53730F006438BC /* SignUpViewController.swift in Sources */,
 				4B0F81701B54A97D0077A371 /* ProfileViewController.swift in Sources */,
 				4B0F81811B54AFBA0077A371 /* HomeTableViewCell.swift in Sources */,
 				4B8A2FB41B5C551A00085940 /* TutorialViewController.swift in Sources */,
@@ -541,6 +548,7 @@
 				4B8A2FB61B5C743800085940 /* PageViewController.swift in Sources */,
 				4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */,
 				4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */,
+				4B5F57FF1B6877E000B473BD /* RatingViewController2.swift in Sources */,
 				5A6642FE1B5C361D005F5FCB /* ParseHandler.swift in Sources */,
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,
 				4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */,
