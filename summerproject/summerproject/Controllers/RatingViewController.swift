@@ -14,7 +14,7 @@ class RatingViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
+                
         picture.clipsToBounds = true
         picture.layer.cornerRadius = picture.frame.size.width / 2.0
     }
