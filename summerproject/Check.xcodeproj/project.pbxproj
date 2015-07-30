@@ -26,6 +26,8 @@
 		4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */; };
 		4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29EA1B2E76F400B74DCA /* summerproject.xcdatamodeld */; };
 		4BCE29F31B2E76F400B74DCA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE29F21B2E76F400B74DCA /* Images.xcassets */; };
+		5A063FD61B69D4C5006F74BC /* FacebookProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A063FD51B69D4C5006F74BC /* FacebookProfileProtocol.swift */; };
+		5A063FD81B69D54F006F74BC /* FacebookProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A063FD71B69D54F006F74BC /* FacebookProfile.swift */; };
 		5A2A13AC1B5314C300BA9535 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13AA1B5314C300BA9535 /* Bolts.framework */; };
 		5A2A13AD1B5314C300BA9535 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13AB1B5314C300BA9535 /* Parse.framework */; };
 		5A2A13BB1B53158C00BA9535 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13AE1B53158B00BA9535 /* Accounts.framework */; };
@@ -106,6 +108,8 @@
 		4BCE29EB1B2E76F400B74DCA /* summerproject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = summerproject.xcdatamodel; sourceTree = "<group>"; };
 		4BCE29F21B2E76F400B74DCA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4BCE29F51B2E76F400B74DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5A063FD51B69D4C5006F74BC /* FacebookProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookProfileProtocol.swift; path = FacebookAPI/FacebookProfileProtocol.swift; sourceTree = "<group>"; };
+		5A063FD71B69D54F006F74BC /* FacebookProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookProfile.swift; path = FacebookAPI/FacebookProfile.swift; sourceTree = "<group>"; };
 		5A2A13AA1B5314C300BA9535 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		5A2A13AB1B5314C300BA9535 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5A2A13AE1B53158B00BA9535 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -243,6 +247,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5A063FD41B69D46E006F74BC /* FacebookAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5A063FD51B69D4C5006F74BC /* FacebookProfileProtocol.swift */,
+				5A063FD71B69D54F006F74BC /* FacebookProfile.swift */,
+			);
+			name = FacebookAPI;
+			sourceTree = "<group>";
+		};
 		5A2A13A91B5314AB00BA9535 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +346,7 @@
 		5A60729E1B53405D008D9C5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5A063FD41B69D46E006F74BC /* FacebookAPI */,
 				5AFC93711B65E74000C34193 /* Review */,
 				5AA6F2A01B54D1FA0006D6B3 /* Profile */,
 				5AA6F2A61B54D1FA0006D6B3 /* Settings */,
@@ -550,9 +564,11 @@
 				4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */,
 				4B5F57FF1B6877E000B473BD /* RatingViewController2.swift in Sources */,
 				5A6642FE1B5C361D005F5FCB /* ParseHandler.swift in Sources */,
+				5A063FD61B69D4C5006F74BC /* FacebookProfileProtocol.swift in Sources */,
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,
 				4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */,
 				5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */,
+				5A063FD81B69D54F006F74BC /* FacebookProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

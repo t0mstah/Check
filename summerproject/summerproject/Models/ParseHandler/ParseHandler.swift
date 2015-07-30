@@ -119,29 +119,7 @@ class ParseHandler: ParseHandlerProtocol {
 
     func loginParseFacebookProfile(userProfile: Profile) -> Bool {
         
-        var isSuccessfulLogin = false
-        
-        //        var permissions = ["]
-        PFFacebookUtils.logInInBackgroundWithReadPermissions([]) {
-            (user: PFUser?, error: NSError?) -> Void in
-            
-            if let user = user {
-                
-                if user.isNew {
-                    println("User signed up and logged in through Facebook!")
-                } else {
-                    println("User logged in through Facebook!")
-                }
-                isSuccessfulLogin = true
-                
-            }
-            else {
-                println("Uh oh. The user cancelled the Facebook login.")
-                isSuccessfulLogin = false
-            }
-        }
-        
-        return isSuccessfulLogin
+        return FacebookProfile().loginWithReadPermissions()
     }
 
     func linkParseProfileToFacebook(userProfile: Profile) -> Bool {
@@ -309,6 +287,7 @@ class ParseHandler: ParseHandlerProtocol {
     
     // MARK: IsCheckVerified interface in Parse.
     
+    
     // REQUIRES: A user profile.
     // EFFECTS: Sets the user to be check verified.
     func addParseCheckVerified() {
@@ -355,7 +334,7 @@ class ParseHandler: ParseHandlerProtocol {
     }
     
     func updateParseReview(userProfile: Profile, userReview: Review) {
-        
+
     }
     
     func getParseReviews(userProfile: Profile) -> [Review]? {
@@ -371,5 +350,4 @@ class ParseHandler: ParseHandlerProtocol {
     func updateParseSettings(userSettings: Settings) {
         
     }
-    
 }
