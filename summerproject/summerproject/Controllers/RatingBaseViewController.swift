@@ -13,11 +13,16 @@ class RatingBaseViewController: UIViewController, UIPageViewControllerDataSource
     
     private var pageViewController: UIPageViewController?
     
-    private var index: Int = 0
+    private var pageItemController: RatingViewController?
+    
+    private var last: Bool = false
+    
+    override func viewWillAppear(animated: Bool) {
+        createPageItemController()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         createPageViewController()
         setupPageControl()
     }
@@ -26,7 +31,7 @@ class RatingBaseViewController: UIViewController, UIPageViewControllerDataSource
         let pageController = self.storyboard!.instantiateViewControllerWithIdentifier("PageController2") as! UIPageViewController
         pageController.dataSource = self
         
-        let firstController = getItemController()!
+        let firstController = self.storyboard!.instantiateViewControllerWithIdentifier("Rating") as! RatingViewController
         let startingViewControllers: NSArray = [firstController]
         pageController.setViewControllers(startingViewControllers as [AnyObject], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         
@@ -34,6 +39,12 @@ class RatingBaseViewController: UIViewController, UIPageViewControllerDataSource
         addChildViewController(pageViewController!)
         self.view.addSubview(pageViewController!.view)
         pageViewController!.didMoveToParentViewController(self)
+    }
+    
+    private func createPageItemController() {
+        pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("Rating1") as? RatingViewController
+        pageItemController!.loadView()
+        pageItemController!.viewDidLoad()
     }
     
     private func setupPageControl() {
@@ -44,38 +55,17 @@ class RatingBaseViewController: UIViewController, UIPageViewControllerDataSource
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        if index == 0 {
-            index++
-            let itemController = viewController as! RatingViewController1
-            return getItemController()
-        } else {
-            index--
-            let itemController = viewController as! RatingViewController
-            return getItemController()
-        }
+        return nil
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        if index == 0 {
-            let itemController = viewController as! RatingViewController1
-            return getItemController()
-        } else {
-            let itemController = viewController as! RatingViewController
-            return getItemController()
-        }
-    }
-    
-    private func getItemController() -> UIViewController? {
-        var pageItemController: UIViewController
-            
-        if index == 0 {
-            pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("Rating") as! RatingViewController
-        } else {
-            pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("Rating1") as! RatingViewController1
+        if (!last) {
+            last = true
+            return pageItemController
         }
         
-        return pageItemController
+        return nil
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
