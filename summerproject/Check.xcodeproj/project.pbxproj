@@ -28,7 +28,6 @@
 		5A063FD61B69D4C5006F74BC /* FacebookProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A063FD51B69D4C5006F74BC /* FacebookProfileProtocol.swift */; };
 		5A063FD81B69D54F006F74BC /* FacebookProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A063FD71B69D54F006F74BC /* FacebookProfile.swift */; };
 		5A2A13AC1B5314C300BA9535 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13AA1B5314C300BA9535 /* Bolts.framework */; };
-		5A2A13AD1B5314C300BA9535 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13AB1B5314C300BA9535 /* Parse.framework */; };
 		5A2A13BB1B53158C00BA9535 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13AE1B53158B00BA9535 /* Accounts.framework */; };
 		5A2A13BC1B53158C00BA9535 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13AF1B53158B00BA9535 /* AudioToolbox.framework */; };
 		5A2A13BD1B53158C00BA9535 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A13B01B53158B00BA9535 /* CFNetwork.framework */; };
@@ -55,10 +54,11 @@
 		5AA6F2AD1B54D1FA0006D6B3 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A21B54D1FA0006D6B3 /* ProfileProtocol.swift */; };
 		5AA6F2B01B54D1FA0006D6B3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */; };
 		5AA6F2B11B54D1FA0006D6B3 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */; };
-		5AAC93041B6885AB00CEC036 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC93031B6885AB00CEC036 /* ParseFacebookUtilsV4.framework */; };
 		5ABF461C1B5E00F6004A0E8E /* UserProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */; };
 		5ABF461E1B5E0145004A0E8E /* ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461D1B5E0145004A0E8E /* ReviewTests.swift */; };
 		5ABF46201B5E0168004A0E8E /* ProfilePictureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461F1B5E0168004A0E8E /* ProfilePictureTests.swift */; };
+		5AF4853D1B6C58460019D736 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF4853C1B6C58460019D736 /* Parse.framework */; };
+		5AF4853F1B6C58510019D736 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF4853E1B6C58510019D736 /* ParseFacebookUtilsV4.framework */; };
 		5AFC93741B65E75A00C34193 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC93721B65E75A00C34193 /* Review.swift */; };
 		5AFC93751B65E75A00C34193 /* ReviewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC93731B65E75A00C34193 /* ReviewProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -109,7 +109,6 @@
 		5A063FD51B69D4C5006F74BC /* FacebookProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookProfileProtocol.swift; path = FacebookAPI/FacebookProfileProtocol.swift; sourceTree = "<group>"; };
 		5A063FD71B69D54F006F74BC /* FacebookProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookProfile.swift; path = FacebookAPI/FacebookProfile.swift; sourceTree = "<group>"; };
 		5A2A13AA1B5314C300BA9535 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		5A2A13AB1B5314C300BA9535 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5A2A13AE1B53158B00BA9535 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		5A2A13AF1B53158B00BA9535 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5A2A13B01B53158B00BA9535 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -144,10 +143,11 @@
 		5AA6F2A21B54D1FA0006D6B3 /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
 		5AA6F2A71B54D1FA0006D6B3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5AA6F2A81B54D1FA0006D6B3 /* SettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
-		5AAC93031B6885AB00CEC036 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileTests.swift; sourceTree = "<group>"; };
 		5ABF461D1B5E0145004A0E8E /* ReviewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTests.swift; sourceTree = "<group>"; };
 		5ABF461F1B5E0168004A0E8E /* ProfilePictureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureTests.swift; sourceTree = "<group>"; };
+		5AF4853C1B6C58460019D736 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		5AF4853E1B6C58510019D736 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		5AFC93721B65E75A00C34193 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Review.swift; path = Review/Review.swift; sourceTree = "<group>"; };
 		5AFC93731B65E75A00C34193 /* ReviewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewProtocol.swift; path = Review/ReviewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,12 +170,12 @@
 				5A2A13C31B53158C00BA9535 /* QuartzCore.framework in Frameworks */,
 				5A2A13C41B53158C00BA9535 /* Security.framework in Frameworks */,
 				5A2A13C51B53158C00BA9535 /* Social.framework in Frameworks */,
+				5AF4853D1B6C58460019D736 /* Parse.framework in Frameworks */,
+				5AF4853F1B6C58510019D736 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				5A2A13C61B53158C00BA9535 /* StoreKit.framework in Frameworks */,
-				5AAC93041B6885AB00CEC036 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				5A2A13C71B53158C00BA9535 /* SystemConfiguration.framework in Frameworks */,
 				5A41DBA61B609B8100D781DC /* FBSDKShareKit.framework in Frameworks */,
 				5A41DBA21B609B6A00D781DC /* FBSDKCoreKit.framework in Frameworks */,
-				5A2A13AD1B5314C300BA9535 /* Parse.framework in Frameworks */,
 				5A2A13AC1B5314C300BA9535 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +257,8 @@
 		5A2A13A91B5314AB00BA9535 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5AAC93031B6885AB00CEC036 /* ParseFacebookUtilsV4.framework */,
+				5AF4853E1B6C58510019D736 /* ParseFacebookUtilsV4.framework */,
+				5AF4853C1B6C58460019D736 /* Parse.framework */,
 				5A40D4881B65F3AE00E12648 /* UIKit.framework */,
 				5A41DBA11B609B6A00D781DC /* FBSDKCoreKit.framework */,
 				5A41DBA31B609B7800D781DC /* FBSDKLoginKit.framework */,
@@ -276,7 +277,6 @@
 				5A2A13B91B53158C00BA9535 /* StoreKit.framework */,
 				5A2A13BA1B53158C00BA9535 /* SystemConfiguration.framework */,
 				5A2A13AA1B5314C300BA9535 /* Bolts.framework */,
-				5A2A13AB1B5314C300BA9535 /* Parse.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

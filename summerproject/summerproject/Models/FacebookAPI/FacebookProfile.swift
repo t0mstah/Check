@@ -40,6 +40,7 @@ class FacebookProfile : FacebookProfileProtocol {
     func requestPublishPermissions() -> Bool {
         
         var isSuccessful = false
+        
         // Request new Publish Permissions
 //        PFFacebookUtils.linkUserInBackground(user, withPublishPermissions: ["publish_actions"], {
 //            (succeeded: Bool?, error: NSError?) -> Void in
