@@ -61,19 +61,19 @@ protocol ProfileProtocol {
     // MARK: Reviews interface.
     
     
-    // EFFECTS: Returns all reviews
+    // EFFECTS: Returns all reviews for this user.
     func getReviews() -> [Review]?
     
     // REQUIRES: A review.
-    // EFFECTS: Creates a review id and adds a review that is linked to the
+    // EFFECTS: Creates a review id and adds a review from this user to the
     //          person's profile.
     func addReview(review: Review)
     
-    // REQUIRES: A reviewId.
+    // REQUIRES: A review.
     // EFFECTS: Edits the person's review and changes the modification date.
     func updateReview(review: Review)
     
-    // REQUIRES: A reviewId.
+    // REQUIRES: A review.
     // EFFECTS: Remove the given review.
     func removeReview(review: Review)
     

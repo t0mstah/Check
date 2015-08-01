@@ -11,6 +11,7 @@ import Parse
 
 class ParseHandler: ParseHandlerProtocol {
     
+    // MARK: Constants for the Parse profile keys
     private struct ParseProfileKeys {
         static let profilePicture = "profilePicture"
         static let name = "name"
@@ -23,7 +24,7 @@ class ParseHandler: ParseHandlerProtocol {
     }
 
     var thisUser : Profile?
-
+    
     init(thisUser: Profile) {
         self.thisUser = thisUser
     }
@@ -116,7 +117,11 @@ class ParseHandler: ParseHandlerProtocol {
     func isParseLoggedIn() -> Bool {
         return PFUser.currentUser() != nil
     }
-
+    
+    
+    // MARK: Facebook interface in Parse
+    
+    
     func loginParseFacebookProfile(userProfile: Profile) -> Bool {
         
         return FacebookProfile().loginWithReadPermissions()
@@ -150,7 +155,11 @@ class ParseHandler: ParseHandlerProtocol {
         return isSuccessfulUnlinking
     }
     
-    // MARK: Username interface in Parse.
+    func findAllParseProfilesInRegion(userLocation: Location) -> [Profile]? {
+        return nil //FacebookProfile().findAllFacebookProfilesInRegion(userLocation)
+    }
+    
+    // MARK: Username interface in Parse
     
     // REQUIRES: A user profile and a new password.
     // EFFECTS: Changes the user's username in Parse.
@@ -166,7 +175,7 @@ class ParseHandler: ParseHandlerProtocol {
     }
     
     
-    // MARK: Password interface in Parse.
+    // MARK: Password interface in Parse
     
     func resetParsePassword(userProfile: Profile) {
         PFUser.requestPasswordResetForEmailInBackground(userProfile.email)
@@ -186,7 +195,7 @@ class ParseHandler: ParseHandlerProtocol {
     }
     
     
-    // MARK: Email interface in Parse.
+    // MARK: Email interface in Parse
     
     
     // REQUIRES: A user profile and a new email address.
@@ -203,7 +212,7 @@ class ParseHandler: ParseHandlerProtocol {
     }
     
     
-    // MARK: Name interface in Parse.
+    // MARK: Name interface in Parse
     
     
     // REQUIRES: A user profile and a new name.

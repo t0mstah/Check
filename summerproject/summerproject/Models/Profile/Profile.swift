@@ -31,7 +31,7 @@ class Profile : ProfileProtocol {
     var settingsService: Settings?
     var backendService: ParseHandler?
 
-    // MARK: Constructor.
+    // MARK: Constructor
 
     init(username: String, password : String, email: String,
          id: String, profilePicture: UIImage?, name: String, biography: String,
@@ -59,7 +59,7 @@ class Profile : ProfileProtocol {
         backendService = ParseHandler(thisUser: self)
     }
 
-    // MARK: Login/signup interface.
+    // MARK: Login/signup interface
     
     func signup() -> Bool {
         return backendService!.signUpParseProfile(self)
@@ -96,7 +96,7 @@ class Profile : ProfileProtocol {
         }
     }
     
-    // MARK: Review interface.
+    // MARK: Review interface
     
     func getReviews() -> [Review]? {
         

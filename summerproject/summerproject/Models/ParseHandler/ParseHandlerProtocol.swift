@@ -51,6 +51,11 @@ protocol ParseHandlerProtocol {
     // EFFECTS: Returns true on successful unlinking of Parse and Facebook profiles.
     func unlinkParseProfileToFacebook(userProfile: Profile) -> Bool
     
+    // REQUIRES: A location.
+    // EFFECTS: Returns a list of user profiles in the specified region.
+    func findAllParseProfilesInRegion(userLocation: Location) -> [Profile]?
+ 
+    
     // MARK: Current user status interface in Parse.
     
     

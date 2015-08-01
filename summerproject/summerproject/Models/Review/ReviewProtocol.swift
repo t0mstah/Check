@@ -15,5 +15,4 @@ protocol ReviewProtocol {
     var reviewId: Int { get set }
     var reviewer: Profile { get set }
     var description: String { get set }
-
 }

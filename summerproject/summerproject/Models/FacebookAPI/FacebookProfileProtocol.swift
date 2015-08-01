@@ -11,11 +11,21 @@ import Foundation
 // This protocol will implement the Facebook Graph API queries.
 
 protocol FacebookProfileProtocol {
-   
+    
+    
+    // MARK: Permissions
+    
+    
     // EFFECTS: Returns true if successfully logged in with read permissions, false otherwise.
     func loginWithReadPermissions() -> Bool
     
     // EFFECTS: Returns true if successfully received publish permissions, false otherwise.
     func requestPublishPermissions() -> Bool
+   
     
+    // MARK: Profile protocols
+
+    
+    // EFFECTS: Returns a list of Facebook profiles within the area.
+    func findAllFacebookProfilesInRegion() -> [Profile]?
 }
