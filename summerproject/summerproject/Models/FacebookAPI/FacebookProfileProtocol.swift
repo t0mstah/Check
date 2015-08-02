@@ -28,4 +28,7 @@ protocol FacebookProfileProtocol {
     
     // EFFECTS: Returns a list of Facebook profiles within the area.
     func findAllFacebookProfilesInRegion() -> [Profile]?
+    
+    
+    // MARK: Profile Picture
 }

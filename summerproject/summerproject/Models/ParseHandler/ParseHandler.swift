@@ -62,8 +62,12 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile.password = userProfile.password
         userParseProfile.email = userProfile.email
         
-        //userParseProfile[ParseProfileKeys.profilePicture] = userProfile.profilePicture
-        userParseProfile[ParseProfileKeys.profilePicture] = userProfile.name
+        // Handle profile picture.
+        let imageData = UIImagePNGRepresentation(userProfile.profilePicture)
+        let imageFile = PFFile(name:"profilePic.png", data:imageData)
+        userParseProfile[ParseProfileKeys.profilePicture] = imageFile
+        
+        userParseProfile[ParseProfileKeys.name] = userProfile.name
         userParseProfile[ParseProfileKeys.biography] = userProfile.biography
         userParseProfile[ParseProfileKeys.phoneNumber] = userProfile.phoneNumber
         userParseProfile[ParseProfileKeys.checkPoints] = userProfile.checkPoints
@@ -212,6 +216,25 @@ class ParseHandler: ParseHandlerProtocol {
     }
     
     
+    // MARK: Profile picture interface in Parse
+    
+    
+    func changeProfilePicture(newProfilePic: UIImage) {
+        
+        var userParseProfile = PFUser.currentUser()
+        
+        if (userParseProfile == nil) {
+            loginParseProfile(thisUser!)
+        }
+        
+        // Convert UIImage to a PNG file, and then into PFFile.
+        let imageData = UIImagePNGRepresentation(newProfilePic)
+        let imageFile = PFFile(name:"profilePic.png", data:imageData)
+        
+        userParseProfile![ParseProfileKeys.profilePicture] = imageFile
+        userParseProfile!.saveInBackground()
+    }
+    
     // MARK: Name interface in Parse
     
     
@@ -226,6 +249,7 @@ class ParseHandler: ParseHandlerProtocol {
         }
         
         userParseProfile![ParseProfileKeys.name] = newName
+        userParseProfile!.saveInBackground()
     }
     
     
@@ -243,6 +267,7 @@ class ParseHandler: ParseHandlerProtocol {
         }
         
         userParseProfile![ParseProfileKeys.biography] = newBiography
+        userParseProfile!.saveInBackground()
     }
     
     
@@ -260,6 +285,7 @@ class ParseHandler: ParseHandlerProtocol {
         }
         
         userParseProfile![ParseProfileKeys.phoneNumber] = newPhoneNumber
+        userParseProfile!.saveInBackground()
     }
     
     
@@ -308,6 +334,7 @@ class ParseHandler: ParseHandlerProtocol {
         }
         
         userParseProfile![ParseProfileKeys.isCheckVerified] = true
+        userParseProfile!.saveInBackground()
     }
     
     // REQUIRES: A user profile.
@@ -321,6 +348,7 @@ class ParseHandler: ParseHandlerProtocol {
         }
         
         userParseProfile![ParseProfileKeys.isCheckVerified] = false
+        userParseProfile!.saveInBackground()
     }
     
     
@@ -336,6 +364,7 @@ class ParseHandler: ParseHandlerProtocol {
         
         // TODO: Query for user and then add this review.
         userParseProfile![ParseProfileKeys.reviews] = userProfile.reviews
+        userParseProfile!.saveInBackground()
     }
     
     func removeParseReview(userProfile: Profile, userReview: Review) {

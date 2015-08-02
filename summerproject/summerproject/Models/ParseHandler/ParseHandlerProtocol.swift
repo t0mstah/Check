@@ -83,7 +83,7 @@ protocol ParseHandlerProtocol {
     func resetParsePassword(userProfile: Profile)
     
     
-    // MARK: Email interface in Parse.
+    // MARK: Email interface in Parse
     
     
     // REQUIRES: A user profile and a new email address.
@@ -91,7 +91,14 @@ protocol ParseHandlerProtocol {
     func changeParseEmail(newEmail: String)
     
     
-    // MARK: Name interface in Parse.
+    // MARK: Profile picture interface in Parse
+    
+    // REQUIRES: A UIImage.
+    // EFFECTS: Changes the user's profile picture
+    func changeProfilePicture(newProfilePic: UIImage)
+    
+    
+    // MARK: Name interface in Parse
     
     
     // REQUIRES: A user profile and a new name.

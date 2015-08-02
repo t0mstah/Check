@@ -57,7 +57,6 @@ protocol ProfileProtocol {
     // EFFECTS: Removes the user profile
     func removeProfile()
     
-    
     // MARK: Reviews interface.
     
     
