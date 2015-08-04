@@ -61,8 +61,8 @@
 		5ABF461C1B5E00F6004A0E8E /* UserProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */; };
 		5ABF461E1B5E0145004A0E8E /* ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461D1B5E0145004A0E8E /* ReviewTests.swift */; };
 		5ABF46201B5E0168004A0E8E /* ProfilePictureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF461F1B5E0168004A0E8E /* ProfilePictureTests.swift */; };
-		5AF4853D1B6C58460019D736 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF4853C1B6C58460019D736 /* Parse.framework */; };
-		5AF4853F1B6C58510019D736 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF4853E1B6C58510019D736 /* ParseFacebookUtilsV4.framework */; };
+		5AEFF11F1B70545F0073C7F2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEFF11D1B70545F0073C7F2 /* Parse.framework */; };
+		5AEFF1201B70545F0073C7F2 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEFF11E1B70545F0073C7F2 /* ParseFacebookUtilsV4.framework */; };
 		5AFC93741B65E75A00C34193 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC93721B65E75A00C34193 /* Review.swift */; };
 		5AFC93751B65E75A00C34193 /* ReviewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC93731B65E75A00C34193 /* ReviewProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -154,8 +154,8 @@
 		5ABF461B1B5E00F6004A0E8E /* UserProfileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileTests.swift; sourceTree = "<group>"; };
 		5ABF461D1B5E0145004A0E8E /* ReviewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTests.swift; sourceTree = "<group>"; };
 		5ABF461F1B5E0168004A0E8E /* ProfilePictureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureTests.swift; sourceTree = "<group>"; };
-		5AF4853C1B6C58460019D736 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		5AF4853E1B6C58510019D736 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		5AEFF11D1B70545F0073C7F2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		5AEFF11E1B70545F0073C7F2 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		5AFC93721B65E75A00C34193 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Review.swift; path = Review/Review.swift; sourceTree = "<group>"; };
 		5AFC93731B65E75A00C34193 /* ReviewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewProtocol.swift; path = Review/ReviewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,8 +178,8 @@
 				5A2A13C31B53158C00BA9535 /* QuartzCore.framework in Frameworks */,
 				5A2A13C41B53158C00BA9535 /* Security.framework in Frameworks */,
 				5A2A13C51B53158C00BA9535 /* Social.framework in Frameworks */,
-				5AF4853D1B6C58460019D736 /* Parse.framework in Frameworks */,
-				5AF4853F1B6C58510019D736 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				5AEFF11F1B70545F0073C7F2 /* Parse.framework in Frameworks */,
+				5AEFF1201B70545F0073C7F2 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				5A2A13C61B53158C00BA9535 /* StoreKit.framework in Frameworks */,
 				5A2A13C71B53158C00BA9535 /* SystemConfiguration.framework in Frameworks */,
 				5A41DBA61B609B8100D781DC /* FBSDKShareKit.framework in Frameworks */,
@@ -265,8 +265,8 @@
 		5A2A13A91B5314AB00BA9535 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5AF4853E1B6C58510019D736 /* ParseFacebookUtilsV4.framework */,
-				5AF4853C1B6C58460019D736 /* Parse.framework */,
+				5AEFF11E1B70545F0073C7F2 /* ParseFacebookUtilsV4.framework */,
+				5AEFF11D1B70545F0073C7F2 /* Parse.framework */,
 				5A40D4881B65F3AE00E12648 /* UIKit.framework */,
 				5A41DBA11B609B6A00D781DC /* FBSDKCoreKit.framework */,
 				5A41DBA31B609B7800D781DC /* FBSDKLoginKit.framework */,
@@ -351,7 +351,6 @@
 		5A60729E1B53405D008D9C5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5AFC6EBA1B6EA09300077997 /* TwoFactorAuthentication */,
 				5ABB75541B6C608700334691 /* Location */,
 				5ABB754D1B6C5D0200334691 /* Core */,
 				5A063FD41B69D46E006F74BC /* FacebookAPI */,
@@ -427,13 +426,6 @@
 				4B2CD2E81B5609720040BEEA /* PrintClearly.otf */,
 			);
 			name = Fonts;
-			sourceTree = "<group>";
-		};
-		5AFC6EBA1B6EA09300077997 /* TwoFactorAuthentication */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = TwoFactorAuthentication;
 			sourceTree = "<group>";
 		};
 		5AFC93711B65E74000C34193 /* Review */ = {
@@ -743,11 +735,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"/Users/0xalate/Documents/parse-library-1.7.5",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = summerproject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Check;
@@ -762,11 +750,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"/Users/0xalate/Documents/parse-library-1.7.5",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = summerproject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Check;
