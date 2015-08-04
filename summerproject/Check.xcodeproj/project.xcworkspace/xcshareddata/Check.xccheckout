@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7EFE6353-B800-421E-B84B-8C3A502685FE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Check</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B5259FE263AA9CD37A0E2D18BF76131C971214FD</key>
 		<string>https://github.com/tfang2017/summerproject</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>summerproject/Check.xcodeproj/project.xcworkspace</string>
+	<string>summerproject/Check.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B5259FE263AA9CD37A0E2D18BF76131C971214FD</key>
