@@ -72,6 +72,7 @@ class FacebookProfile : FacebookProfileProtocol {
 //    
 //   To access the user's Facebook access token, you can simply call [FBSDKAccessToken currentAccessToken] to access the FBSDKAccessToken instance, which can be passed to FBSDKGraphRequests.
     func findAllFacebookProfilesInRegion() -> [Profile]? {
+        
         return nil
     }
 }
