@@ -9,6 +9,10 @@
 import UIKit
 
 class RatingBaseViewController: UIViewController, UIPageViewControllerDataSource {
+    @IBAction func toggleMenu(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("toggleMenu", object: nil)
+    }
+    
     private var buttonSize = UIScreen.mainScreen().bounds.width/7.5
     
     private var pageViewController: UIPageViewController?
@@ -45,6 +49,14 @@ class RatingBaseViewController: UIViewController, UIPageViewControllerDataSource
         pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("Rating1") as? RatingViewController
         pageItemController!.loadView()
         pageItemController!.viewDidLoad()
+        let constraint = NSLayoutConstraint(item: pageItemController!.view,
+            attribute: NSLayoutAttribute.Top,
+            relatedBy: .Equal,
+            toItem: pageItemController!.topLayoutGuide,
+            attribute: NSLayoutAttribute.Top,
+            multiplier: 1,
+            constant: -24)
+        pageItemController!.view.addConstraint(constraint)
     }
     
     private func setupPageControl() {
