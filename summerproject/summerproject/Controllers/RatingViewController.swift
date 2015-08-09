@@ -12,10 +12,6 @@ class RatingViewController: UIViewController {
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var review: UITextView!
-    
-    @IBOutlet weak var picture1: UIImageView!
-    @IBOutlet weak var name1: UILabel!
-    
         
     override func viewDidLoad() {
         super.viewDidLoad()

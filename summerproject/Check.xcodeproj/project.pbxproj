@@ -22,6 +22,7 @@
 		4B5F58011B6881A100B473BD /* RatingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F58001B6881A100B473BD /* RatingBaseViewController.swift */; };
 		4B8A2FB41B5C551A00085940 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A2FB31B5C551A00085940 /* TutorialViewController.swift */; };
 		4B8A2FB61B5C743800085940 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A2FB51B5C743800085940 /* PageViewController.swift */; };
+		4B9CA8161B78067B00FBA4D3 /* RatingViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9CA8151B78067B00FBA4D3 /* RatingViewController1.swift */; };
 		4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */; };
 		4BCE29EC1B2E76F400B74DCA /* summerproject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE29EA1B2E76F400B74DCA /* summerproject.xcdatamodeld */; };
 		4BCE29F31B2E76F400B74DCA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE29F21B2E76F400B74DCA /* Images.xcassets */; };
@@ -104,6 +105,7 @@
 		4B5F58001B6881A100B473BD /* RatingBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingBaseViewController.swift; sourceTree = "<group>"; };
 		4B8A2FB31B5C551A00085940 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		4B8A2FB51B5C743800085940 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		4B9CA8151B78067B00FBA4D3 /* RatingViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController1.swift; sourceTree = "<group>"; };
 		4BCE29E31B2E76F400B74DCA /* Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Check.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCE29E71B2E76F400B74DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BCE29E81B2E76F400B74DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				4B269A701B672B2F00FAFFDE /* ReviewTableViewCell.swift */,
 				4B5F58001B6881A100B473BD /* RatingBaseViewController.swift */,
 				4B5F57FC1B68776C00B473BD /* RatingViewController.swift */,
+				4B9CA8151B78067B00FBA4D3 /* RatingViewController1.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				5AA6F2AD1B54D1FA0006D6B3 /* ProfileProtocol.swift in Sources */,
 				4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */,
 				5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */,
+				4B9CA8161B78067B00FBA4D3 /* RatingViewController1.swift in Sources */,
 				4B5F57FD1B68776C00B473BD /* RatingViewController.swift in Sources */,
 				5AFC93741B65E75A00C34193 /* Review.swift in Sources */,
 				4B0F81701B54A97D0077A371 /* ProfileViewController.swift in Sources */,

@@ -13,14 +13,18 @@ class RatingBaseViewController: UIViewController, UIPageViewControllerDataSource
         NSNotificationCenter.defaultCenter().postNotificationName("toggleMenu", object: nil)
     }
     
+    @IBAction func cancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+        
     private var buttonSize = UIScreen.mainScreen().bounds.width/7.5
     
     private var pageViewController: UIPageViewController?
     
-    private var pageItemController: RatingViewController?
+    private var pageItemController: RatingViewController1?
     
     private var last: Bool = false
-    
+
     override func viewWillAppear(animated: Bool) {
         createPageItemController()
     }
@@ -44,9 +48,9 @@ class RatingBaseViewController: UIViewController, UIPageViewControllerDataSource
         self.view.addSubview(pageViewController!.view)
         pageViewController!.didMoveToParentViewController(self)
     }
-    
+
     private func createPageItemController() {
-        pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("Rating1") as? RatingViewController
+        pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("Rating1") as? RatingViewController1
         pageItemController!.loadView()
         pageItemController!.viewDidLoad()
         let constraint = NSLayoutConstraint(item: pageItemController!.view,
@@ -69,7 +73,7 @@ class RatingBaseViewController: UIViewController, UIPageViewControllerDataSource
         
         return nil
     }
-    
+
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
         if (!last) {
@@ -79,7 +83,7 @@ class RatingBaseViewController: UIViewController, UIPageViewControllerDataSource
         
         return nil
     }
-    
+
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 2
     }
