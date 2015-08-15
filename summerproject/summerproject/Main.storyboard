@@ -928,7 +928,6 @@
         <!--Custom Navigation Controller-->
         <scene sceneID="DKi-V5-Bcs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9h-2H-s1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="seH-jR-IzV" customClass="CustomNavigationController" customModule="Check" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vcM-jk-Ly0">
@@ -940,6 +939,7 @@
                         <segue destination="apX-21-W3c" kind="relationship" relationship="rootViewController" id="EfA-RM-Nxk"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9h-2H-s1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1589" y="2135"/>
         </scene>
