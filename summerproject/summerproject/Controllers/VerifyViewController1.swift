@@ -1,14 +1,14 @@
 //
-//  LoginViewController.swift
+//  VerifyViewController1.swift
 //  summerproject
 //
-//  Created by Zheng Hao Tan on 7/12/15.
+//  Created by Tommy Fang on 8/18/15.
 //  Copyright (c) 2015 Stanford University. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class VerifyViewController1: UIViewController {
     @IBAction func toggleMenu(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName("toggleMenu", object: nil)
     }

@@ -16,6 +16,9 @@
 		4B269A6F1B672B1700FAFFDE /* ReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B269A6E1B672B1700FAFFDE /* ReviewsTableViewController.swift */; };
 		4B269A711B672B2F00FAFFDE /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B269A701B672B2F00FAFFDE /* ReviewTableViewCell.swift */; };
 		4B2CD2E51B56067A0040BEEA /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CD2E41B56067A0040BEEA /* SideBarViewController.swift */; };
+		4B3D15A01B84351F00FBB36A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D159F1B84351F00FBB36A /* SignupViewController.swift */; };
+		4B3D15A21B84352900FBB36A /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D15A11B84352900FBB36A /* VerifyViewController.swift */; };
+		4B3D15A41B84353300FBB36A /* VerifyViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D15A31B84353300FBB36A /* VerifyViewController1.swift */; };
 		4B46F0231B5B5C3900573A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B46F0221B5B5C3900573A1F /* Main.storyboard */; };
 		4B46F0241B5B5C4B00573A1F /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 4B46F0221B5B5C3900573A1F /* Main.storyboard */; };
 		4B5F57FD1B68776C00B473BD /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F57FC1B68776C00B473BD /* RatingViewController.swift */; };
@@ -100,6 +103,9 @@
 		4B2CD2E71B5609720040BEEA /* PrintDashed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintDashed.otf; path = summerproject/Fonts/PrintDashed.otf; sourceTree = "<group>"; };
 		4B2CD2E81B5609720040BEEA /* PrintClearly.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PrintClearly.otf; path = summerproject/Fonts/PrintClearly.otf; sourceTree = "<group>"; };
 		4B2CD2F61B560BF10040BEEA /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		4B3D159F1B84351F00FBB36A /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		4B3D15A11B84352900FBB36A /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		4B3D15A31B84353300FBB36A /* VerifyViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController1.swift; sourceTree = "<group>"; };
 		4B46F0221B5B5C3900573A1F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4B5F57FC1B68776C00B473BD /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		4B5F58001B6881A100B473BD /* RatingBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingBaseViewController.swift; sourceTree = "<group>"; };
@@ -333,6 +339,9 @@
 			children = (
 				5A6E56751B5377EB006438BC /* Tutorial */,
 				5A6E566D1B5372E3006438BC /* LoginViewController.swift */,
+				4B3D159F1B84351F00FBB36A /* SignupViewController.swift */,
+				4B3D15A11B84352900FBB36A /* VerifyViewController.swift */,
+				4B3D15A31B84353300FBB36A /* VerifyViewController1.swift */,
 				4B0F81841B54B8B80077A371 /* HomeTableViewController.swift */,
 				4B0F81801B54AFBA0077A371 /* HomeTableViewCell.swift */,
 				4B0F816F1B54A97D0077A371 /* ProfileViewController.swift */,
@@ -580,6 +589,7 @@
 				5AA6F2AD1B54D1FA0006D6B3 /* ProfileProtocol.swift in Sources */,
 				4B0F81721B54A9B40077A371 /* SettingsTableViewController.swift in Sources */,
 				5A6E566E1B5372E3006438BC /* LoginViewController.swift in Sources */,
+				4B3D15A21B84352900FBB36A /* VerifyViewController.swift in Sources */,
 				4B9CA8161B78067B00FBA4D3 /* RatingViewController1.swift in Sources */,
 				4B5F57FD1B68776C00B473BD /* RatingViewController.swift in Sources */,
 				5AFC93741B65E75A00C34193 /* Review.swift in Sources */,
@@ -591,8 +601,10 @@
 				5AFC93751B65E75A00C34193 /* ReviewProtocol.swift in Sources */,
 				4B8A2FB61B5C743800085940 /* PageViewController.swift in Sources */,
 				5ABB75561B6C60A000334691 /* LocationProtocol.swift in Sources */,
+				4B3D15A41B84353300FBB36A /* VerifyViewController1.swift in Sources */,
 				4B0F81851B54B8B80077A371 /* HomeTableViewController.swift in Sources */,
 				4B0F81831B54B18B0077A371 /* CustomNavigationController.swift in Sources */,
+				4B3D15A01B84351F00FBB36A /* SignupViewController.swift in Sources */,
 				5A6642FE1B5C361D005F5FCB /* ParseHandler.swift in Sources */,
 				5A063FD61B69D4C5006F74BC /* FacebookProfileProtocol.swift in Sources */,
 				4BCE29E91B2E76F400B74DCA /* AppDelegate.swift in Sources */,
