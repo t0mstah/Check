@@ -12,10 +12,10 @@ class Application: ApplicationProtocol {
     
     func findAllProfilesInRegion(userLocation: Location) -> [Profile]? {
         
-//        var thisUser : Profile
-//        
-//        var parseHandler = ParseHandler(thisUser: thisUser)
-//        return parseHandler.findAllParseProfilesInRegion(userLocation)
-        return nil
+        var thisUser : Profile? = nil
+        
+        var parseHandler = ParseHandler(thisUser: thisUser!)
+
+        return parseHandler.findAllParseProfilesInRegion(userLocation)
     }
 }

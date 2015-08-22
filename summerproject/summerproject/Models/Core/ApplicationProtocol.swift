@@ -15,4 +15,6 @@ protocol ApplicationProtocol {
     // REQUIRES: A location.
     // EFFECTS: Returns a list of user profiles within the area.
     func findAllProfilesInRegion(userLocation: Location) -> [Profile]?
+    
+    // REQUIRES: A location for
 }

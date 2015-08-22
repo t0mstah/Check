@@ -11,6 +11,10 @@
 import Foundation
 import Parse
 
+import FBSDKCoreKit
+import FBSDKShareKit
+import FBSDKLoginKit
+
 class FacebookProfile : FacebookProfileProtocol {
     
     
@@ -74,5 +78,25 @@ class FacebookProfile : FacebookProfileProtocol {
     func findAllFacebookProfilesInRegion() -> [Profile]? {
         
         return nil
+    }
+   
+    // REQUIRES: A Facebook profile.
+    // EFFECTS: Fetches the profile picture of the given user. Returns nil if not found.
+    func fetchProfilePicture(facebookProfile: FacebookProfile) -> UIImage? {
+
+        // Get user profile pic
+        var accessToken = FBSDKAccessToken.currentAccessToken()
+        
+        let url = NSURL(string: "https://graph.facebook.com/me/picture?type=large&return_ssl_resources=1&access_token=\(accessToken)")
+        let urlRequest = NSURLRequest(URL: url!)
+        
+        var profilePic : UIImage? = nil
+        
+        // Make request for the profile picture.
+        NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+            profilePic = UIImage(data: data)
+        }
+        
+        return profilePic
     }
 }

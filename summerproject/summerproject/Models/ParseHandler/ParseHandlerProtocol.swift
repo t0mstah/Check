@@ -11,9 +11,8 @@ import Foundation
 protocol ParseHandlerProtocol {
     
     var thisUser: Profile? { get set }
-    
+    var facebookProfile: FacebookProfile? { get set }
     // MARK: Login user profile in Parse.
-    
     
     // REQUIRES: A user profile.
     // EFFECTS: Returns true on successful login, false otherwise.

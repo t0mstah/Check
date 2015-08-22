@@ -24,11 +24,13 @@ protocol FacebookProfileProtocol {
    
     
     // MARK: Profile protocols
-
     
     // EFFECTS: Returns a list of Facebook profiles within the area.
     func findAllFacebookProfilesInRegion() -> [Profile]?
     
-    
     // MARK: Profile Picture
+
+    // REQUIRES: A Facebook profile.
+    // EFFECTS: Fetches the profile picture of the given user. Returns nil if not found.
+    func fetchProfilePicture(facebookProfile: FacebookProfile) -> UIImage?
 }

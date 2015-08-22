@@ -24,9 +24,11 @@ class ParseHandler: ParseHandlerProtocol {
     }
 
     var thisUser : Profile?
+    var facebookProfile : FacebookProfile?
     
     init(thisUser: Profile) {
         self.thisUser = thisUser
+        self.facebookProfile = FacebookProfile()
     }
 
     func loginParseProfile(userProfile: Profile) -> Bool {
@@ -128,7 +130,7 @@ class ParseHandler: ParseHandlerProtocol {
     
     func loginParseFacebookProfile(userProfile: Profile) -> Bool {
         
-        return FacebookProfile().loginWithReadPermissions()
+        return facebookProfile!.loginWithReadPermissions()
     }
 
     func linkParseProfileToFacebook(userProfile: Profile) -> Bool {
