@@ -25,16 +25,19 @@ class Profile : ProfileProtocol {
     var phoneNumber: String = ""
     var checkPoints: Int = 0
     var isCheckVerified: Bool = false
-    var reviews: [Review]?
+    var reviewIds: [Int]?
     var settings: Settings?
 
 
     // MARK: Constructor
+    init() {
+        
+    }
 
     init(username: String, password : String, email: String,
          id: String, profilePicture: UIImage?, name: String, biography: String,
          phoneNumber : String, checkPoints : Int, isCheckVerified : Bool,
-         reviews: [Review]?, settings: Settings?) {
+         reviewIds: [Int]?, settings: Settings?) {
 
         self.username = username
         self.password = password
@@ -47,52 +50,16 @@ class Profile : ProfileProtocol {
         self.phoneNumber = phoneNumber
         self.checkPoints = checkPoints
         self.isCheckVerified = isCheckVerified
-        self.reviews = reviews
+        self.reviewIds = reviewIds
         self.settings = settings
     }
 
-    // MARK: Login/signup interface
-    
-    func signup() -> Bool {
-        return application!.backendService!.signUpParseProfile(self)
-    }
-    
-    func isLoggedIn() -> Bool {
-        return application!.backendService!.isParseLoggedIn()
-    }
-    
-    func login() -> Bool {
-        return application!.backendService!.loginParseProfile(self)
-    }
-    
-    func logout() -> Bool {
-        return application!.backendService!.logoutParseProfile(self)
-    }
-
-    // MARK: Profile interface.
-
-    func getProfile() -> Profile {
-        
-        if application!.isUsingParse {
-            return application!.backendService!.getParseProfile()
-        }
-        
-        return self
-    }
-    
-    func removeProfile() {
-        
-        if application!.isUsingParse {
-            application!.backendService!.removeParseProfile()
-        }
-    }
-    
     // MARK: Review interface
     
     func getReviews() -> [Review]? {
         
         if application!.isUsingParse {
-            return application!.backendService!.getParseReviews(self)
+            return application!.backendService!.getParseReviews(self.reviewIds)
         }
         return nil
     }
@@ -107,7 +74,7 @@ class Profile : ProfileProtocol {
     func updateReview(review: Review) {
         
         if application!.isUsingParse {
-            application!.backendService!.updateParseReview(self, userReview: review)
+            application!.backendService!.updateParseReview(0)
         }
     }
     
@@ -116,5 +83,13 @@ class Profile : ProfileProtocol {
         if application!.isUsingParse {
             application!.backendService!.removeParseReview(self, userReview: review)
         }
+    }
+    
+    
+    // MARK: Settings interface
+    
+    
+    func updateSettings(settings: Settings) {
+       
     }
 }

@@ -158,11 +158,11 @@ protocol ParseHandlerProtocol {
     
     // REQUIRES: A user profile.
     // EFFECTS: Updates a review for the user in Parse.
-    func updateParseReview(userProfile: Profile, userReview: Review)
+    func updateParseReview(reviewId: Int)
     
     // REQUIRES: A user profile.
     // EFFECTS: Returns the user's reviews in Parse.
-    func getParseReviews(userProfile: Profile) -> [Review]?
+    func getParseReviews(reviewIds : [Int]?) -> [Review]?
 
 
     // MARK: Settings interface in Parse.

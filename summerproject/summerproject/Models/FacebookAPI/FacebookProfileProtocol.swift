@@ -27,7 +27,7 @@ protocol FacebookProfileProtocol {
     
     
     // EFFECTS: Returns a list of Facebook profiles within the area.
-    func findAllFacebookProfilesInRegion() -> [Profile]?
+    func findAllFacebookProfilesInRegion(userLocation: Location) -> [Profile]?
     
     
     // MARK: Profile Picture
@@ -35,5 +35,5 @@ protocol FacebookProfileProtocol {
     
     // REQUIRES: A Facebook profile.
     // EFFECTS: Fetches the profile picture of the given user. Returns nil if not found.
-    func fetchProfilePicture(facebookProfile: FacebookProfile) -> UIImage?
+    func getFacebookProfilePicture(facebookProfile: FacebookProfile) -> UIImage?
 }

@@ -26,6 +26,10 @@ class ParseHandler: ParseHandlerProtocol {
     var thisUser : Profile?
     var facebookProfile : FacebookProfile?
     
+    init() {
+
+    }
+
     init(thisUser: Profile) {
         self.thisUser = thisUser
         self.facebookProfile = FacebookProfile()
@@ -74,10 +78,8 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile[ParseProfileKeys.phoneNumber] = userProfile.phoneNumber
         userParseProfile[ParseProfileKeys.checkPoints] = userProfile.checkPoints
         userParseProfile[ParseProfileKeys.isCheckVerified] = userProfile.isCheckVerified
-//        userParseProfile[ParseProfileKeys.reviews] = userProfile.reviews
-//        userParseProfile[ParseProfileKeys.settings] = userProfile.settings
-        userParseProfile[ParseProfileKeys.reviews] = "reviews"
-        userParseProfile[ParseProfileKeys.settings] = "settings"
+        userParseProfile[ParseProfileKeys.reviews] = userProfile.reviewIds
+        userParseProfile[ParseProfileKeys.settings] = userProfile.settings
         
         userParseProfile.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             println("Parse user profile signed up successfully.")
@@ -162,7 +164,7 @@ class ParseHandler: ParseHandlerProtocol {
     }
     
     func findAllParseProfilesInRegion(userLocation: Location) -> [Profile]? {
-        return nil //FacebookProfile().findAllFacebookProfilesInRegion(userLocation)
+        return facebookProfile!.findAllFacebookProfilesInRegion(userLocation)
     }
     
     // MARK: Username interface in Parse
@@ -361,7 +363,7 @@ class ParseHandler: ParseHandlerProtocol {
         }
         
         // TODO: Query for user and then add this review.
-        userParseProfile![ParseProfileKeys.reviews] = userProfile.reviews
+        userParseProfile![ParseProfileKeys.reviews] = userProfile.reviewIds
         userParseProfile!.saveInBackground()
     }
     
@@ -369,11 +371,11 @@ class ParseHandler: ParseHandlerProtocol {
         
     }
     
-    func updateParseReview(userProfile: Profile, userReview: Review) {
+    func updateParseReview(reviewId: Int) {
 
     }
     
-    func getParseReviews(userProfile: Profile) -> [Review]? {
+    func getParseReviews(reviewIds :[Int]?) -> [Review]? {
         
         return nil
     }

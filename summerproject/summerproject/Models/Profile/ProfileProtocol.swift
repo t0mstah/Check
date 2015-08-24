@@ -25,35 +25,10 @@ protocol ProfileProtocol {
     var phoneNumber: String { get set }
     var checkPoints: Int { get set }
     var isCheckVerified: Bool { get set }
-    var reviews: [Review]? { get set }
+    var reviewIds: [Int]? { get set }
     var settings: Settings? { get set }
 
-    // MARK: User profile interface.
-    
-    // REQUIRES: A user profile.
-    // EFFECTS: Returns true on successful signup, false otherwise.
-    func signup() -> Bool
-    
-    // REQUIRES: A Profile
-    // EFFECTS: Returns true if user has a logged in session, false otherwise.
-    func isLoggedIn() -> Bool
-    
-    // REQUIRES: A user profile.
-    // EFFECTS: Returns true on successful login, false otherwise.
-    func login() -> Bool
-    
-    // REQUIRES: A user profile.
-    // EFFECTS: Returns true on successful log out, false otherwise.
-    func logout() -> Bool
-
-    // EFFECTS: Returns the user profile
-    func getProfile() -> Profile
-
-    // EFFECTS: Removes the user profile
-    func removeProfile()
-    
     // MARK: Reviews interface.
-    
     
     // EFFECTS: Returns all reviews for this user.
     func getReviews() -> [Review]?
@@ -71,6 +46,7 @@ protocol ProfileProtocol {
     // EFFECTS: Remove the given review.
     func removeReview(review: Review)
     
-    
     // MARK: Settings interface.
+    
+    func updateSettings(settings: Settings)
 }
