@@ -12,6 +12,8 @@ import UIKit
 // TODO: Add facebook, twitter, signup with email profiles etc.
 class Profile : ProfileProtocol {
 
+    var application: ApplicationProtocol?
+
     var username: String = ""
     var password: String = ""
     var email: String = ""
@@ -26,10 +28,6 @@ class Profile : ProfileProtocol {
     var reviews: [Review]?
     var settings: Settings?
 
-    var isUsingParse: Bool = true
-    
-    var settingsService: Settings?
-    var backendService: ParseHandler?
 
     // MARK: Constructor
 
@@ -51,38 +49,32 @@ class Profile : ProfileProtocol {
         self.isCheckVerified = isCheckVerified
         self.reviews = reviews
         self.settings = settings
-
-        isUsingParse = true // Use Parse for all profile stores.
-            
-        // Services for reviews, settings and the Parse handler.
-        settingsService = Settings()
-        backendService = ParseHandler(thisUser: self)
     }
 
     // MARK: Login/signup interface
     
     func signup() -> Bool {
-        return backendService!.signUpParseProfile(self)
+        return application!.backendService!.signUpParseProfile(self)
     }
     
     func isLoggedIn() -> Bool {
-        return backendService!.isParseLoggedIn()
+        return application!.backendService!.isParseLoggedIn()
     }
     
     func login() -> Bool {
-        return backendService!.loginParseProfile(self)
+        return application!.backendService!.loginParseProfile(self)
     }
     
     func logout() -> Bool {
-        return backendService!.logoutParseProfile(self)
+        return application!.backendService!.logoutParseProfile(self)
     }
 
     // MARK: Profile interface.
 
     func getProfile() -> Profile {
         
-        if isUsingParse {
-            return backendService!.getParseProfile()
+        if application!.isUsingParse {
+            return application!.backendService!.getParseProfile()
         }
         
         return self
@@ -90,9 +82,8 @@ class Profile : ProfileProtocol {
     
     func removeProfile() {
         
-        // TODO: error check - user profile does not exist.
-        if isUsingParse {
-            backendService!.removeParseProfile()
+        if application!.isUsingParse {
+            application!.backendService!.removeParseProfile()
         }
     }
     
@@ -100,27 +91,30 @@ class Profile : ProfileProtocol {
     
     func getReviews() -> [Review]? {
         
-        return backendService!.getParseReviews(self)
+        if application!.isUsingParse {
+            return application!.backendService!.getParseReviews(self)
+        }
+        return nil
     }
     
     func addReview(review: Review) {
     
-        if isUsingParse {
-            backendService!.addParseReview(self, userReview: review)
+        if application!.isUsingParse {
+            application!.backendService!.addParseReview(self, userReview: review)
         }
     }
     
     func updateReview(review: Review) {
         
-        if isUsingParse {
-            backendService!.updateParseReview(self, userReview: review)
+        if application!.isUsingParse {
+            application!.backendService!.updateParseReview(self, userReview: review)
         }
     }
     
     func removeReview(review: Review) {
         
-        if isUsingParse {
-            backendService!.removeParseReview(self, userReview: review)
+        if application!.isUsingParse {
+            application!.backendService!.removeParseReview(self, userReview: review)
         }
     }
 }

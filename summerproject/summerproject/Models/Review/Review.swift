@@ -14,7 +14,7 @@ class Review : ReviewProtocol {
     var reviewId = 0
     var reviewer: Profile
     var description : String = ""
-    
+
     // Constructor.
     init(reviewer: Profile, description: String) {
         self.time = NSDate()

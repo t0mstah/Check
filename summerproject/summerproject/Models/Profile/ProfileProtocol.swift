@@ -27,13 +27,8 @@ protocol ProfileProtocol {
     var isCheckVerified: Bool { get set }
     var reviews: [Review]? { get set }
     var settings: Settings? { get set }
-    
-    // Internal states
-    var isUsingParse: Bool { get set }
 
-    
     // MARK: User profile interface.
-    
     
     // REQUIRES: A user profile.
     // EFFECTS: Returns true on successful signup, false otherwise.
