@@ -12,9 +12,14 @@ import Foundation
 
 protocol ApplicationProtocol {
     
+    // Internal states
+    var isUsingParse: Bool { get set }
+    var backendService: ParseHandler? {get set}
+    
+    // Current user.
+    var thisUser: Profile? {get set}
+    
     // REQUIRES: A location.
     // EFFECTS: Returns a list of user profiles within the area.
     func findAllProfilesInRegion(userLocation: Location) -> [Profile]?
-    
-    // REQUIRES: A location for
 }

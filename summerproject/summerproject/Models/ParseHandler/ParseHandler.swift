@@ -257,7 +257,6 @@ class ParseHandler: ParseHandlerProtocol {
     
     // MARK: Biography interface in Parse.
     
-    
     // REQUIRES: A user profile and a new biography.
     // EFFECTS: Changes the user's biography in Parse.
     func changeParseBiography(newBiography:String) {
@@ -272,9 +271,7 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile!.saveInBackground()
     }
     
-    
     // MARK: Phone number interface in Parse.
-    
     
     // REQUIRES: A user profile and a new phone number.
     // EFFECTS: Changes the user's phone number.
@@ -356,7 +353,6 @@ class ParseHandler: ParseHandlerProtocol {
     
     // MARK: Reviews stored in Parse.
     
-
     func addParseReview(userProfile: Profile, userReview: Review) {
         var userParseProfile = PFUser.currentUser()
         
