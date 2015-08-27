@@ -78,10 +78,10 @@ class Profile : ProfileProtocol {
         }
     }
     
-    func removeReview(review: Review) {
+    func removeReview(reviewId: Int) {
         
         if application!.isUsingParse {
-            application!.backendService!.removeParseReview(self, userReview: review)
+            application!.backendService!.removeParseReview(reviewId)
         }
     }
     

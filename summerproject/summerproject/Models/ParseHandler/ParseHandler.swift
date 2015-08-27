@@ -367,7 +367,7 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile!.saveInBackground()
     }
     
-    func removeParseReview(userProfile: Profile, userReview: Review) {
+    func removeParseReview(reviewId: Int) {
         
     }
     

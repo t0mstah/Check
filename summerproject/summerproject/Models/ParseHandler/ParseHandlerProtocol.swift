@@ -154,7 +154,7 @@ protocol ParseHandlerProtocol {
     
     // REQUIRES: A user profile.
     // EFFECTS: Removes a review for the user in Parse.
-    func removeParseReview(userProfile: Profile, userReview: Review)
+    func removeParseReview(reviewId: Int)
     
     // REQUIRES: A user profile.
     // EFFECTS: Updates a review for the user in Parse.

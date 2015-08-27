@@ -44,7 +44,7 @@ protocol ProfileProtocol {
     
     // REQUIRES: A review.
     // EFFECTS: Remove the given review.
-    func removeReview(review: Review)
+    func removeReview(reviewId: Int)
     
     // MARK: Settings interface.
     
