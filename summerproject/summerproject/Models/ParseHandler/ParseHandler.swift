@@ -19,10 +19,19 @@ class ParseHandler: ParseHandlerProtocol {
         static let phoneNumber = "phoneNumber"
         static let checkPoints = "checkPoints"
         static let isCheckVerified = "isCheckVerified"
-        static let reviews = "reviews"
+        static let reviewIds = "reviewIds"
         static let settings = "settings"
     }
-
+    
+    private struct ParseReviewKeys {
+        static let className = "Review"
+        static let reviewId = "reviewId"
+        static let timeCreated = "timeCreated"
+        static let lastUpdated = "lastUpdated"
+        static let reviewer = "reviewer"
+        static let description = "description"
+    }
+    
     var thisUser : Profile?
     var facebookProfile : FacebookProfile?
     
@@ -78,7 +87,7 @@ class ParseHandler: ParseHandlerProtocol {
         userParseProfile[ParseProfileKeys.phoneNumber] = userProfile.phoneNumber
         userParseProfile[ParseProfileKeys.checkPoints] = userProfile.checkPoints
         userParseProfile[ParseProfileKeys.isCheckVerified] = userProfile.isCheckVerified
-        userParseProfile[ParseProfileKeys.reviews] = userProfile.reviewIds
+        userParseProfile[ParseProfileKeys.reviewIds] = userProfile.reviewIds
         userParseProfile[ParseProfileKeys.settings] = userProfile.settings
         
         userParseProfile.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
@@ -363,19 +372,46 @@ class ParseHandler: ParseHandlerProtocol {
         }
         
         // TODO: Query for user and then add this review.
-        userParseProfile![ParseProfileKeys.reviews] = userProfile.reviewIds
+        userParseProfile![ParseProfileKeys.reviewIds] = userProfile.reviewIds
         userParseProfile!.saveInBackground()
     }
     
-    func removeParseReview(reviewId: Int) {
+    func removeParseReview(reviewId: String) {
         
+        // Search for ParseObjectid and delete it.
+        var query = PFQuery(className:ParseReviewKeys.className)
+        
+        query.getObjectInBackgroundWithId(reviewId) {
+            (review: PFObject?, error: NSError?) -> Void in
+            if error == nil && review != nil {
+                println(review)
+            } else {
+                println(error)
+            }
+        }
     }
     
-    func updateParseReview(reviewId: Int) {
+    func updateParseReview(reviewId: String, userReview: Review) {
 
+        var query = PFQuery(className:ParseReviewKeys.className)
+        
+        query.getObjectInBackgroundWithId(reviewId) {
+            (review: PFObject?, error: NSError?) -> Void in
+
+            if error != nil {
+                println(error)
+            }
+            else if let review = review {
+                
+                review[ParseReviewKeys.description] = "todo:description"
+                // Update and save.
+                review["lastUpdated"] = NSDate();
+                review.saveInBackground()
+            }
+        }
     }
     
-    func getParseReviews(reviewIds :[Int]?) -> [Review]? {
+    func getParseReviews(reviewIds :[String]?) -> [Review]? {
         
         return nil
     }

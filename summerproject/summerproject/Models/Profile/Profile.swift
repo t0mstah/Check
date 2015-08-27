@@ -25,7 +25,7 @@ class Profile : ProfileProtocol {
     var phoneNumber: String = ""
     var checkPoints: Int = 0
     var isCheckVerified: Bool = false
-    var reviewIds: [Int]?
+    var reviewIds: [String]?
     var settings: Settings?
 
 
@@ -37,7 +37,7 @@ class Profile : ProfileProtocol {
     init(username: String, password : String, email: String,
          id: String, profilePicture: UIImage?, name: String, biography: String,
          phoneNumber : String, checkPoints : Int, isCheckVerified : Bool,
-         reviewIds: [Int]?, settings: Settings?) {
+         reviewIds: [String]?, settings: Settings?) {
 
         self.username = username
         self.password = password
@@ -74,11 +74,11 @@ class Profile : ProfileProtocol {
     func updateReview(review: Review) {
         
         if application!.isUsingParse {
-            application!.backendService!.updateParseReview(0)
+            application!.backendService!.updateParseReview("dwaoindwa", userReview: review)
         }
     }
     
-    func removeReview(reviewId: Int) {
+    func removeReview(reviewId: String) {
         
         if application!.isUsingParse {
             application!.backendService!.removeParseReview(reviewId)

@@ -10,15 +10,19 @@ import Foundation
 
 class Review : ReviewProtocol {
     
-    var time: NSDate
-    var reviewId = 0
+    var timeCreated: NSDate
+    var lastUpdated: NSDate
+    var reviewId = ""
     var reviewer: Profile
     var description : String = ""
 
     // Constructor.
     init(reviewer: Profile, description: String) {
-        self.time = NSDate()
+        self.timeCreated = NSDate()
+        self.lastUpdated = self.timeCreated
         self.reviewer = reviewer
         self.description = description
+        
+        // TODO: Call necessary Parse stuff.
     }
 }

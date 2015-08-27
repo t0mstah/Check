@@ -25,7 +25,7 @@ protocol ProfileProtocol {
     var phoneNumber: String { get set }
     var checkPoints: Int { get set }
     var isCheckVerified: Bool { get set }
-    var reviewIds: [Int]? { get set }
+    var reviewIds: [String]? { get set }
     var settings: Settings? { get set }
 
     // MARK: Reviews interface.
@@ -44,7 +44,7 @@ protocol ProfileProtocol {
     
     // REQUIRES: A review.
     // EFFECTS: Remove the given review.
-    func removeReview(reviewId: Int)
+    func removeReview(reviewId: String)
     
     // MARK: Settings interface.
     
