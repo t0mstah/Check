@@ -10,7 +10,7 @@ import Foundation
 
 protocol ParseHandlerProtocol {
     
-    var thisUser: Profile? { get set }
+    var thisUser: Profile { get set }
     var facebookProfile: FacebookProfile? { get set }
     // MARK: Login user profile in Parse.
     

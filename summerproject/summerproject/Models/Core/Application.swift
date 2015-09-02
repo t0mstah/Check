@@ -21,14 +21,15 @@ class Application: ApplicationProtocol {
         isUsingParse = true
         
         // Initialize current user profile.
-        thisUser = Profile()
+        thisUser = Profile(username: "bean", password: "1234", email: "tandwao@umich.edu",
+                            id: "12313", profilePicture: nil, name: "JOhn Doe",
+                            biography: "toy", phoneNumber: "2015124444", checkPoints: 20,
+                            isCheckVerified: true, reviewIds: nil, settings: nil)
 
         // Services for reviews, settings and the Parse handler.
         if (isUsingParse) {
-            backendService = ParseHandler()
+            backendService = ParseHandler(thisUser: thisUser!)
         }
-        
-        thisUser = Profile(username: "bean", password: "1234", email: "tandwao@umich.edu", id: "12313", profilePicture: nil, name: "JOhn Doe", biography: "toy", phoneNumber: "2015124444", checkPoints: 20, isCheckVerified: true, reviewIds: nil, settings: nil)
     }
     
     // MARK: Login/signup interface

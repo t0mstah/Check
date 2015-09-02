@@ -25,4 +25,12 @@ class Review : ReviewProtocol {
         
         // TODO: Call necessary Parse stuff.
     }
+    
+    init(timeCreated: NSDate, lastUpdated: NSDate, reviewId : String, reviewer: Profile, description: String) {
+        self.timeCreated = timeCreated
+        self.lastUpdated = lastUpdated
+        self.reviewId = reviewId
+        self.reviewer = reviewer
+        self.description = description
+    }
 }

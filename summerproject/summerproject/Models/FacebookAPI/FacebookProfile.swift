@@ -74,7 +74,7 @@ class FacebookProfile : FacebookProfileProtocol {
     // MARK: Profile protocols
     // TODO: Implement this.
     func findAllFacebookProfilesInRegion(userLocation: Location) -> [Profile]? {
-        
+
         return nil
     }
    

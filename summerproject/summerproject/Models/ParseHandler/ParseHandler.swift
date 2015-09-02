@@ -32,13 +32,10 @@ class ParseHandler: ParseHandlerProtocol {
         static let description = "description"
     }
     
-    var thisUser : Profile?
+    var thisUser: Profile
     var facebookProfile : FacebookProfile?
     
-    init() {
-
-    }
-
+    // MARK: Constructor
     init(thisUser: Profile) {
         self.thisUser = thisUser
         self.facebookProfile = FacebookProfile()
@@ -147,11 +144,14 @@ class ParseHandler: ParseHandlerProtocol {
     func linkParseProfileToFacebook(userProfile: Profile) -> Bool {
         
         var isSuccessfulLinking = false
-//        if !PFFacebookUtils.isLinkedWithUser(user) {
-//            PFFacebookUtils.linkUserInBackground(user, withReadPermissions: nil, {
+        var user = PFUser.currentUser()
+        
+//        if !PFFacebookUtils.isLinkedWithUser(user!) {
+//            PFFacebookUtils.linkUserInBackground(user!, withReadPermissions: nil, block: {
 //                (succeeded: Bool?, error: NSError?) -> Void in
-//                if succeeded {
+//                if (succeeded != nil) {
 //                    println("Woohoo, the user is linked with Facebook!")
+//                    isSuccessfulLinking = true
 //                }
 //            })
 //        }
@@ -162,10 +162,13 @@ class ParseHandler: ParseHandlerProtocol {
     func unlinkParseProfileToFacebook(userProfile: Profile) -> Bool {
         
         var isSuccessfulUnlinking = false
-//        PFFacebookUtils.unlinkUserInBackground(user, {
+        var currentUser = PFUser.currentUser()
+        
+//        PFFacebookUtils.unlinkUserInBackground(currentUser!, block: {
 //            (succeeded: Bool?, error: NSError?) -> Void in
-//            if succeeded {
+//            if (succeeded != nil) {
 //                println("The user is no longer associated with their Facebook account.")
+//                isSuccessfulUnlinking = true
 //            }
 //        })
         
@@ -184,10 +187,10 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
-        thisUser!.username = newUsername
+        thisUser.username = newUsername
         userParseProfile!.username = newUsername
     }
     
@@ -204,10 +207,10 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
-        thisUser!.password = newPassword
+        thisUser.password = newPassword
         userParseProfile!.password = newPassword
     }
     
@@ -222,7 +225,7 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
         userParseProfile!.email = newEmail
@@ -237,7 +240,7 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
         // Convert UIImage to a PNG file, and then into PFFile.
@@ -258,7 +261,7 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
         userParseProfile![ParseProfileKeys.name] = newName
@@ -275,7 +278,7 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
         userParseProfile![ParseProfileKeys.biography] = newBiography
@@ -291,7 +294,7 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
         userParseProfile![ParseProfileKeys.phoneNumber] = newPhoneNumber
@@ -309,10 +312,11 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
-        //userParseProfile![ParseProfileKeys.checkPoints] += checkPointsValue
+        userParseProfile![ParseProfileKeys.checkPoints] = userParseProfile![ParseProfileKeys.checkPoints] as! Int + checkPointsValue
+        userParseProfile!.saveInBackground()
     }
     
     
@@ -323,10 +327,11 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
-        //userParseProfile![ParseProfileKeys.checkPoints] -= checkPointsValue
+        userParseProfile![ParseProfileKeys.checkPoints] = userParseProfile![ParseProfileKeys.checkPoints] as! Int - checkPointsValue
+        userParseProfile!.saveInBackground()
     }
     
     
@@ -340,7 +345,7 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
         userParseProfile![ParseProfileKeys.isCheckVerified] = true
@@ -354,7 +359,7 @@ class ParseHandler: ParseHandlerProtocol {
         var userParseProfile = PFUser.currentUser()
         
         if (userParseProfile == nil) {
-            loginParseProfile(thisUser!)
+            loginParseProfile(thisUser)
         }
         
         userParseProfile![ParseProfileKeys.isCheckVerified] = false
@@ -384,7 +389,8 @@ class ParseHandler: ParseHandlerProtocol {
         query.getObjectInBackgroundWithId(reviewId) {
             (review: PFObject?, error: NSError?) -> Void in
             if error == nil && review != nil {
-                println(review)
+                review!.deleteInBackground()
+                println("Review successfully deleted!")
             } else {
                 println(error)
             }
@@ -403,17 +409,48 @@ class ParseHandler: ParseHandlerProtocol {
             }
             else if let review = review {
                 
-                review[ParseReviewKeys.description] = "todo:description"
+                review[ParseReviewKeys.description] = userReview.description
                 // Update and save.
-                review["lastUpdated"] = NSDate();
+                review[ParseReviewKeys.lastUpdated] = NSDate();
                 review.saveInBackground()
+                println("Review successfully updated!")
+            }
+            else {
+                println(error);
             }
         }
     }
     
     func getParseReviews(reviewIds :[String]?) -> [Review]? {
         
-        return nil
+        var reviews : [Review]? = nil
+        
+        if let tempReviews = reviewIds {
+            for reviewId in tempReviews {
+                
+                var query = PFQuery(className:ParseReviewKeys.className)
+                query.getObjectInBackgroundWithId(reviewId) {
+                    (review: PFObject?, error: NSError?) -> Void in
+                    
+                    if error == nil && review != nil {
+                        // TODO:
+//                        let time = review[ParseReviewKeys.timeCreated] as! NSDate
+//                        let reviewer = review[ParseReviewKeys.reviewer] as! String
+//
+//                        reviews.append(Review(timeCreated: (review[ParseReviewKeys.timeCreated] as NSDate,
+//                                                lastUpdated: review[ParseReviewKeys.lastUpdated] as NSDate,
+//                                                reviewId: review[ParseReviewKeys.reviewId] as String,
+//                                                reviewer: review[ParseReviewKeys.reviewer] as String,
+//                                                description: review[ParseReviewKeys.description] as String)))
+                        
+                    } else {
+                        println(error)
+                    }
+                }
+            }
+        }
+
+        return reviews
     }
     
     // Settings stored in Parse.

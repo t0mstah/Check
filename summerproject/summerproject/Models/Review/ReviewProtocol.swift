@@ -12,9 +12,9 @@ import Foundation
 
 protocol ReviewProtocol {
     
-    var reviewId: String { get set }
     var timeCreated: NSDate { get set }
     var lastUpdated: NSDate { get set }
+    var reviewId: String { get set }
     var reviewer: Profile { get set }
     var description: String { get set }
 }
