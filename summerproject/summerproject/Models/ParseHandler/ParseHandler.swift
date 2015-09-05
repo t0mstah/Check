@@ -111,15 +111,14 @@ class ParseHandler: ParseHandlerProtocol {
         
         if userParseProfile != nil {
                 
-//            userProfile.profilePicture = userParseProfile["profilePicture"] as String
-//            userProfile.name = userParseProfile["name"] as String
-//            userProfile.biography = userParseProfile["biography"] as! String
-//            userProfile.phoneNumber = userParseProfile["phoneNumber"] as! String
-//            userProfile.checkPoints = userParseProfile["checkPoints"] as! Int
-//            userProfile.isCheckVerified = userParseProfile["isCheckVerified"] as! Bool
-//            userProfile.reviews = userParseProfile["reviews"] as! String
-//            userProfile.settings = userParseProfile["settings"] as! String
-            
+            userProfile!.profilePicture = (userParseProfile?.objectForKey("profilePicture") as? UIImage)!
+            userProfile!.name = (userParseProfile?.objectForKey("name") as? String)!
+            userProfile!.biography = (userParseProfile?.objectForKey("biography") as? String)!
+            userProfile!.phoneNumber = (userParseProfile?.objectForKey("phoneNumber") as? String)!
+            userProfile!.checkPoints = (userParseProfile?.objectForKey("checkPoints") as? Int)!
+            userProfile!.isCheckVerified = (userParseProfile?.objectForKey("isCheckVerified") as? Bool)!
+            userProfile!.reviewIds = (userParseProfile?.objectForKey("reviews") as? [String]?)!
+            userProfile!.settings = (userParseProfile?.objectForKey("settings") as? Settings)!
         }
         else {
             println("Error occured while fetching ParseProfile")
@@ -145,12 +144,12 @@ class ParseHandler: ParseHandlerProtocol {
         
         var isSuccessfulLinking = false
         var user = PFUser.currentUser()
-        
+        // TODO:
 //        if !PFFacebookUtils.isLinkedWithUser(user!) {
 //            PFFacebookUtils.linkUserInBackground(user!, withReadPermissions: nil, block: {
 //                (succeeded: Bool?, error: NSError?) -> Void in
 //                if (succeeded != nil) {
-//                    println("Woohoo, the user is linked with Facebook!")
+//                    println("The user is linked with Facebook!")
 //                    isSuccessfulLinking = true
 //                }
 //            })
@@ -163,7 +162,7 @@ class ParseHandler: ParseHandlerProtocol {
         
         var isSuccessfulUnlinking = false
         var currentUser = PFUser.currentUser()
-        
+        // TODO: 
 //        PFFacebookUtils.unlinkUserInBackground(currentUser!, block: {
 //            (succeeded: Bool?, error: NSError?) -> Void in
 //            if (succeeded != nil) {
@@ -192,6 +191,7 @@ class ParseHandler: ParseHandlerProtocol {
         
         thisUser.username = newUsername
         userParseProfile!.username = newUsername
+        userParseProfile!.save()
     }
     
     
@@ -212,6 +212,7 @@ class ParseHandler: ParseHandlerProtocol {
         
         thisUser.password = newPassword
         userParseProfile!.password = newPassword
+        userParseProfile!.save()
     }
     
     
@@ -229,6 +230,7 @@ class ParseHandler: ParseHandlerProtocol {
         }
         
         userParseProfile!.email = newEmail
+        userParseProfile!.save()
     }
     
     
