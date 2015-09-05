@@ -433,17 +433,23 @@ class ParseHandler: ParseHandlerProtocol {
                     (review: PFObject?, error: NSError?) -> Void in
                     
                     if error == nil && review != nil {
-                        // TODO:
-//                        let time = review[ParseReviewKeys.timeCreated] as! NSDate
-//                        let reviewer = review[ParseReviewKeys.reviewer] as! String
-//
-//                        reviews.append(Review(timeCreated: (review[ParseReviewKeys.timeCreated] as NSDate,
-//                                                lastUpdated: review[ParseReviewKeys.lastUpdated] as NSDate,
-//                                                reviewId: review[ParseReviewKeys.reviewId] as String,
-//                                                reviewer: review[ParseReviewKeys.reviewer] as String,
-//                                                description: review[ParseReviewKeys.description] as String)))
                         
+                        // Fetch all the data
+                        let timeCreated = review?.objectForKey(ParseReviewKeys.timeCreated) as? NSDate
+                        let lastUpdated = review?.objectForKey(ParseReviewKeys.lastUpdated) as? NSDate
+                        let reviewId = review?.objectForKey(ParseReviewKeys.reviewId) as? String
+                        let reviewer = review?.objectForKey(ParseReviewKeys.reviewer) as? Profile
+                        let description = review?.objectForKey(ParseReviewKeys.description) as? String
+                        
+                        // Append into lists of reviews.
+                        if timeCreated != nil && lastUpdated != nil && reviewId != nil && reviewer != nil && description != nil {
+                            let tempReview = Review(timeCreated: timeCreated!, lastUpdated: lastUpdated!, reviewId: reviewId!, reviewer: reviewer!, description: description!)
+                            
+                            reviews?.append(tempReview)
+                        }
+
                     } else {
+                        println("Failed to get Parse reviews")
                         println(error)
                     }
                 }
